@@ -1,0 +1,14 @@
+"CFBundleDisplayName" = "Rino Smart";
+"NSAppleMusicUsageDescription" = "The app needs to access your media library to get music. If you do not allow access, local music cannot be added.";
+"NSBluetoothAlwaysUsageDescription" = "This will allow the app to find and connect Bluetooth accessories. This app may also use Bluetooth to locate Bluetooth device.";
+"NSBluetoothPeripheralUsageDescription" = "To add or use Bluetooth devices, enable Bluetooth on your mobile phone.";
+"NSCameraUsageDescription" = "The App can use camera to take new profile and to scan QR Code.";
+"NSLocationUsageDescription" = "The app can provide temperature and humidity according to your location.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "The app can provide temperature and humidity according to your location.";
+"NSLocationAlwaysUsageDescription" = "The app can provide temperature and humidity according to your location.";
+"NSLocationWhenInUseUsageDescription" = "Location permissions will be used for smart device automation, discovery of nearby devices, Wi-Fi lists, and more. Please grant the permission to the app.";
+"NSLocalNetworkUsageDescription" = "The purpose of the app connecting to the local network: enable pairing and control of the devices connected to the local area network";
+"NSMicrophoneUsageDescription" = "The app requests microphone access to control smart devices.";
+"NSNFCReaderUsageDescription" = "The app can use NFC to quickly operate the device";
+"NSPhotoLibraryAddUsageDescription" = "We need your authorization to save pictures and videos in albums.";
+"NSPhotoLibraryUsageDescription" = "The app requests access to your albums for profile photo uploading.";

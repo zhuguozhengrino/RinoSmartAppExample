@@ -1,0 +1,14 @@
+"CFBundleDisplayName" = "犀云智能";
+"NSAppleMusicUsageDescription" = "APP需要访问您的媒体库权限以获取音乐，不允许则无法添加本地音乐";
+"NSBluetoothAlwaysUsageDescription" = "这将允许 App 查找并连接蓝牙配件。此 App 还可能使用蓝牙来获取蓝牙设备的位置";
+"NSBluetoothPeripheralUsageDescription" = "App需要使用您的手机蓝牙来添加和使用蓝牙设备。";
+"NSCameraUsageDescription" = "App可以使用相机来添加新头像和扫描二维码。";
+"NSLocalNetworkUsageDescription" = "App访问本地局域网的用途：配网，本地设备控制";
+"NSLocationUsageDescription" = "App可以根据定位提供温度、湿度等天气信息";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "App可以根据定位提供温度、湿度等天气信息";
+"NSLocationAlwaysUsageDescription" = "App可以根据定位提供温度、湿度等天气信息";
+"NSLocationWhenInUseUsageDescription" = "定位权限将用于智能设备自动化、发现附近设备及 Wi-Fi 列表等功能。请授权 App 使用该权限。";
+"NSMicrophoneUsageDescription" = "App可以使用语音识别功能来控制智能设备。";
+"NSNFCReaderUsageDescription" = "App可以使用NFC来快捷操作设备";
+"NSPhotoLibraryAddUsageDescription" = "App可以保存图片和视频到相册。";
+"NSPhotoLibraryUsageDescription" = "App可以使用相册来添加个人头像。";
