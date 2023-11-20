@@ -1,0 +1,3 @@
+rootProject.name = "Rino Smart"
+include ':app'
+include ':resource'

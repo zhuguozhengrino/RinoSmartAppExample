@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "menuCode": "home_page",
+    "menuName": "首页",
+    "sort": 0,
+    "status": 1
+  },
+  {
+    "id": "2",
+    "menuCode": "scene_page",
+    "menuName": "场景",
+    "sort": 0,
+    "status": 1
+  },
+  {
+    "id": "3",
+    "menuCode": "mine_page",
+    "menuName": "我的",
+    "sort": 0,
+    "status": 1
+  }
+]

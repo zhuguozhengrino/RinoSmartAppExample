@@ -1,0 +1,34 @@
+[
+  {
+    "channelId": "baiDuAssistant",
+    "channelUrl": "https://shouji.baidu.com/detail/5000028585"
+  },
+  {
+    "channelId": "tencentAppStore",
+    "channelUrl": "https://sj.qq.com/appdetail/com.smart.rinoiot?&from_wxz=1"
+  },
+  {
+    "channelId": "vivoStore",
+    "channelUrl": "http://h5.appstore.vivo.com.cn/#/details?search_word=%E7%8A%80%E4%BA%91&search_action=4&app_id=3517429&app_pos=4&source=5&appId=3517429&frompage=searchResultApp&listpos=4"
+  },
+  {
+    "channelId": "oppoStore",
+    "channelUrl": "https://www.opposhop.cn/app/download.html"
+  },
+  {
+    "channelId": "huaweiStore",
+    "channelUrl": "https://appgallery.huawei.com/app/C107701851"
+  },
+  {
+    "channelId": "xiaoMiStore",
+    "channelUrl": "https://app.mi.com/details?id=com.smart.rinoiot"
+  },
+  {
+    "channelId": "googlePlay",
+    "channelUrl": "https://play.google.com/store/apps/details?id=com.smart.rinoiot"
+  },
+  {
+    "channelId": "domesticStore",
+    "channelUrl": "https://integration.rinoiot.com/rino-smart-download"
+  }
+]

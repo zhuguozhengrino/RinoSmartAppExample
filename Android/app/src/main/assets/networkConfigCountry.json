@@ -1,0 +1,1164 @@
+{
+  "dataCenter": {
+    "iOQltLo3pg2PrWyi": {
+      "domain": "9xvNRY2h0AOWc10kCgdE4gVMgki88pzY1uHf76JfUME=",
+      "mqttUrl": "XR1qmMvjT6buPkdPv9zDF2gqQnTpEHK5iJx0Vj6/QMo=",
+      "c": "EP",
+      "code": "eu"
+    },
+    "JC2OZ5j64QHSn2ZK": {
+      "domain": "9xvNRY2h0AOWc10kCgdE4gVMgki88pzY1uHf76JfUME=",
+      "mqttUrl": "XR1qmMvjT6buPkdPv9zDF2gqQnTpEHK5iJx0Vj6/QMo=",
+      "c": "US",
+      "code": "us"
+    },
+    "xSznGE4XyaCzynKZ": {
+      "domain": "YoYFk1gJ87cfNdGwFEm84yvpXE8OlSv6DYio5RjtnF8=",
+      "mqttUrl": "IF80wKXKmW3RRXMkBD+YCt9HHHbDYEb4+V9GzxTu4XE=",
+      "c": "CN",
+      "code": "cn"
+    }
+  },
+  "country": [
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "971",
+      "name": "阿拉伯联合酋长国"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1809",
+      "name": "特立尼达和多巴哥"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "239",
+      "name": "圣多美和普林西比"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "689",
+      "name": "法属玻利尼西亚"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "675",
+      "name": "巴布亚新几内亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1268",
+      "name": "安提瓜和巴布达"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1890",
+      "name": "多米尼加共和国"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "684",
+      "name": "东萨摩亚(美)"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1670",
+      "name": "马里亚那群岛"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1664",
+      "name": "蒙特塞拉特岛"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "599",
+      "name": "荷属安的列斯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "376",
+      "name": "安道尔共和国"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "233",
+      "name": "乌兹别克斯坦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "261",
+      "name": "马达加斯加"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "355",
+      "name": "阿尔巴尼亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "213",
+      "name": "阿尔及利亚"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1441",
+      "name": "百慕大群岛"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "594",
+      "name": "法属圭亚那"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "966",
+      "name": "沙特阿拉伯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "386",
+      "name": "斯洛文尼亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "677",
+      "name": "所罗门群岛"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "226",
+      "name": "布基纳法索"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "992",
+      "name": "塔吉克斯坦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "251",
+      "name": "埃塞俄比亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "993",
+      "name": "土库曼斯坦"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "506",
+      "name": "哥斯达黎加"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "327",
+      "name": "哈萨克斯坦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "331",
+      "name": "吉尔吉斯坦"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "62",
+      "name": "印度尼西亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "423",
+      "name": "列支敦士登"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "236",
+      "name": "中非共和国"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "60",
+      "name": "马来西亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "596",
+      "name": "马提尼克"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "960",
+      "name": "马尔代夫"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "994",
+      "name": "阿塞拜疆"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "685",
+      "name": "西萨摩亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "503",
+      "name": "萨尔瓦多"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "258",
+      "name": "莫桑比克"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "40",
+      "name": "罗马尼亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "264",
+      "name": "纳米比亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "225",
+      "name": "科特迪瓦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "350",
+      "name": "直布罗陀"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "375",
+      "name": "白俄罗斯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "591",
+      "name": "玻利维亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "372",
+      "name": "爱沙尼亚"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "61",
+      "name": "澳大利亚"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "504",
+      "name": "洪都拉斯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "263",
+      "name": "津巴布韦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1787",
+      "name": "波多黎各"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "230",
+      "name": "毛里求斯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "995",
+      "name": "格鲁吉亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1809",
+      "name": "格林纳达"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "94",
+      "name": "斯里兰卡"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "421",
+      "name": "斯洛伐克"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "268",
+      "name": "斯威士兰"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "373",
+      "name": "摩尔多瓦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "371",
+      "name": "拉脱维亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1345",
+      "name": "开曼群岛"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "682",
+      "name": "库克群岛"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1246",
+      "name": "巴巴多斯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "92",
+      "name": "巴基斯坦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "234",
+      "name": "尼日利亚"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "505",
+      "name": "尼加拉瓜"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1264",
+      "name": "安圭拉岛"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "880",
+      "name": "孟加拉国"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "58",
+      "name": "委内瑞拉"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "357",
+      "name": "塞浦路斯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "232",
+      "name": "塞拉利昂"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "221",
+      "name": "塞内加尔"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "255",
+      "name": "坦桑尼亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "378",
+      "name": "圣马力诺"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1784",
+      "name": "圣文森特"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1758",
+      "name": "圣卢西亚"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "57",
+      "name": "哥伦比亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "593",
+      "name": "厄瓜多尔"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "502",
+      "name": "危地马拉"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "267",
+      "name": "博茨瓦纳"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "381",
+      "name": "南斯拉夫"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "231",
+      "name": "利比里亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "359",
+      "name": "保加利亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "374",
+      "name": "亚美尼亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "961",
+      "name": "黎巴嫩"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "356",
+      "name": "马耳他"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "265",
+      "name": "马拉维"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "247",
+      "name": "阿森松"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "54",
+      "name": "阿根廷"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "93",
+      "name": "阿富汗"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "260",
+      "name": "赞比亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "34",
+      "name": "西班牙"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "351",
+      "name": "葡萄牙"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "63",
+      "name": "菲律宾"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "266",
+      "name": "莱索托"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "597",
+      "name": "苏里南"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "254",
+      "name": "肯尼亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "252",
+      "name": "索马里"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "370",
+      "name": "立陶宛"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "216",
+      "name": "突尼斯"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "965",
+      "name": "科威特"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "262",
+      "name": "留尼旺"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "1876",
+      "name": "牙买加"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "353",
+      "name": "爱尔兰"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "32",
+      "name": "比利时"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "855",
+      "name": "柬埔寨"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "64",
+      "name": "新西兰"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "65",
+      "name": "新加坡"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "377",
+      "name": "摩纳哥"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "212",
+      "name": "摩洛哥"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "243",
+      "name": "扎伊尔"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "39",
+      "name": "意大利"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "257",
+      "name": "布隆迪"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "507",
+      "name": "巴拿马"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "595",
+      "name": "巴拉圭"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1242",
+      "name": "巴哈马"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "977",
+      "name": "尼泊尔"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "227",
+      "name": "尼日尔"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "244",
+      "name": "安哥拉"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "43",
+      "name": "奥地利"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "52",
+      "name": "墨西哥"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "248",
+      "name": "塞舌尔"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "592",
+      "name": "圭亚那"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "90",
+      "name": "土耳其"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "237",
+      "name": "喀麦隆"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "253",
+      "name": "吉布提"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "886",
+      "name": "台湾省"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "963",
+      "name": "叙利亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "352",
+      "name": "卢森堡"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "974",
+      "name": "卡塔尔"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "36",
+      "name": "匈牙利"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1",
+      "name": "加拿大"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "218",
+      "name": "利比亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "224",
+      "name": "几内亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "220",
+      "name": "冈比亚"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "7",
+      "name": "俄罗斯"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "501",
+      "name": "伯利兹"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "964",
+      "name": "伊拉克"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "972",
+      "name": "以色列"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "598",
+      "name": "乌拉圭"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "256",
+      "name": "乌干达"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "380",
+      "name": "乌克兰"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "223",
+      "name": "马里"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "852",
+      "name": "香港"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "82",
+      "name": "韩国"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "968",
+      "name": "阿曼"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "84",
+      "name": "越南"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "229",
+      "name": "贝宁"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "976",
+      "name": "蒙古"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "31",
+      "name": "荷兰"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "44",
+      "name": "英国"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "249",
+      "name": "苏丹"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "358",
+      "name": "芬兰"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "856",
+      "name": "老挝"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1",
+      "name": "美国"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "95",
+      "name": "缅甸"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "962",
+      "name": "约旦"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "51",
+      "name": "秘鲁"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "41",
+      "name": "瑞士"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "46",
+      "name": "瑞典"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "674",
+      "name": "瑙鲁"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "853",
+      "name": "澳门"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "509",
+      "name": "海地"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "66",
+      "name": "泰国"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "48",
+      "name": "波兰"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "33",
+      "name": "法国"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "676",
+      "name": "汤加"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "850",
+      "name": "朝鲜"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "56",
+      "name": "智利"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "81",
+      "name": "日本"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "679",
+      "name": "斐济"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "673",
+      "name": "文莱"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "420",
+      "name": "捷克"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "47",
+      "name": "挪威"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "49",
+      "name": "德国"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "30",
+      "name": "希腊"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "55",
+      "name": "巴西"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "973",
+      "name": "巴林"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "228",
+      "name": "多哥"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "20",
+      "name": "埃及"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "53",
+      "name": "古巴"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "91",
+      "name": "印度"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "27",
+      "name": "南非"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "241",
+      "name": "加蓬"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "233",
+      "name": "加纳"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "242",
+      "name": "刚果"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "354",
+      "name": "冰岛"
+    },
+    {
+      "areaId": "JC2OZ5j64QHSn2ZK",
+      "areaCode": "us",
+      "code": "1671",
+      "name": "关岛"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "98",
+      "name": "伊朗"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "967",
+      "name": "也门"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "235",
+      "name": "乍得"
+    },
+    {
+      "areaId": "iOQltLo3pg2PrWyi",
+      "areaCode": "eu",
+      "code": "45",
+      "name": "丹麦"
+    },
+    {
+      "areaId": "xSznGE4XyaCzynKZ",
+      "areaCode": "cn",
+      "code": "86",
+      "name": "中国"
+    }
+  ]
+}
