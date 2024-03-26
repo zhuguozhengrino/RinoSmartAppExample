@@ -1,0 +1,90 @@
+source "https://github.com/3721iot/RinoSmartPublicSpecs.git"
+source "https://cdn.cocoapods.org/"
+
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '13.0'
+
+install! 'cocoapods', disable_input_output_paths: true, generate_multiple_pod_projects: true
+
+use_frameworks! :linkage => :static
+
+production = ENV["PRODUCTION"] == "1"
+
+target 'Rino' do
+  
+  config = use_native_modules!
+
+  # Flags change depending on the env values.
+  flags = get_default_flags()
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :production => production,
+    :hermes_enabled => flags[:hermes_enabled],
+#    :hermes_enabled => false,
+    :fabric_enabled => flags[:fabric_enabled],
+#    :flipper_configuration => FlipperConfiguration.enabled,
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+  
+  #--------------基本库----------------
+  pod 'RinoBaseKit'
+  pod 'RinoAppConfigModule'
+  pod 'RinoBusinessLibraryModule'
+  pod 'RinoBizCore'
+  pod 'RinoDeviceDetailDefaultUISkin'
+  pod 'RinoUIKit'
+  pod 'RinoBizCore'
+  pod 'RinoWebViewKit'
+  #--------------面板----------------
+  pod 'RinoPanelKit'
+  #--------------设备----------------
+  pod 'RinoDeviceKit'
+  #--------------ipc----------------
+  pod 'RinoIPCKit', :git => 'https://gitee.com/rinoapp/RinoIPCKit.git', :tag => '1.0.2'
+  #--------------配网----------------
+  pod 'RinoActivatorDefaultUISkin'     #配网UI库
+  pod 'RinoActivatorKit'               #配网接口库
+  #--------------场景----------------
+  pod 'RinoSceneKit'                   #场景接口库
+  pod 'RinoSceneDefaultUISkin'         #场景UI库
+  #--------------消息----------------
+  pod 'RinoMessageDefaultUISKin'       #消息UI库
+  pod 'RinoMessageKit'                 #消息接口库
+  
+  #--------------家庭管理----------------
+  pod 'RinoHomeDefaultUISkin'          #家庭管理UI库
+  pod 'RinoHomeKit'                    #家庭管理接口库
+  
+  
+  #--------------设置----------------
+  pod 'RinoUserSettingsDefaultUISkin'  #设置UI库
+  
+      
+  post_install do |installer|
+    installer.generated_projects.each do |project|
+      project.targets.each do |target|
+        target.build_configurations.each do |config|
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+        end
+      end
+    end
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      end
+    end
+    react_native_post_install(installer)
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+  end
+  pre_install do |installer|
+    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+  end
+      
+end
+

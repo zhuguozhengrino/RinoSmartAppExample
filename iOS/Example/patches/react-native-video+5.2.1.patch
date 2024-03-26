@@ -1,0 +1,580 @@
+diff --git a/node_modules/react-native-video/.DS_Store b/node_modules/react-native-video/.DS_Store
+new file mode 100644
+index 0000000..045f641
+Binary files /dev/null and b/node_modules/react-native-video/.DS_Store differ
+diff --git a/node_modules/react-native-video/ios/.DS_Store b/node_modules/react-native-video/ios/.DS_Store
+new file mode 100644
+index 0000000..3781176
+Binary files /dev/null and b/node_modules/react-native-video/ios/.DS_Store differ
+diff --git a/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.h b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.h
+new file mode 100644
+index 0000000..78e4d6b
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.h
+@@ -0,0 +1,42 @@
++//
++//  RCTVLCVideoManager.h
++//  react-native-video
++//
++//  Created by super on 2023/8/14.
++//
++
++#import <Foundation/Foundation.h>
++#import "RCTVideo.h"
++NS_ASSUME_NONNULL_BEGIN
++
++@protocol RCTVLCVideoManagerDelegate <NSObject>
++
++@optional
++-(void)RCTVLCMediaPlayerTimeChanged:(NSNotification *)aNotification;
++
++@end
++
++@interface RCTVLCVideoManager : NSObject
+++ (instancetype)sharedInstance;
++
++@property (nonatomic, weak) id<RCTVLCVideoManagerDelegate> delegate;
++
++- (void)setSrc:(NSDictionary *)source view:(RCTVideo *)videoView;
++
++- (void)setSeek:(NSDictionary *)info;
++
++-(void)pause;
++
++-(void)play;
++
++-(void)stop;
++
++-(void)setRate:(float)rate;
++
++-(void)setVolume:(float)volume;
++
++-(void)removePlayer;
++
++@end
++
++NS_ASSUME_NONNULL_END
+diff --git a/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.m b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.m
+new file mode 100644
+index 0000000..e10d148
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.m
+@@ -0,0 +1,202 @@
++//
++//  RCTVLCVideoManager.m
++//  react-native-video
++//
++//  Created by super on 2023/8/14.
++//
++
++#import "RCTVLCVideoManager.h"
++#import <IJKMediaFramework/IJKMediaFramework.h>
++#import <React/RCTConvert.h>
++#import "RCTVideo.h"
++#import <React/RCTBridgeModule.h>
++#import <React/RCTEventDispatcher.h>
++#import <React/UIView+React.h>
++
++@interface RCTVLCVideoManager ()
++
++
++@property (nonatomic , assign) BOOL isSend;
++
++@property (nonatomic , strong) IJKFFMoviePlayerController *player;
++@property (nonatomic , strong) RCTVideo *videoView;
++
++@property (nonatomic , assign) BOOL useVlC;
++
++@property (nonatomic , copy)NSString *vlcUrl;
++
++@property (nonatomic , assign) NSInteger totalTime;
++
++@property (nonatomic , assign)NSInteger currentTime;
++
++@end
++static id VLCVideoSharedInstance;
++static dispatch_once_t VLCVideoOnceToken;
++@implementation RCTVLCVideoManager
+++ (instancetype)sharedInstance {
++    
++    dispatch_once(&VLCVideoOnceToken, ^{
++        VLCVideoSharedInstance = [[self alloc] init];
++    });
++    return VLCVideoSharedInstance;
++}
++
++
++-(IJKFFMoviePlayerController *)player{
++    if(_player == nil && self.vlcUrl.length > 0){
++        NSURL *url = [NSURL URLWithString:self.vlcUrl];
++        [IJKFFMoviePlayerController setLogReport:YES];
++        [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_INFO];
++        IJKFFOptions *options = [IJKFFOptions optionsByDefault];
++        _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:url withOptions:options];
++        [_player setScalingMode:IJKMPMovieScalingModeAspectFit];
++        
++        _player.view.frame = self.videoView.frame;
++        _player.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
++        [self.videoView addSubview:self.player.view];
++    }
++    return _player;
++}
++
++
++- (void)setSrc:(NSDictionary *)source view:(RCTVideo *)videoView{
++    self.useVlC = videoView.useVlC;
++    if(self.useVlC){
++        [_player pause];
++        _player = nil;
++        self.isSend = NO;
++        self.totalTime = 0;
++        self.currentTime = 0;
++        self.vlcUrl = [source objectForKey:@"uri"];
++        self.videoView = videoView;
++        NSLog(@"--IJKFF--source:%@",source);
++        
++        [self.player prepareToPlay];
++        [[NSNotificationCenter defaultCenter] addObserver:self
++                                                 selector:@selector(playerPlaybackStateDidChange:)
++                                                     name:IJKMPMoviePlayerPlaybackStateDidChangeNotification
++                                                   object:nil];
++        
++        
++    }
++    
++}
++
++
++
++
++
++-(void)pause{
++//    NSLog(@"--IJKFF--pause");
++    if(self.player && self.useVlC){
++       
++        [self.player pause];
++    }
++    
++}
++
++-(void)play{
++//    NSLog(@"--IJKFF--play");
++    if(self.player && self.useVlC){
++        
++        
++        [self.player play];
++        self.player.playbackRate = 0;
++    }
++    
++}
++-(void)stop{
++    if(self.player && self.useVlC){
++//        NSLog(@"--IJKFF--stop");
++        [self.player stop];
++    }
++    
++    
++}
++
++- (void)setSeek:(NSDictionary *)info{
++    if(self.player && self.useVlC){
++        NSNumber *seekTime = info[@"time"];
++        NSNumber *seekTolerance = info[@"tolerance"];
++        NSLog(@"--IJKFF----rn----time:%@--tolerance:%@",seekTime,seekTolerance);
++        self.currentTime = [info[@"time"] integerValue];
++        if(self.totalTime > 0){
++//            [self.player pause];
++            self.player.currentPlaybackTime = self.currentTime;
++            NSLog(@"--IJKFF--设置--外外外-time:%zd",self.currentTime);
++//            [self.player play];
++        }
++        
++    }
++}
++-(void)setRate:(float)rate{
++    if(self.player && self.useVlC){
++        self.player.playbackRate = rate;
++    }
++    
++}
++-(void)setVolume:(float)volume{
++    if(self.player && self.useVlC){
++    }
++}
++-(void)removePlayer{
++    if(_player && self.useVlC){
++        NSLog(@"--IJKFF--removePlayer");
++        [_player shutdown];
++        [_player stop];
++        _player.playbackRate = 0;
++        _player = nil;
++    }
++    
++}
++
++
++
++
++
++- (void)playerPlaybackStateDidChange:(NSNotification *)notification {
++    
++    switch (self.player.playbackState) {
++        case IJKMPMoviePlaybackStateStopped:
++            // 播放停止
++            NSLog(@"--IJKFF--播放停止");
++            break;
++        case IJKMPMoviePlaybackStatePlaying:
++            // 播放中
++//            NSLog(@"--IJKFF--播放中");
++            self.totalTime = self.player.duration;
++            NSLog(@"--IJKFF--totalTime:%zd",self.totalTime);
++            if([self.delegate respondsToSelector:@selector(RCTVLCMediaPlayerTimeChanged:)] && !self.isSend){
++                self.isSend = YES;
++                [self.delegate RCTVLCMediaPlayerTimeChanged:notification];
++            }
++            if(self.currentTime > 0){
++//                [self.player pause];
++                self.player.currentPlaybackTime = self.currentTime;
++                [self.player play];
++                NSLog(@"--IJKFF--设置--里里里-time:%zd",self.currentTime);
++                self.currentTime = 0;
++                
++            }
++            break;
++        case IJKMPMoviePlaybackStatePaused:
++            // 暂停
++            NSLog(@"--IJKFF--暂停");
++            break;
++        case IJKMPMoviePlaybackStateInterrupted:
++            // 播放被中断
++            NSLog(@"--IJKFF--播放被中断");
++            break;
++        case IJKMPMoviePlaybackStateSeekingForward:
++            //正在快进
++//            NSLog(@"--IJKFF--正在快进");
++            break;
++        case IJKMPMoviePlaybackStateSeekingBackward:
++            // 正在快退
++//            NSLog(@"--IJKFF--正在快退");
++            break;
++        default:
++            break;
++    }
++}
++@end
+diff --git a/node_modules/react-native-video/ios/Video/RCTVideo.h b/node_modules/react-native-video/ios/Video/RCTVideo.h
+index 6fee299..9f8197c 100644
+--- a/node_modules/react-native-video/ios/Video/RCTVideo.h
++++ b/node_modules/react-native-video/ios/Video/RCTVideo.h
+@@ -44,6 +44,8 @@
+ @property (nonatomic, copy) RCTDirectEventBlock onRestoreUserInterfaceForPictureInPictureStop;
+ @property (nonatomic, copy) RCTDirectEventBlock onGetLicense;
+ 
++@property (nonatomic, assign)BOOL useVlC;
++
+ typedef NS_ENUM(NSInteger, RCTVideoError) {
+     RCTVideoErrorFromJSPart,
+     RCTVideoErrorLicenseRequestNotOk,
+diff --git a/node_modules/react-native-video/ios/Video/RCTVideo.m b/node_modules/react-native-video/ios/Video/RCTVideo.m
+index a757c08..df1c7b3 100644
+--- a/node_modules/react-native-video/ios/Video/RCTVideo.m
++++ b/node_modules/react-native-video/ios/Video/RCTVideo.m
+@@ -5,7 +5,7 @@
+ #import <React/UIView+React.h>
+ #include <MediaAccessibility/MediaAccessibility.h>
+ #include <AVFoundation/AVFoundation.h>
+-
++#import "RCTVLCVideoManager.h"
+ static NSString *const statusKeyPath = @"status";
+ static NSString *const playbackLikelyToKeepUpKeyPath = @"playbackLikelyToKeepUp";
+ static NSString *const playbackBufferEmptyKeyPath = @"playbackBufferEmpty";
+@@ -22,6 +22,12 @@
+     #define DebugLog(...) (void)0
+ #endif
+ 
++
++@interface RCTVideo ()<RCTVLCVideoManagerDelegate>
++
++
++@end
++
+ @implementation RCTVideo
+ {
+   AVPlayer *_player;
+@@ -97,7 +103,7 @@ - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
+ {
+   if ((self = [super init])) {
+     _eventDispatcher = eventDispatcher;
+-	  _automaticallyWaitsToMinimizeStalling = YES;
++      _automaticallyWaitsToMinimizeStalling = YES;
+     _playbackRateObserverRegistered = NO;
+     _isExternalPlaybackActiveObserverRegistered = NO;
+     _playbackStalled = NO;
+@@ -200,6 +206,10 @@ -(void)addPlayerTimeObserver
+                    ];
+ }
+ 
++
++
++
++
+ /* Cancels the previously registered time observer. */
+ -(void)removePlayerTimeObserver
+ {
+@@ -228,6 +238,7 @@ - (void)applicationWillResignActive:(NSNotification *)notification
+   if (_playInBackground || _playWhenInactive || _paused) return;
+   
+   [_player pause];
++    [[RCTVLCVideoManager sharedInstance] pause];
+   [_player setRate:0.0];
+ }
+ 
+@@ -352,16 +363,79 @@ - (void)removePlayerItemObservers
+   }
+ }
+ 
++-(void)RCTVLCMediaPlayerTimeChanged:(NSNotification *)aNotification{
++    float duration = CMTimeGetSeconds(_playerItem.asset.duration);
++    
++    if (isnan(duration)) {
++      duration = 0.0;
++    }
++    
++    NSObject *width = @"undefined";
++    NSObject *height = @"undefined";
++    NSString *orientation = @"undefined";
++    
++    if ([_playerItem.asset tracksWithMediaType:AVMediaTypeVideo].count > 0) {
++      AVAssetTrack *videoTrack = [[_playerItem.asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
++      width = [NSNumber numberWithFloat:videoTrack.naturalSize.width];
++      height = [NSNumber numberWithFloat:videoTrack.naturalSize.height];
++      CGAffineTransform preferredTransform = [videoTrack preferredTransform];
++      
++      if ((videoTrack.naturalSize.width == preferredTransform.tx
++           && videoTrack.naturalSize.height == preferredTransform.ty)
++          || (preferredTransform.tx == 0 && preferredTransform.ty == 0))
++      {
++        orientation = @"landscape";
++      } else {
++        orientation = @"portrait";
++      }
++    } else if (_playerItem.presentationSize.height) {
++      width = [NSNumber numberWithFloat:_playerItem.presentationSize.width];
++      height = [NSNumber numberWithFloat:_playerItem.presentationSize.height];
++      orientation = _playerItem.presentationSize.width > _playerItem.presentationSize.height ? @"landscape" : @"portrait";
++    }
++
++    if (_pendingSeek) {
++      [self setCurrentTime:_pendingSeekTime];
++      _pendingSeek = false;
++    }
++    
++    if (self.onVideoLoad && _videoLoadStarted) {
++      self.onVideoLoad(@{@"duration": [NSNumber numberWithFloat:duration],
++                         @"currentTime": [NSNumber numberWithFloat:CMTimeGetSeconds(_playerItem.currentTime)],
++                         @"canPlayReverse": [NSNumber numberWithBool:_playerItem.canPlayReverse],
++                         @"canPlayFastForward": [NSNumber numberWithBool:_playerItem.canPlayFastForward],
++                         @"canPlaySlowForward": [NSNumber numberWithBool:_playerItem.canPlaySlowForward],
++                         @"canPlaySlowReverse": [NSNumber numberWithBool:_playerItem.canPlaySlowReverse],
++                         @"canStepBackward": [NSNumber numberWithBool:_playerItem.canStepBackward],
++                         @"canStepForward": [NSNumber numberWithBool:_playerItem.canStepForward],
++                         @"naturalSize": @{
++                             @"width": width,
++                             @"height": height,
++                             @"orientation": orientation
++                             },
++                         @"audioTracks": [self getAudioTrackInfo],
++                         @"textTracks": [self getTextTrackInfo],
++                         @"target": self.reactTag});
++    }
++    _videoLoadStarted = NO;
++    
++    [self attachListeners];
++    [self applyModifiers];
++}
++
+ #pragma mark - Player and source
+ 
+ - (void)setSrc:(NSDictionary *)source
+ {
+   _source = source;
++   
++  NSLog(@"--VLC--rn--设置资源：%@",source);
+   [self removePlayerLayer];
+   [self removePlayerTimeObserver];
+   [self removePlayerItemObservers];
+   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) 0), dispatch_get_main_queue(), ^{
+-    
++    [[RCTVLCVideoManager sharedInstance] setSrc:_source view:self];
++      [RCTVLCVideoManager sharedInstance].delegate = self;
+     // perform on next run loop, otherwise other passed react-props may not be set
+     [self playerItemForSource:self->_source withCallback:^(AVPlayerItem * playerItem) {
+       self->_playerItem = playerItem;
+@@ -372,7 +446,7 @@ - (void)setSrc:(NSDictionary *)source
+       [self setMaxBitRate:self->_maxBitRate];
+       
+       [_player pause];
+-        
++//        [[RCTVLCVideoManager sharedInstance] pause];
+       if (_playbackRateObserverRegistered) {
+         [_player removeObserver:self forKeyPath:playbackRate context:nil];
+         _playbackRateObserverRegistered = NO;
+@@ -407,7 +481,12 @@ - (void)setSrc:(NSDictionary *)source
+                                 @"drm": self->_drm ? self->_drm : [NSNull null],
+                                 @"target": self.reactTag
+                                 });
++//          dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
++//              [self setPaused:NO];
++//          });
+       }
++        
++    
+     }];
+   });
+   _videoLoadStarted = YES;
+@@ -609,6 +688,7 @@ - (void)dvAssetLoaderDelegate:(DVAssetLoaderDelegate *)loaderDelegate
+ - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+ {
+ 
++    NSLog(@"--VLC--keyPath:%@",keyPath);
+   if([keyPath isEqualToString:readyForDisplayKeyPath] && [change objectForKey:NSKeyValueChangeNewKey] && self.onReadyForDisplay) {
+     self.onReadyForDisplay(@{@"target": self.reactTag});
+     return;
+@@ -930,9 +1010,17 @@ - (void)setMixWithOthers:(NSString *)mixWithOthers
+ 
+ - (void)setPaused:(BOOL)paused
+ {
++    if(paused){
++        NSLog(@"--VLC-rn-pause:YES");
++    }else{
++        NSLog(@"--VLC-rn-pause:NO");
++    }
++    
+   if (paused) {
+     [_player pause];
+     [_player setRate:0.0];
++    [[RCTVLCVideoManager sharedInstance] setRate:0.0];
++    [[RCTVLCVideoManager sharedInstance] pause];
+   } else {
+ 
+     [self configureAudio];
+@@ -941,9 +1029,13 @@ - (void)setPaused:(BOOL)paused
+       [_player playImmediatelyAtRate:_rate];
+     } else {
+       [_player play];
+-      [_player setRate:_rate];
++        [_player setRate:_rate];
++        [[RCTVLCVideoManager sharedInstance] play];
++        [[RCTVLCVideoManager sharedInstance] setRate:_rate];
++     
+     }
+     [_player setRate:_rate];
++    [[RCTVLCVideoManager sharedInstance] setRate:_rate];
+   }
+   
+   _paused = paused;
+@@ -967,7 +1059,8 @@ - (void)setSeek:(NSDictionary *)info
+ {
+   NSNumber *seekTime = info[@"time"];
+   NSNumber *seekTolerance = info[@"tolerance"];
+-  
++    NSLog(@"--VLC-rn-time:%@--tolerance:%@",seekTime,seekTolerance);
++    [[RCTVLCVideoManager sharedInstance] setSeek:info];
+   int timeScale = 1000;
+   
+   AVPlayerItem *item = _player.currentItem;
+@@ -983,6 +1076,7 @@ - (void)setSeek:(NSDictionary *)info
+     if (CMTimeCompare(current, cmSeekTime) != 0) {
+       if (!wasPaused) [_player pause];
+       [_player seekToTime:cmSeekTime toleranceBefore:tolerance toleranceAfter:tolerance completionHandler:^(BOOL finished) {
++          
+         if (!_timeObserver) {
+           [self addPlayerTimeObserver];
+         }
+@@ -1036,8 +1130,8 @@ - (void)setPreferredForwardBufferDuration:(float) preferredForwardBufferDuration
+ 
+ - (void)setAutomaticallyWaitsToMinimizeStalling:(BOOL)waits
+ {
+-	_automaticallyWaitsToMinimizeStalling = waits;
+-	_player.automaticallyWaitsToMinimizeStalling = waits;
++    _automaticallyWaitsToMinimizeStalling = waits;
++    _player.automaticallyWaitsToMinimizeStalling = waits;
+ }
+ 
+ 
+@@ -1051,8 +1145,13 @@ - (void)applyModifiers
+   } else {
+     [_player setVolume:_volume];
+     [_player setMuted:NO];
++      if(self.useVlC){
++          [_player setVolume:0];
++          [[RCTVLCVideoManager sharedInstance] setVolume:_volume];
++      }
+   }
+ 
++
+   if (@available(iOS 12.0, *)) {
+       self->_player.preventsDisplaySleepDuringVideoPlayback = _preventsDisplaySleepDuringVideoPlayback;
+   } else {
+@@ -1492,6 +1591,7 @@ - (void)removePlayerLayer
+     _playerLayerObserverSet = NO;
+   }
+   _playerLayer = nil;
++    [[RCTVLCVideoManager sharedInstance] removePlayer];
+ }
+ 
+ #pragma mark - RCTVideoPlayerViewControllerDelegate
+@@ -1615,6 +1715,7 @@ - (void)layoutSubviews
+ - (void)removeFromSuperview
+ {
+   [_player pause];
++    [[RCTVLCVideoManager sharedInstance] pause];
+   if (_playbackRateObserverRegistered) {
+     [_player removeObserver:self forKeyPath:playbackRate context:nil];
+     _playbackRateObserverRegistered = NO;
+diff --git a/node_modules/react-native-video/ios/Video/RCTVideoManager.m b/node_modules/react-native-video/ios/Video/RCTVideoManager.m
+index 000a9e8..1874e9f 100644
+--- a/node_modules/react-native-video/ios/Video/RCTVideoManager.m
++++ b/node_modules/react-native-video/ios/Video/RCTVideoManager.m
+@@ -10,7 +10,9 @@ @implementation RCTVideoManager
+ 
+ - (UIView *)view
+ {
+-  return [[RCTVideo alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
++    RCTVideo * videoView = [[RCTVideo alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
++    videoView.useVlC = YES;
++  return videoView;
+ }
+ 
+ - (dispatch_queue_t)methodQueue
+@@ -112,6 +114,12 @@ - (dispatch_queue_t)methodQueue
+         }
+     }];
+ };
++
++RCT_CUSTOM_VIEW_PROPERTY(useVlC, BOOL, RCTVideo) {
++    
++    [view setUseVlC:json];
++    
++}
+ RCT_EXPORT_VIEW_PROPERTY(onPictureInPictureStatusChanged, RCTDirectEventBlock);
+ RCT_EXPORT_VIEW_PROPERTY(onRestoreUserInterfaceForPictureInPictureStop, RCTDirectEventBlock);
+ 
+diff --git a/node_modules/react-native-video/react-native-video.podspec b/node_modules/react-native-video/react-native-video.podspec
+index 7013f95..a5c7577 100644
+--- a/node_modules/react-native-video/react-native-video.podspec
++++ b/node_modules/react-native-video/react-native-video.podspec
+@@ -24,12 +24,12 @@ Pod::Spec.new do |s|
+     ss.dependency "react-native-video/Video"
+     ss.dependency "SPTPersistentCache", "~> 1.1.0"
+     ss.dependency "DVAssetLoaderDelegate", "~> 0.3.1"
+-
+     ss.source_files = "ios/VideoCaching/**/*.{h,m}"
+     s.static_framework = true
+   end
+ 
+   s.dependency "React-Core"
++  s.dependency "IJKMediaFramework"
+ 
+   s.default_subspec = "Video"
+ 

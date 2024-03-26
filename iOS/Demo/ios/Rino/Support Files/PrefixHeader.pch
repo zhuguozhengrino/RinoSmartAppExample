@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  Rino
+//
+//  Created by zhangstar on 2022/8/16.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AppDelegate.h"
+#import "UtilsMacros.h"
+
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDWebImage/SDWebImage.h>
+#import <MJExtension/MJExtension.h>
+
+#import <RinoAppConfigModule/RinoAppConfigModule.h>
+#import <RinoBusinessLibraryModule/RinoRootViewController.h>
+#import <RinoBusinessLibraryModule/RinoRootNavigationController.h>
+#import <RinoFoundationKit/RinoFoundationKit.h>
+#import <RinoLanguageKit/RinoLanguageKit.h>
+#import <RinoLibraryModule/RinoLibraryModule.h>
+#import <RinoProgressHUD/RinoProgressHUD.h>
+#import <RinoUIKit/RinoUIKit.h>
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,17 @@
+{
+    "tab":{
+        "device":true,
+        "scene":true,
+        "mine":true
+    },
+    "scene_bg":[
+        "#858AE2",
+        "#6ECCD0",
+        "#6588E0",
+        "#9F7DDA",
+        "#65C395",
+        "#DE9B59",
+        "#DE6556",
+        "#DC7287"
+    ]
+}
