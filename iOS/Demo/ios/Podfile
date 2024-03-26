@@ -44,8 +44,6 @@ target 'Rino' do
   pod 'RinoPanelKit'
   #--------------设备----------------
   pod 'RinoDeviceKit'
-  #--------------ipc----------------
-  pod 'RinoIPCKit', :git => 'https://gitee.com/rinoapp/RinoIPCKit.git', :tag => '1.0.2'
   #--------------配网----------------
   pod 'RinoActivatorDefaultUISkin'     #配网UI库
   pod 'RinoActivatorKit'               #配网接口库
