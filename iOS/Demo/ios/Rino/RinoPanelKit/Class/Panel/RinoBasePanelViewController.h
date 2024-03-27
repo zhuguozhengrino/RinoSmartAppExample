@@ -28,7 +28,6 @@
 #endif
 
 #import "RinoEmitterModule.h"
-#import "RinoRNP2PBridgingModule.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

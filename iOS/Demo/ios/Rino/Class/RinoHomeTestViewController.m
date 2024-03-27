@@ -15,6 +15,9 @@
 #import <RinoActivatorDefaultUISkin/RinoActivatorDefaultUISkin.h>
 #import <RinoUserSettingsDefaultUISkin/RinoUserSettingsDefaultUISkin.h>
 #import <RinoHomeDefaultUISkin/RinoHomeDefaultUISkin.h>
+#import <RinoHomeKit/RinoFamilyBiz.h>
+#import <RinoMessageKit/RinoMessage.h>
+#import <RinoBaseKit/RinoBaseKit.h>
 @interface RinoHomeTestViewController ()<UITableViewDelegate,UITableViewDataSource,RinoHomeDelegate>
 
 @property (nonatomic , strong) UITableView *myTableView;
@@ -84,6 +87,11 @@
         [[RinoHomeDefaultUISkinManager sharedInstance] gotoFamilyManagementViewController];
     }
     
+    [[RinoUser sharedInstance] updateUserName:@"" success:^{
+            
+        } failure:^(NSError *error) {
+            
+        }];
 }
 
 

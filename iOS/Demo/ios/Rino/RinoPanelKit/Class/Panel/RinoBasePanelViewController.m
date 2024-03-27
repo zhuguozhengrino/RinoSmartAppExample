@@ -9,10 +9,8 @@
 
 #import <RinoBizCore/RinoBizCore.h>
 #import <RinoDebugKit/RinoDebugKit.h>
-#import <RinoIPCKit/RinoIPCKit.h>
 #import "RCTVLCVideoManager.h"
 #import "RinoIPCModule.h"
-#import "RinoRNP2PBridgingModule.h"
 @interface RinoBasePanelViewController ()<RCTBridgeDelegate>
 
 @property (nonatomic, assign) BOOL landscape;
@@ -25,9 +23,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[RCTVLCVideoManager sharedInstance] removePlayer];
     [[RinoPanelViewModel sharedInstance] leavePanel];
-    [[RinoIpcRNFunctionModul sharedInstance] destructionInstance];
     [RinoPanelManager sharedInstance].ipcFunctionType = RinoIpcPanelFunctionTypeNone;
-    [RinoIpcRNFunctionModul sharedInstance].inVideoVoice = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

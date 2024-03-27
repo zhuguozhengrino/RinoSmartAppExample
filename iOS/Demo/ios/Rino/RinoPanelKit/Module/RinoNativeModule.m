@@ -6,7 +6,6 @@
 //
 
 #import "RinoNativeModule.h"
-#import "RinoRNP2PBridgingModule.h"
 
 #import <NetworkExtension/NetworkExtension.h>
 #import <RinoAppConfigModule/RinoAppConfigModule.h>
@@ -16,7 +15,6 @@
 #import <RinoPanelKit/RinoPanelKit.h>
 #import <RinoPanelKit/RinoReactNativeModuleManager.h>
 #import <RinoLaunchMenuKit/RinoLaunchMenuKit.h>
-#import <RinoIPCKit/RinoIpcRNFunctionModul.h>
 @implementation RinoNativeModule
 
 RCT_EXPORT_MODULE();
@@ -344,7 +342,7 @@ RCT_EXPORT_METHOD(getMqttServer:(RCTPromiseResolveBlock)resolve
 RCT_EXPORT_METHOD(setIntercomLock:(BOOL)lock resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [RinoIpcRNFunctionModul sharedInstance].inVideoVoice = lock;
+//        [RinoIpcRNFunctionModul sharedInstance].inVideoVoice = lock;
     });
 }
 

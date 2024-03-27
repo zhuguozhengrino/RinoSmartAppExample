@@ -55,7 +55,6 @@
 		63D98EDF2934A86600A91F41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D98EDE2934A86600A91F41 /* CoreGraphics.framework */; };
 		63D98EE32934A87700A91F41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D98EE22934A87700A91F41 /* UIKit.framework */; };
 		63D98EE52934A87F00A91F41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D98EE42934A87F00A91F41 /* Foundation.framework */; };
-		63F8AC682A97306B005D2B19 /* RinoRNP2PBridgingModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F8AC672A97306B005D2B19 /* RinoRNP2PBridgingModule.m */; };
 		63FF2FA72A4E7EAE00719594 /* hermes.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638E07F72A4E7AE90045A51F /* hermes.xcframework */; };
 		BF3AA3312B2957250033E33E /* RinoDemoCountryListController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3AA3302B2957250033E33E /* RinoDemoCountryListController.m */; };
 		BF3AA3342B2957530033E33E /* RinoDemoRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3AA3332B2957530033E33E /* RinoDemoRegisterController.m */; };
@@ -163,8 +162,6 @@
 		63D98EE02934A86C00A91F41 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		63D98EE22934A87700A91F41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63D98EE42934A87F00A91F41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		63F8AC662A97306B005D2B19 /* RinoRNP2PBridgingModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoRNP2PBridgingModule.h; sourceTree = "<group>"; };
-		63F8AC672A97306B005D2B19 /* RinoRNP2PBridgingModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoRNP2PBridgingModule.m; sourceTree = "<group>"; };
 		BF3AA32F2B2957250033E33E /* RinoDemoCountryListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoDemoCountryListController.h; sourceTree = "<group>"; };
 		BF3AA3302B2957250033E33E /* RinoDemoCountryListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinoDemoCountryListController.m; sourceTree = "<group>"; };
 		BF3AA3322B2957530033E33E /* RinoDemoRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoDemoRegisterController.h; sourceTree = "<group>"; };
@@ -296,8 +293,6 @@
 		63B25F462A2F484D00454015 /* RinoPanelKit */ = {
 			isa = PBXGroup;
 			children = (
-				63F8AC662A97306B005D2B19 /* RinoRNP2PBridgingModule.h */,
-				63F8AC672A97306B005D2B19 /* RinoRNP2PBridgingModule.m */,
 				63B25F492A2F484D00454015 /* Class */,
 				63B25FBD2A2F484D00454015 /* Module */,
 				63B25FE22A2F484D00454015 /* Resource */,
@@ -587,7 +582,6 @@
 				63D0D75D2A720B5A00FC5C08 /* RinoUserModule.m in Sources */,
 				63B261902A2F484F00454015 /* RinoNativeModule.m in Sources */,
 				BFCD12F02B28042800EA7839 /* RinoDemoLoginController.m in Sources */,
-				63F8AC682A97306B005D2B19 /* RinoRNP2PBridgingModule.m in Sources */,
 				63B261522A2F484F00454015 /* RinoBasePanelViewController.m in Sources */,
 				63B2618B2A2F484F00454015 /* RinoDeviceModule.m in Sources */,
 				63B2618F2A2F484F00454015 /* RinoIPCModule.m in Sources */,

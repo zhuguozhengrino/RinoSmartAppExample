@@ -11,7 +11,7 @@
 
 @property (nonatomic , strong) UITableView *myTableView;
 
-@property (nonatomic , strong) NSArray *dataList;
+@property (nonatomic , strong) NSMutableArray *dataList;
 
 @property (nonatomic , strong) RinoHome *home;
 
@@ -69,8 +69,17 @@
 /// 获取家庭下的设备列表
 - (void)getHomeDeviceList {
     [self.home getHomeDeviceListAndGroupListWithSuccess:^(NSArray * _Nonnull list) {
-        
-        self.dataList = list;
+        for (id model in list) {
+            if ([model isKindOfClass:[RinoDeviceModel class]]) {
+                RinoDeviceModel *deviceModel = model;
+                if(!deviceModel.isIpc){
+                    [self.dataList addObject:deviceModel];
+                }
+            } else if ([model isKindOfClass:[RinoGroupModel class]]) {
+                RinoGroupModel *groupModel = model;
+                [self.dataList addObject:groupModel];
+            }
+        }
         [self.myTableView reloadData];
     } failure:^(NSError *error) {
         [RinoToast showMessage:[error.userInfo StringForKey:NSLocalizedDescriptionKey]];
@@ -84,6 +93,13 @@
         _myTableView.dataSource = self;
     }
     return _myTableView;
+}
+
+-(NSMutableArray *)dataList{
+    if(_dataList == nil){
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
 }
 
 @end

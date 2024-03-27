@@ -8,9 +8,6 @@
 #import "RinoIPCModule.h"
 #import <RinoWebViewKit/RinoWebViewKit.h>
 #import <RinoPanelKit/RinoPanelKit.h>
-#import <RinoIPCKit/RinoIpcRNFunctionModul.h>
-#import <RinoIPCKit/RinoAgoraRtcEngineManager.h>
-#import <RinoIPCKit/RinoIpcSnapShootManger.h>
 #import "RinoIPCPlay.h"
 
 @interface RinoIPCModule ()
@@ -28,13 +25,13 @@ RCT_EXPORT_METHOD(initIPC:(NSString *)ID map:(NSDictionary *)map
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] initIPC:ID map:map resolve:^(BOOL result) {
-            if(resolve){
-                resolve([NSNumber numberWithBool:result]);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] initIPC:ID map:map resolve:^(BOOL result) {
+//            if(resolve){
+//                resolve([NSNumber numberWithBool:result]);
+//            }
+//        } reject:^(NSError *error) {
+//
+//        }];
         
     });
     
@@ -44,13 +41,13 @@ RCT_EXPORT_METHOD(setParameters:(NSString *)ID parameters:(NSString *)parameters
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] setParameters:ID parameters:parameters resolve:^{
-            if (resolve) {
-                resolve([NSNumber numberWithBool:YES]);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] setParameters:ID parameters:parameters resolve:^{
+//            if (resolve) {
+//                resolve([NSNumber numberWithBool:YES]);
+//            }
+//        } reject:^(NSError *error) {
+//
+//        }];
     });
 }
 
@@ -59,13 +56,13 @@ RCT_EXPORT_METHOD(connect:(NSString *)ID map:(NSDictionary *)map
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance]connect:ID map:map resolve:^(BOOL result) {
-            if(resolve){
-                resolve([NSNumber numberWithBool:result]);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance]connect:ID map:map resolve:^(BOOL result) {
+//            if(resolve){
+//                resolve([NSNumber numberWithBool:result]);
+//            }
+//        } reject:^(NSError *error) {
+//
+//        }];
     });
     
 }
@@ -74,7 +71,7 @@ RCT_EXPORT_METHOD(connect:(NSString *)ID map:(NSDictionary *)map
 RCT_EXPORT_METHOD(pullStream:(NSString *)ID jsonValue:(NSString *)jsonValue resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] pullStream:ID jsonValue:jsonValue];
+//        [[RinoIpcRNFunctionModul sharedInstance] pullStream:ID jsonValue:jsonValue];
         
     });
     
@@ -85,13 +82,13 @@ RCT_EXPORT_METHOD(pullStream:(NSString *)ID jsonValue:(NSString *)jsonValue reso
 RCT_EXPORT_METHOD(muteRemote:(NSString *)ID map:(NSDictionary *)map resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] muteRemote:ID map:map resolve:^(BOOL result) {
-            if(resolve){
-                resolve([NSNumber numberWithBool:result]);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] muteRemote:ID map:map resolve:^(BOOL result) {
+//            if(resolve){
+//                resolve([NSNumber numberWithBool:result]);
+//            }
+//        } reject:^(NSError *error) {
+//
+//        }];
         
     });
     
@@ -103,14 +100,14 @@ RCT_EXPORT_METHOD(enableTalk:(NSString *)ID enable:(BOOL)enable
                   reject:(RCTPromiseRejectBlock)reject) {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] enableTalk:ID enable:enable resolve:^(BOOL result) {
-            if(resolve){
-                resolve([NSNumber numberWithBool:YES]);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
-        
+//        [[RinoIpcRNFunctionModul sharedInstance] enableTalk:ID enable:enable resolve:^(BOOL result) {
+//            if(resolve){
+//                resolve([NSNumber numberWithBool:YES]);
+//            }
+//        } reject:^(NSError *error) {
+//
+//        }];
+//
         
     });
 }
@@ -120,16 +117,16 @@ RCT_EXPORT_METHOD(putDeviceData:(NSString *)ID jsonValue:(NSString *)jsonValue r
                   reject:(RCTPromiseRejectBlock)reject) {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] putDeviceData:ID jsonValue:jsonValue resolve:^(BOOL result) {
-            if(resolve){
-                resolve([NSNumber numberWithBool:result]);
-            }
-        } reject:^(NSError *error) {
-            if (reject) {
-                reject([self rejectCode:error], [self rejectMessage:error], error);
-                
-            }
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] putDeviceData:ID jsonValue:jsonValue resolve:^(BOOL result) {
+//            if(resolve){
+//                resolve([NSNumber numberWithBool:result]);
+//            }
+//        } reject:^(NSError *error) {
+//            if (reject) {
+//                reject([self rejectCode:error], [self rejectMessage:error], error);
+//
+//            }
+//        }];
     });
 }
 
@@ -140,56 +137,56 @@ RCT_EXPORT_METHOD(openCloudStorage:(NSString *)url
                   reject:(RCTPromiseRejectBlock)reject) {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] openCloudStorage:url
-                                                              map:map
-                                                          resolve:^{
-            if (resolve) {
-                resolve([NSNumber numberWithBool:YES]);
-            }
-        } reject:^(NSError *error) {
-            if (reject) {
-                reject(@(error.code).stringValue, [error.userInfo StringForKey:NSLocalizedDescriptionKey], error);
-            }
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] openCloudStorage:url
+//                                                              map:map
+//                                                          resolve:^{
+//            if (resolve) {
+//                resolve([NSNumber numberWithBool:YES]);
+//            }
+//        } reject:^(NSError *error) {
+//            if (reject) {
+//                reject(@(error.code).stringValue, [error.userInfo StringForKey:NSLocalizedDescriptionKey], error);
+//            }
+//        }];
     });
 }
 
 -(void)snapshot{
-    RinoAgoraRtcEngineManager *manager = [RinoAgoraRtcEngineManager sharedInstance];
-    for (RinoAgoraRtcEngineDataModel *model in manager.ipcModelArr) {
-        for (RinoIPCPlay *ipcView in model.videoViewArr) {
-            NSString *role = ipcView.role;
-            NSString *ipcPath = [[RinoIpcSnapShootManger sharedInstance] shootSavedAtPathWithDeviceId:model.viewId];
-            NSString *filePath = [NSString stringWithFormat:@"%@_%@.png",ipcPath,role];
-            NSDictionary *map = @{@"filePath":filePath,@"uid":role};
-            [[RinoIpcRNFunctionModul sharedInstance] snapshot:model.viewId map:map resolve:^(NSDictionary *data) {
-                
-               
-            } reject:^(NSError *error) {
-                
-            }];
-        }
-    }
+//    RinoAgoraRtcEngineManager *manager = [RinoAgoraRtcEngineManager sharedInstance];
+//    for (RinoAgoraRtcEngineDataModel *model in manager.ipcModelArr) {
+//        for (RinoIPCPlay *ipcView in model.videoViewArr) {
+//            NSString *role = ipcView.role;
+//            NSString *ipcPath = [[RinoIpcSnapShootManger sharedInstance] shootSavedAtPathWithDeviceId:model.viewId];
+//            NSString *filePath = [NSString stringWithFormat:@"%@_%@.png",ipcPath,role];
+//            NSDictionary *map = @{@"filePath":filePath,@"uid":role};
+//            [[RinoIpcRNFunctionModul sharedInstance] snapshot:model.viewId map:map resolve:^(NSDictionary *data) {
+//
+//
+//            } reject:^(NSError *error) {
+//
+//            }];
+//        }
+//    }
 }
 
 #pragma mark - 视频截图
 RCT_EXPORT_METHOD(snapshot:(NSString *)ID map:(NSDictionary *)map resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [RinoIpcRNFunctionModul sharedInstance].snapDeviceId = [RinoPanelManager sharedInstance].deviceModel.deviceId;
-        NSString *path = [map StringForKey:@"filePath"];
-        if([path containsString:@"Documents/ipc/meida"]){
-            [[RinoIpcRNFunctionModul sharedInstance] snapshot:ID map:map resolve:^(NSDictionary *data) {
-                if(resolve){
-                    resolve(data);
-                }
-            } reject:^(NSError *error) {
-                if (reject) {
-                    reject([self rejectCode:error], [self rejectMessage:error], error);
-                }
-            }];
-        }
-        
+//        [RinoIpcRNFunctionModul sharedInstance].snapDeviceId = [RinoPanelManager sharedInstance].deviceModel.deviceId;
+//        NSString *path = [map StringForKey:@"filePath"];
+//        if([path containsString:@"Documents/ipc/meida"]){
+//            [[RinoIpcRNFunctionModul sharedInstance] snapshot:ID map:map resolve:^(NSDictionary *data) {
+//                if(resolve){
+//                    resolve(data);
+//                }
+//            } reject:^(NSError *error) {
+//                if (reject) {
+//                    reject([self rejectCode:error], [self rejectMessage:error], error);
+//                }
+//            }];
+//        }
+//
         
     });
 }
@@ -201,16 +198,16 @@ RCT_EXPORT_METHOD(snapshot:(NSString *)ID map:(NSDictionary *)map resolve:(RCTPr
 RCT_EXPORT_METHOD(startRecording:(NSString *)ID map:(NSDictionary *)map resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [RinoIpcRNFunctionModul sharedInstance].snapDeviceId = [RinoPanelManager sharedInstance].deviceModel.deviceId;
-        [[RinoIpcRNFunctionModul sharedInstance] startRecording:ID map:map resolve:^(BOOL result) {
-            if(resolve){
-                resolve([NSNumber numberWithBool:result]);
-            }
-        } reject:^(NSError *error) {
-            if (reject) {
-                reject([self rejectCode:error], [self rejectMessage:error], error);
-            }
-        }];
+//        [RinoIpcRNFunctionModul sharedInstance].snapDeviceId = [RinoPanelManager sharedInstance].deviceModel.deviceId;
+//        [[RinoIpcRNFunctionModul sharedInstance] startRecording:ID map:map resolve:^(BOOL result) {
+//            if(resolve){
+//                resolve([NSNumber numberWithBool:result]);
+//            }
+//        } reject:^(NSError *error) {
+//            if (reject) {
+//                reject([self rejectCode:error], [self rejectMessage:error], error);
+//            }
+//        }];
         
     });
 }
@@ -219,14 +216,14 @@ RCT_EXPORT_METHOD(startRecording:(NSString *)ID map:(NSDictionary *)map resolve:
 RCT_EXPORT_METHOD(stopRecording:(NSString *)ID resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"--Engine--stopRecording");
-        [[RinoIpcRNFunctionModul sharedInstance] stopRecording:ID resolve:^(NSDictionary *data) {
-            if(resolve){
-                resolve(data);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
+//        NSLog(@"--Engine--stopRecording");
+//        [[RinoIpcRNFunctionModul sharedInstance] stopRecording:ID resolve:^(NSDictionary *data) {
+//            if(resolve){
+//                resolve(data);
+//            }
+//        } reject:^(NSError *error) {
+//
+//        }];
     });
 }
 
@@ -235,11 +232,11 @@ RCT_EXPORT_METHOD(enableVideo:(NSString *)ID enable:(BOOL)enable
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] enableVideo:ID enable:enable resolve:^(BOOL result) {
-            
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] enableVideo:ID enable:enable resolve:^(BOOL result) {
+//
+//        } reject:^(NSError *error) {
+//
+//        }];
     });
 }
 
@@ -248,11 +245,11 @@ RCT_EXPORT_METHOD(enableMute:(NSString *)ID enable:(BOOL)enable
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] enableMute:ID enable:enable resolve:^(BOOL result) {
-            
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] enableMute:ID enable:enable resolve:^(BOOL result) {
+//
+//        } reject:^(NSError *error) {
+//
+//        }];
     });
 }
 
@@ -261,13 +258,13 @@ RCT_EXPORT_METHOD(releasePlayView:(NSString *)ID role:(NSString *)role resolve:(
                   reject:(RCTPromiseRejectBlock)reject) {
     NSLog(@"--Engine-----releasePlayView-----");
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] releasePlayView:ID role:role resolve:^(BOOL result) {
-            if (resolve) {
-                resolve([NSNumber numberWithBool:result]);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] releasePlayView:ID role:role resolve:^(BOOL result) {
+//            if (resolve) {
+//                resolve([NSNumber numberWithBool:result]);
+//            }
+//        } reject:^(NSError *error) {
+//
+//        }];
         
     });
 }
@@ -276,13 +273,13 @@ RCT_EXPORT_METHOD(enableVideoWithParams:(NSString *)ID map:(NSDictionary *)map r
                   reject:(RCTPromiseRejectBlock)reject) {
     NSLog(@"--Engine-----enableVideoWithParams-----");
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[RinoIpcRNFunctionModul sharedInstance] enableVideoWithParams:ID map:map resolve:^(BOOL result) {
-            if (resolve) {
-                resolve([NSNumber numberWithBool:result]);
-            }
-        } reject:^(NSError *error) {
-            
-        }];
+//        [[RinoIpcRNFunctionModul sharedInstance] enableVideoWithParams:ID map:map resolve:^(BOOL result) {
+//            if (resolve) {
+//                resolve([NSNumber numberWithBool:result]);
+//            }
+//        } reject:^(NSError *error) {
+//            
+//        }];
         
     });
 }

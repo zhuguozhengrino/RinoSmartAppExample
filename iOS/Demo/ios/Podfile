@@ -44,6 +44,8 @@ target 'Rino' do
   pod 'RinoPanelKit'
   #--------------设备----------------
   pod 'RinoDeviceKit'
+  
+  
   #--------------配网----------------
   pod 'RinoActivatorDefaultUISkin'     #配网UI库
   pod 'RinoActivatorKit'               #配网接口库

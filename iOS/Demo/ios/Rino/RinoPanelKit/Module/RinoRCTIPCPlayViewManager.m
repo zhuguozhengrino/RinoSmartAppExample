@@ -10,8 +10,6 @@
 #import "RinoRCTIPCPlayViewManager.h"
 #import <RinoPanelKit/RinoPanelKit.h>
 #import "RinoIPCPlay.h"
-#import <RinoIPCKit/RinoIPCKit.h>
-#import "RinoRNP2PBridgingModule.h"
 
 @interface RinoRCTIPCPlayViewManager ()
 
@@ -59,47 +57,15 @@ RCT_EXPORT_MODULE(RinoIPCPlay)
 RCT_CUSTOM_VIEW_PROPERTY(id, NSString, RinoIPCPlay) {
     NSLog(@"--Engine--viewId:%@",json);
     [view setID:json];
-    [[RinoAgoraRtcEngineManager sharedInstance] initModelDataWithViewId:json];
-    
 }
 RCT_CUSTOM_VIEW_PROPERTY(role, NSString, RinoIPCPlay) {
     [view setRole:json];
-    NSLog(@"--Engine--role:%@",json);
-    RinoAgoraRtcEngineDataModel *dataModel = [[RinoAgoraRtcEngineManager sharedInstance] getDataModelWithViewId:view.ID];
-    BOOL isExit = NO;
-    for (RinoIPCPlay *ipcView in dataModel.videoViewArr) {
-        if([ipcView.role isEqualToString:json]){
-            isExit = YES;
-            NSLog(@"--Engine-- 视图已经存在");
-            [dataModel rinoRemoteVideo:view role:view.role];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                if(view.onStatusChange){
-                    NSLog(@"--Engine--status:%@",ipcView.status);
-                    view.onStatusChange(@{@"status":ipcView.status});
-                }
-            });
-            return;
-        }
-    }
-    if(!isExit){
-        [dataModel.videoViewArr addObject:view];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            if(view.onStatusChange){
-                NSLog(@"--Engine--status:%@",RinoIPCStatusForInit);
-                view.onStatusChange(@{@"status":RinoIPCStatusForInit});
-            }
-        });
-    }
+    
     
 }
 RCT_CUSTOM_VIEW_PROPERTY(solution, solution, RinoIPCPlay) {
     [view setSolution:json];
-    NSString *solution = [NSString stringWithFormat:@"%@",json];
-    if([solution isEqualToString:@"ShangYun"]){
-        [RinoIpcRNFunctionModul sharedInstance].solutionType = RinoIPCConnectSolutionTypeShangYun;
-    }else if ([solution isEqualToString:@"Agora"]){
-        [RinoIpcRNFunctionModul sharedInstance].solutionType = RinoIPCConnectSolutionTypeAgora;
-    }
+    
     
 }
 
@@ -116,12 +82,7 @@ RCT_EXPORT_VIEW_PROPERTY(onOtherBusiness, RCTBubblingEventBlock)
 #pragma mark - Private
 - (void)p2pConenctChangeStatus:(NSString *)status viewId:(NSString *)viewId{
     dispatch_async(dispatch_get_main_queue(), ^{
-        RinoAgoraRtcEngineDataModel *dataModel = [[RinoAgoraRtcEngineManager sharedInstance] getDataModelWithViewId:viewId];
-        for (RinoIPCPlay *videoView in dataModel.videoViewArr) {
-            if(videoView.onStatusChange){
-                videoView.onStatusChange(@{@"status":status});
-            }
-        }
+        
         
     });
 }

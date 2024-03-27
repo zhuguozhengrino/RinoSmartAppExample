@@ -6,7 +6,6 @@
 //
 
 #import "RinoSmartBusinessManager.h"
-#import "RinoRNP2PBridgingModule.h"
 #import "RinoEmitterModule.h"
 
 #import "RinoActivatorPanelViewController.h"
@@ -72,7 +71,7 @@
 
 /// 初始化监听
 - (void)initBusinessMonitor {
-    [RinoRNP2PBridgingModule sharedInstance];
+    
 }
 
 #pragma mark - RinoDeviceHomeProtocol
