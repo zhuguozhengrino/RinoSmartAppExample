@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/device_controller_fragment">
+
+    <fragment
+        android:id="@+id/device_controller_fragment"
+        android:name="com.smart.rinoiot.matter.control.DeviceControllerFragment"
+        android:label="DeviceControllerFragment"
+        tools:layout="@layout/fragment_device_controller">
+
+        <action
+            android:id="@+id/device_controller_to_device_settings_fragment"
+            app:destination="@id/device_settings_fragment" />
+
+        <action
+            android:id="@+id/device_controller_to_device_color_fragment"
+            app:destination="@id/device_color_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/device_settings_fragment"
+        android:name="com.smart.rinoiot.matter.settings.DeviceSettingsFragment"
+        android:label="DeviceSettingsFragment"
+        tools:layout="@layout/fragment_device_settings">
+
+        <action
+            android:id="@+id/device_settings_to_device_share_fragment"
+            app:destination="@id/device_share_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/device_color_fragment"
+        android:name="com.smart.rinoiot.matter.color.DeviceColorFragment"
+        android:label="DeviceColorFragment"
+        tools:layout="@layout/fragment_device_color">
+    </fragment>
+
+    <fragment
+        android:id="@+id/device_share_fragment"
+        android:name="com.smart.rinoiot.matter.share.DeviceShareFragment"
+        android:label="DeviceShareFragment"
+        tools:layout="@layout/fragment_device_share">
+    </fragment>
+</navigation>

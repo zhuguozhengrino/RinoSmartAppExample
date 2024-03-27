@@ -1,0 +1,55 @@
+{
+  "Rino": [
+    {
+      "authorizationId": "rinoiot-iot-app",
+      "environment": "development",
+      "authorizationPassword": "olADJCmWlFIVXY1q1lx0wUrUbze7XweR",
+      "baseUrl": "https://dev.rinoiot.com/api/",
+      "mqttHostUrl": "dev.rinoiot.com",
+      "mqttPort": "1883",
+      "clientId": "cmlub2lvdC1pb3QtYXBwOm9sQURKQ21XbEZJVlhZMXExbHgwd1VyVWJ6ZTdYd2VS",
+      "shakeFlag": true,
+      "panelDebug": true,
+      "isSupportUmVerify": true,
+      "googleAgentId": "rinoiot-57f50",
+      "alexaClientId": "amzn1.application-oa2-client.10c1e82a4a8f4d52ba76a1994e0f0209",
+      "alexaRedirectUri": "https://iot.rinoiot.com/auth",
+      "webSocketUrl": "ws-miffy.iprodigytec.com",
+      "channelIdentifier": "pq7hclof"
+    },
+    {
+      "authorizationId": "rinoiot-iot-app",
+      "environment": "test",
+      "authorizationPassword": "olADJCmWlFIVXY1q1lx0wUrUbze7XweR",
+      "baseUrl": "https://dev.rinoiot.com/api/",
+      "mqttHostUrl": "dev.rinoiot.com",
+      "mqttPort": "1883",
+      "clientId": "cmlub2lvdC1pb3QtYXBwOm9sQURKQ21XbEZJVlhZMXExbHgwd1VyVWJ6ZTdYd2VS",
+      "shakeFlag": true,
+      "panelDebug": true,
+      "isSupportUmVerify": true,
+      "googleAgentId": "rinoiot-57f50",
+      "alexaClientId": "amzn1.application-oa2-client.10c1e82a4a8f4d52ba76a1994e0f0209",
+      "alexaRedirectUri": "https://iot.rinoiot.com/auth",
+      "webSocketUrl": "ws-miffy.iprodigytec.com",
+      "channelIdentifier": "pq7hclof"
+    },
+    {
+      "authorizationId": "rinoiot-iot-app",
+      "environment": "production",
+      "authorizationPassword": "olADJCmWlFIVXY1q1lx0wUrUbze7XweR",
+      "baseUrl": "https://dev.rinoiot.com/api/",
+      "mqttHostUrl": "dev.rinoiot.com",
+      "mqttPort": "1883",
+      "clientId": "cmlub2lvdC1pb3QtYXBwOm9sQURKQ21XbEZJVlhZMXExbHgwd1VyVWJ6ZTdYd2VS",
+      "shakeFlag": true,
+      "panelDebug": true,
+      "isSupportUmVerify": true,
+      "googleAgentId": "rinoiot-57f50",
+      "alexaClientId": "amzn1.application-oa2-client.10c1e82a4a8f4d52ba76a1994e0f0209",
+      "alexaRedirectUri": "https://iot.rinoiot.com/auth",
+      "webSocketUrl": "ws-miffy.iprodigytec.com",
+      "channelIdentifier": "pq7hclof"
+    }
+  ]
+}

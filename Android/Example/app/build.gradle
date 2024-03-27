@@ -1,0 +1,186 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.firebase.crashlytics'
+}
+project.ext.react = [
+        exnableHerems: false
+]
+
+
+// versionCode按时间自增
+def releaseVersionCode() {
+    return Integer.getInteger(new Date().format("yyyyMMddHH", TimeZone.getTimeZone("GMT+08:00")))
+}
+// 获取当前系统时间
+def releaseTime() {
+    return new Date().format("MMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+android {
+    def tempVersionCode = releaseVersionCode()
+    def tempVersionName = releaseTime()
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    signingConfigs {
+        android_studio_app {
+            keyAlias 'housing'
+            keyPassword 'shellinfoem'
+            storeFile file('./keystore/housing.keystore')
+            storePassword 'shellinfoem'
+        }
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            //网络安全配置
+            resValue "xml", "network_security_config", "@xml/network_security_config_debug"
+            // 混淆
+            minifyEnabled false
+            // 压缩对齐
+            zipAlignEnabled false
+            // 资源压缩
+            shrinkResources false
+            ndk {
+                //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+                abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            }
+            signingConfig signingConfigs.android_studio_app
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            //网络安全配置
+            resValue "xml", "network_security_config", "@xml/network_security_config_release"
+            // 混淆
+            minifyEnabled true
+            // 压缩对齐
+            zipAlignEnabled true
+            // 资源压缩
+            shrinkResources true
+            ndk {
+                //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.android_studio_app
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    flavorDimensions "version"
+    productFlavors {
+        google {//google play
+            dimension = "version"
+            manifestPlaceholders = [
+                    current_channel: "googlePlay",
+                    rn_core_version: rootProject.ext.android.rnCoreVersion
+            ]
+        }
+        domestic {//国内
+            dimension = "version"
+            manifestPlaceholders = [
+                    current_channel: "domesticStore",
+                    rn_core_version: rootProject.ext.android.rnCoreVersion
+            ]
+        }
+//        huawei {//华为
+//            dimension = "version"
+//            manifestPlaceholders = [
+//                    current_channel: "huaweiStore"
+//            ]
+//        }
+//        baidu {//百度手机助手
+//            dimension = "version"
+//            manifestPlaceholders = [
+//                    current_channel: "baiDuAssistant"
+//            ]
+//        }
+//        tengxun {//腾讯应用宝
+//            dimension = "version"
+//            manifestPlaceholders = [
+//                    current_channel: "tencentAppStore"
+//            ]
+//        }
+//        vivo {//vivo
+//            dimension = "version"
+//            manifestPlaceholders = [
+//                    current_channel: "vivoStore"
+//            ]
+//        }
+//        oppo {//oppo
+//            dimension = "version"
+//            manifestPlaceholders = [
+//                    current_channel: "oppoStore"
+//            ]
+//        }
+//        xiaomi {//小米
+//            dimension = "version"
+//            manifestPlaceholders = [
+//                    current_channel: "xiaoMiStore"
+//            ]
+//        }
+
+        packagingOptions {
+            pickFirst 'lib/*/libfbjni.so'
+            pickFirst 'lib/*/libc++_shared.so'
+            pickFirst 'lib/*/libyuv.so'
+            pickFirst 'lib/*/libopenh264.so'
+            exclude "**/libjsc.so"
+        }
+    }
+
+    //自定义打包时apk名称
+    android.applicationVariants.all { variant ->
+        def buildType = variant.buildType.name
+        variant.outputs.all {
+            outputFileName = "rino_${variant.productFlavors[0].name}_${releaseTime()}_${buildType}.apk"
+        }
+    }
+}
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    testImplementation 'junit:junit:4.+'
+
+    if (rootProject.ext.android.dependenciesSdk) {
+        implementation rootProject.ext.app_impl_sdk.common_sdk
+    } else {
+        implementation project(path: ':common_sdk')
+    }
+    api project(path: ':resource')
+    // Hilt
+    implementation "com.google.dagger:hilt-android:2.45"
+    annotationProcessor "com.google.dagger:hilt-compiler:2.45"
+}

@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  app 模块  -->
+    <!-- alexa  app to app 第三方语音配置 -->
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://baidu.com\" }]</string>
+
+    <!-- 高德地址key -->
+    <string name="rino_user_amap_apikey">dsjldsfljfsohfweroiwnfcmvfewecsd</string>
+    <string name="rino_app_name">犀云智能</string>
+    <string name="rino_user_feedback_account">accountapp@rinoiot.com</string>
+    <!-- 第一次安装用户协议和隐私政策 -->
+    <string name="rino_user_first_user_agreement_url">https://h5.rinoiot.com/agreement/user-agreement?appId=6e9QcQlsUtUPx1mG&amp;apiPath=https://service.rinoiot.com/api</string>
+    <string name="rino_user_first_privacy_policy_url">https://h5.rinoiot.com/agreement/private-policy?appId=6e9QcQlsUtUPx1mG&amp;apiPath=https://service.rinoiot.com/api</string>
+
+
+    <!-- bridge_SDK 模块-->
+
+    <string name="rino_h5_pay_wechat_error">未检测到微信客户端</string>
+
+    <!-- chat 模块-->
+    <string name="rino_chat_support_score">对此服务发表评论</string>
+    <string name="rino_chat_tab_support">客户支持</string>
+    <string name="rino_chat_support_input_hint">请输入咨询内容</string>
+    <string name="rino_chat_video_list">视频演示列表</string>
+    <string name="rino_chat_connect_tip">抱歉，由于服务器长时间未连接，在线客服暂时无法接通，您可以提交工单处理您的问题</string>
+    <string name="rino_chat_question_btn">提交票证</string>
+    <string name="rino_chat_support_score_title">这项服务解决了您的问题吗？</string>
+    <string name="rino_chat_support_score_solved">已解决</string>
+    <string name="rino_chat_support_score_unsolved">继续咨询</string>
+    <string name="rino_chat_issue_title">我猜你想问：</string>
+    <string name="rino_chat_score_success">评论发布成功</string>
+    <string name="rino_chat_support_faq">常见问题解答</string>
+    <string name="rino_chat_support">在线服务</string>
+    <string name="rino_chat_action_send">发送</string>
+    <string name="rino_chat_video">视频</string>
+    <string name="rino_common_request_camera">需要相机权限</string>
+
+
+    <!-- common_SDK 模块-->
+
+    <!-- 用户协议和隐私政策 -->
+    <string name="rino_user_user_agreement_url">%1s/agreement/user-agreement</string>
+    <string name="rino_user_privacy_policy_url">%1s/agreement/private-policy</string>
+
+    <string name="rino_common_cancel">取消</string>
+    <string name="rino_common_no_data_title">暂无数据</string>
+    <string name="rino_common_loading">加载中...</string>
+    <string name="rino_common_network_unavailable">当前网络不可用，请检查手机网络</string>
+    <string name="rino_user_country_the_uniteds_states">美国</string>
+    <string name="rino_common_permission_opened">已开启</string>
+    <string name="rino_common_permission_go_to_open">去打开</string>
+    <string name="rino_nfc_turn_on_bluetooth">开启蓝牙</string>
+    <string name="rino_common_permission_rationale">1.蓝牙权限用于基本蓝牙操作；\n2.位置权限将用于手机定位和蓝牙；\n为了正常使用APP必须打开所有权限，点击同意</string>
+    <string name="rino_common_open_setting_permission">您拒绝了部分权限，将无法正常使用APP，请进入权限设置界面，打开所有权限</string>
+    <string name="rino_common_confirm">确定</string>
+    <string name="rino_common_access_location">访问地理位置</string>
+    <string name="rino_common_access_location_tips">用于搜索附近的设备及显示WiFi名称、场景自动化等</string>
+    <string name="rino_common_camera">访问相机</string>
+    <string name="rino_common_camera_tips">用于扫描、拍照、录制视频等</string>
+    <string name="rino_common_media_files">访问媒体文件</string>
+    <string name="rino_common_media_files_tips">用于访问设备相关图片、音频和视频等文件</string>
+    <string name="rino_common_alert_title">温馨提示</string>
+    <string name="rino_common_permission_denied_desc">你没有%1s的访问权限，请在设置中打开此权限</string>
+    <string name="rino_family_permission_denied_title">普通成员不可操作</string>
+    <string name="rino_family_permission_denied_tips">请联系家庭所有者来开通权限</string>
+    <string name="rino_device_not_support_network_config_cancel">我知道了</string>
+    <string name="rino_common_save">保存</string>
+    <string name="rino_nfc_i_know">知道了</string>
+    <string name="rino_common_permission_location">位置</string>
+    <string name="rino_common_permission_camera">相机</string>
+    <string name="rino_common_permission_title">%1sApp需请求以下权限</string>
+    <string name="rino_common_ble_permission">允许本应用的“蓝牙”权限</string>
+    <string name="rino_common_ble_nearby_permission">允许本应用的“附近的设备”权限</string>
+    <string name="rino_common_open_system_ble_permission">打开蓝牙（或重试）</string>
+    <string name="rino_device_enable_bluetooth">当前手机蓝牙关闭，是否打开以扫描附近蓝牙设备？</string>
+    <string name="rino_common_user_location_service">用户定位服务是以关闭，是否开启</string>
+    <string name="rino_common_second_unit">秒</string>
+    <string name="rino_common_minutes_unit">分</string>
+    <string name="rino_common_hour_unit">时</string>
+    <string name="rino_common_operation_failure">操作失败</string>
+    <string name="rino_common_operation_success">操作成功</string>
+    <string name="rino_common_permission_notification">通知</string>
+    <string name="rino_common_jan">一月</string>
+    <string name="rino_common_feb">二月</string>
+    <string name="rino_common_mar">三月</string>
+    <string name="rino_common_apr">四月</string>
+    <string name="rino_common_may">五月</string>
+    <string name="rino_common_jun">六月</string>
+    <string name="rino_common_jul">七月</string>
+    <string name="rino_common_aug">八月</string>
+    <string name="rino_common_sep">九月</string>
+    <string name="rino_common_oct">十月</string>
+    <string name="rino_common_nov">十一月</string>
+    <string name="rino_common_dec">十二月</string>
+    <string name="rino_common_hour_unit_simple">时</string>
+    <string name="rino_common_minutes_unit_simple">分</string>
+    <string name="rino_common_second_unit_simple">秒</string>
+    <string name="rino_common_timeout">超时</string>
+    <string name="rino_common_success">成功</string>
+    <string name="rino_common_fail">失败</string>
+    <string name="rino_scene_local_scene">本地场景</string>
+    <string name="rino_scene_local_scene_wait">这是一个本地场景，请等待网关相应</string>
+    <string name="rino_scene_local_scene_condition">条件</string>
+    <string name="rino_scene_local_scene_task">任务</string>
+    <string name="rino_common_retry">重试</string>
+
+    <!-- connect SDK 模块-->
+
+    <string name="rino_common_ble_is_support">手机是否支持蓝牙</string>
+    <string name="rino_device_cloud">云端</string>
+    <string name="rino_device_edge_gateway">边缘</string>
+    <string name="rino_device_activator_brink_gateway">边缘网关列表</string>
+    <string name="rino_device_activator_brink_gateway_number">编号</string>
+    <string name="rino_common_back">返回</string>
+    <string name="rino_device_activator_ble_connect">蓝牙直连</string>
+    <string name="rino_device_activator_wifi_title">选择设备工作Wi-Fi并输入密码</string>
+    <string name="rino_device_activator_wifi_desc">请选择2.4Gz Wifi连接使用</string>
+    <string name="rino_device_wifi_5g_tips">这可能是一个5GHz WiFi</string>
+    <string name="rino_device_user_wifi">上次使用过的网络</string>
+    <string name="rino_device_available_network">可用网络</string>
+    <string name="rino_device_wifi_search">正在搜寻附近网络…</string>
+    <string name="rino_common_refresh">刷新</string>
+    <string name="rino_common_next">下一步</string>
+    <string name="rino_device_current_no_wifi">目前手机没有连接WiFi</string>
+    <string name="rino_device_to_connect">去连接</string>
+    <string name="rino_device_add_all">全部添加</string>
+    <string name="rino_device_distribution_network_tips">点击添加设备</string>
+    <string name="rino_device_activator_to_be_add_device">可添加设备</string>
+    <string name="rino_device_activator_wait_reset_device">待重置设备</string>
+    <string name="rino_device_distribution_network_success">添加成功</string>
+    <string name="rino_device_add">添加设备</string>
+    <string name="rino_common_finish">完成</string>
+    <string name="rino_device_activator_error">配网失败</string>
+    <string name="rino_device_activator_wifi_error">WiFi名称或密码不正确</string>
+    <string name="rino_device_activator_connect_wifi_failure">设备连接WiFi失败</string>
+    <string name="rino_device_activator_bind_failure">绑定失败</string>
+    <string name="rino_device_activator_unbind_failure">解绑失败</string>
+    <string name="rino_device_activator_init_failure">初始化失败</string>
+    <string name="rino_device_activator_parse_model_failure">物模型解析失败</string>
+    <string name="rino_device_connect_wifi_failure">设备联网失败</string>
+    <string name="rino_device_activator_exit_title">设备正在添加，是否退出？</string>
+    <string name="rino_device_activator_exit_desc">设备可能正在添加,确认退出?若确认退出,请在下次添加设备时按照流程重置设备</string>
+    <string name="rino_device_detail_info_ipmac">IP地址</string>
+    <string name="rino_device_activator_error_binded">设备已被其他用户绑定，请先解绑</string>
+    <string name="rino_connect_wifi_content">是否打开系统WiFi</string>
+
+    <!-- connect_ui 模块 -->
+
+    <string name="rino_device_not_support_network_config">如果您想绑定该设备，需要使设备处于配网模式</string>
+    <string name="rino_device_not_support_network_config_confirm">查看引导</string>
+    <string name="rino_device_scan">扫一扫</string>
+    <string name="rino_device_activator_add_device_adding">正在添加设备</string>
+    <string name="rino_device_activator_add_device_timeout">设备添加超时</string>
+    <string name="rino_device_not_support_qrcode">暂不支持二维码配网方式</string>
+    <string name="rino_nfc_connect_device">连接设备</string>
+    <string name="rino_device_found_add">已发现%1s个设备</string>
+    <string name="rino_device_automatic_find">自动搜寻附近设备中…</string>
+    <string name="rino_device_manual_add">手动添加设备</string>
+    <string name="rino_device_activator_open_bluetooth_tip">请点击蓝牙按钮打开系统蓝牙</string>
+    <string name="rino_device_activator_scan_timeout">请将手机靠近设备与路由器，并保持网络正常-Fi</string>
+    <string name="rino_device_activator_device_retry">按步骤重试</string>
+    <string name="rino_device_activator_device_success">配网成功</string>
+    <string name="rino_device_connect_ipc_tips">将二维码正对着摄像头，保持15-20cm距离</string>
+    <string name="rino_device_activator_not_scan_title">扫描不到要添加的设备…</string>
+    <string name="rino_device_activator_not_scan_subtitle">扫描不到要添加的设备怎么办？</string>
+    <string name="rino_device_activator_not_scan_desc1">可能由于当前网络环境较差或设备已被他人绑定。</string>
+    <string name="rino_device_activator_not_scan_desc2">1.请确保手机与设备之间的距离足够近，并且周围网络环境没有强干扰。</string>
+    <string name="rino_device_activator_not_scan_desc3">2.同时需确认应用的定位权限未关闭。若手动关闭了应用定位权限可能会导致无法自动发现设备。</string>
+    <string name="rino_device_activator_not_scan_desc4">3.如果仍始终无法发现设备，可能因为设备已经被他人绑定了。如果你并不清楚是谁链接了设备，可以进行重置，重置方式请查阅说明书，或在APP中选择“手动添加”设备，根据引导操作。</string>
+    <string name="rino_device_activator_not_scan_desc5">4.蓝牙设备请检查设备是否正常通电，手机蓝牙是否已经打开。</string>
+    <string name="rino_user_input_password">请输入密码</string>
+    <string name="rino_device_detail_list_info">设备信息</string>
+    <string name="rino_device_update_room">选择设备所在房间</string>
+    <string name="rino_device_activator_connect_wifi">连接WI-Fi</string>
+    <string name="rino_device_activator_find_device">寻找设备</string>
+    <string name="rino_device_activator_bind_device">绑定设备</string>
+    <string name="rino_device_activator_register_cloud">注册到云</string>
+    <string name="rino_device_activator_init_device">设备初始化</string>
+    <string name="rino_device_activator_continue_add">继续添加</string>
+    <string name="rino_device_activator_not_scan_device">扫描不到怎么办？</string>
+    <string name="rino_device_guide_empty_tips">未配置配网引导</string>
+    <string name="rino_device_activator_ap_wifi_guide_decs1">1、请将手机连接到下图所示热点</string>
+    <string name="rino_device_activator_ap_wifi_guide_decs4">2、返回本应用，继续添加设备</string>
+    <string name="rino_device_activator_ap_wifi_guide_sure">确定连接热点无误，继续下一步</string>
+    <string name="rino_device_activator_ap_wifi_guide_again_connect">重新连接</string>
+
+    <!-- device_sdk 模块 -->
+
+    <string name="rino_device_upgrade_tips">即将自动安装 请勿中途退出APP</string>
+    <string name="rino_device_drag_to_sort">长按拖拽排序</string>
+    <string name="rino_common_delete">删除</string>
+    <string name="rino_device_reset_sort">重置排序</string>
+    <string name="rino_device_panel_dialog_rename_title">重命名</string>
+    <string name="rino_device_delete_message">设备移除后与其相关的场景即将失效</string>
+    <string name="rino_device_management">设备管理</string>
+    <string name="rino_device_delete_title">确认要移除设备或解散群组吗？</string>
+    <string name="rino_device_update">设备升级</string>
+    <string name="rino_family_delete_success">删除成功</string>
+    <string name="rino_device_remove_group">解散群组</string>
+    <string name="rino_device_detail_gateway_connect_method">网关连接方式</string>
+    <string name="rino_device_detail_run_time">运行时间</string>
+    <string name="rino_device_detail_sub_device_count">子设备数量</string>
+    <string name="rino_device_detail_run_status">运行状态</string>
+
+    <!-- device_share_ui -->
+
+    <string name="rino_device_home_receive_share">我收到的共享</string>
+    <string name="rino_device_home_receive_share_decs">您收到的共享设备，对您家中其他成员不可见</string>
+    <string name="rino_device_share_cancel_title">是否取消共享</string>
+    <string name="rino_device_detail_share">共享设备</string>
+    <string name="rino_device_detail_share_group">共享群组</string>
+    <string name="rino_device_alert_remove_shared">是否移除共享</string>
+    <string name="rino_device_home_receive_share_detail">共享详情</string>
+    <string name="rino_device_detail_share_input_account">请输入账号</string>
+    <string name="rino_device_detail_share_coutry_title">国家/地区</string>
+    <string name="rino_device_detail_add_share_title">添加共享</string>
+    <string name="rino_device_home_receive_share_device">收到的共享设备</string>
+    <string name="rino_device_detail_share_title">设备已被共享给以下%1sAPP用户</string>
+    <string name="rino_device_shared_help">帮助</string>
+    <string name="rino_device_share_user_home_title">的家</string>
+    <string name="rino_device_detail_share_add_remark">添加备注</string>
+    <string name="rino_device_detail_share_alert_input_remark">请输入备注</string>
+    <string name="rino_device_detail_cancel_share">取消共享</string>
+    <string name="rino_device_detail_remove_share">移除共享</string>
+    <string name="rino_device_deteil_share_from">设备来自</string>
+    <string name="rino_device_home_receive_share_from">共享来自</string>
+    <string name="rino_device_home_receive_share_notes">备注</string>
+    <string name="rino_device_shared_help_unsupport_shared_model">当前设备暂不支持此共享方式</string>
+    <string name="rino_device_shared_help_unsupport_shared_model_sub">蓝牙Mesh、单蓝牙、网关等设备暂不支持通过此方式共享给其他用户使用。</string>
+    <string name="rino_device_shared_help_family_recommand">推荐添加家庭成员共享方式</string>
+    <string name="rino_device_shared_help_family_recommand_sub">请通过家庭管理入口添加成员，完成添加后，可将家庭下设备批量共享。</string>
+    <string name="rino_device_group_item_online">在线</string>
+    <string name="rino_device_group_item_select_num"> 选中</string>
+    <string name="rino_device_group_item_offline">离线</string>
+    <string name="rino_device_group_item_existing_group">已存在分组</string>
+    <string name="rino_device_group_max_nums">最多4台相机</string>
+    <string name="rino_device_mulit_screen_name">多屏分组名称</string>
+
+    <!-- device_ui 模块 -->
+
+    <string name="rino_device_status_offline">已离线</string>
+    <string name="rino_device_upgrading">升级中… %1s %%</string>
+    <string name="rino_device_upgrading_version_to">正在升级版本至：V %1s</string>
+    <string name="rino_device_upgrade_success">升级成功</string>
+    <string name="rino_device_upgrade_fail">升级失败</string>
+    <string name="rinp_device_group_input_name">请输入群组名称</string>
+    <string name="rino_device_detail_name_input">请输入设备名称</string>
+    <string name="rino_device_dissolve_group">确定要解散该群组吗？</string>
+    <string name="rino_device_create_group_rename">修改名称</string>
+    <string name="rino_device_upgrade_stop">设备升级中，中途退出可能会升级失败</string>
+    <string name="rino_device_upgrade_quit">坚持退出</string>
+    <string name="rino_device_upgrade_not_quit">暂不退出</string>
+    <string name="rino_device_cancel_upgrade_title">是否退出升级？</string>
+    <string name="rino_device_cancel_upgrade_tips">设备正在升级，退出后设备将可能升级不成功</string>
+    <string name="rino_family_exit">退出</string>
+    <string name="rino_device_detail_delete_type_unbind">解除绑定</string>
+    <string name="rino_device_detail_delete_type_unbind_clear">解绑并清除数据</string>
+    <string name="rino_device_upgrade_tips_1">升级过程中，为保证能升级成功</string>
+    <string name="rino_device_upgrade_tips_2">请停留在当前页面</string>
+    <string name="rino_device_upgrade_tips_3">将手机尽量靠近设备</string>
+    <string name="rino_device_upgrade_tips_4">确保设备正常通电</string>
+    <string name="rino_device_upgrade_precautions">升级注意事项</string>
+    <string name="rino_device_upgrade_precautions_info">升级可能持续较长时间，请确保设备处于电量充足状态，升级时设备不可使用。</string>
+    <string name="rino_device_start_upgrade">开始升级</string>
+    <string name="rino_device_upgrade_instructions">升级说明：</string>
+    <string name="rino_device_module_ota_target">模组固件可升级：%1s</string>
+    <string name="rino_device_module_ota_current">当前模组固件版本：%1s</string>
+    <string name="rino_device_mcu_ota_target">MCU固件可升级：%1s</string>
+    <string name="rino_device_mcu_ota_current">当前MCU固件版本：%1s</string>
+    <string name="rino_device_panel_rename_title">名称</string>
+    <string name="rino_common_copy">复制</string>
+    <string name="rino_device_detail_info_signal">信号连接</string>
+    <string name="rino_device_reboot">设备重启</string>
+    <string name="rino_device_create_group">创建群组</string>
+    <string name="rino_device_latest">已经是最新版本</string>
+    <string name="rino_device_detail_delete_title">移除设备</string>
+    <string name="rino_device_detail_title">设备详情</string>
+    <string name="rino_device_detail_location">位置管理</string>
+    <string name="rino_common_cope_success">复制成功</string>
+    <string name="rino_device_detail_info_dev_sn">设备SN</string>
+    <string name="rino_device_detail_info_devid">设备ID</string>
+    <string name="rino_device_time_zone">设备时区</string>
+    <string name="rino_device_group_manager">管理群组</string>
+    <string name="rino_device_edit_group_name">群组设备</string>
+    <string name="rino_device_create_group_name">群组名称</string>
+    <string name="rino_device_ota_upgrade">有固件可更新</string>
+    <string name="rino_device_position_manager">位置管理</string>
+    <string name="rino_family_delete_room_tip">确定删除该房间吗？</string>
+    <string name="rino_device_create_group_desc">创建群组后可以同时控制设备</string>
+    <string name="rino_device_create_group_condition_tips">一个家庭下，需要有至少2个相同产品才可以组成群组</string>
+    <string name="rino_device_save_group_condition_tips">至少添加2个设备才可以创建群组</string>
+    <string name="rino_device_edit_group_tips">可添加更多设备到当前群组下</string>
+    <string name="rino_device_firmware_upgrade">固件升级</string>
+    <string name="rino_device_no_data_desc">您还没有设备，点击右上角添加一个试试吧！</string>
+    <string name="rino_device_member_no_data_tips">可以让家庭创建者添加产品，添加后您也可以使用</string>
+    <string name="rino_family_device_count">%d个设备</string>
+    <string name="rino_device_detail_unbind_device_title">确定要解绑设备吗？</string>
+    <string name="rino_device_detail_unbind_clear_device_title">确定解绑并清除数据吗？</string>
+    <string name="rino_device_detail_unbind_device_tips">设备解绑后，与其相关的"自动化"场景将不可用</string>
+    <string name="rino_device_detail_unbind_clear_device_tips">设备将恢复出厂设置，从设备列表移除，设备相关数据将全部清除</string>
+    <string name="rino_common_unselect_all">全不选</string>
+    <string name="rino_common_unit_day">天</string>
+    <string name="rino_common_unit_hour">小时</string>
+    <string name="rino_device_ota_upgrading">正在升级</string>
+    <string name="rino_device_batch_upgrade">批量固件升级</string>
+    <string name="rino_device_batch_upgrade_empty_tips">当前没有可用于升级的设备</string>
+    <string name="rino_device_batch_upgrade_product_id">产品ID</string>
+    <string name="rino_device_batch_upgrade_product_title">设备批量升级</string>
+    <string name="rino_device_batch_upgrade_product_tips">请选择需要升级的产品</string>
+    <string name="rino_device_batch_upgrade_device">批量升级</string>
+    <string name="rino_device_batch_upgrade_device_version">版本</string>
+    <string name="rino_device_batch_upgrade_device_selected_all_tips">最多全选四十个</string>
+    <string name="rino_device_gateway_sub_share_remove">分享的网关子设备不支持移除分享</string>
+    <string name="rino_device_edit_group">编辑群组</string>
+    <string name="rino_common_create_success">创建成功</string>
+    <string name="rino_device_group">群组</string>
+    <string name="rino_device_hibernated">已休眠</string>
+    <string name="rino_device_share_matter_title">关联启用 Matter 的应用</string>
+    <string name="rino_device_share_matter_content">选择一个已启用 Matter 的应用来控制和管理此设备，您还可以使用代码关联或邀请他人</string>
+    <string name="rino_device_share_manual_code">使用配对码</string>
+    <string name="rino_device_share_qr_code">使用二维码</string>
+    <string name="rino_device_share_qr_code_title">使用二维码分享</string>
+    <string name="rino_device_share_qr_code_content">%1s已经处于配对模式，可通过扫码进行设备的连接。此二维码将在15分钟后失败，未分享完成前，请不要退出此界面，否则可能分享失败</string>
+    <string name="rino_device_share_manual_code_title">使用配对码分享</string>
+    <string name="rino_device_share_manual_code_content">%1s已经处于配对模式，可通过复制和粘贴该配对码进行设备的连接。此二维码将在15分钟后失败，未分享完成前，请不要退出此界面，否则可能分享失败</string>
+    <string name="rino_device_share_copy_code">复制配对码</string>
+    <string name="rino_device_share_offline_tips">设备已离线，不支持共享</string>
+    <string name="rino_device_delete_group_tips">强制解散该群组将从场景中移除，确认要解散该群组吗？</string>
+    <string name="rino_device_delete_device_tips">强制解绑该设备将从场景和群组中移除，确定要解绑设备吗？</string>
+    <string name="rino_device_delete_cache_tips">强制解绑该设备将从场景和群组中移除，确定要解绑并清除数据吗？</string>
+    <string name="rino_common_replace">替换</string>
+    <string name="rino_device_sub_device_cancel_operation">取消操作</string>
+    <string name="rino_device_gateway_replace_empty_tips">暂无可替换的网关设备</string>
+    <string name="rino_device_gateway_replace">网关替换</string>
+    <string name="rino_device_gateway_replace_select">请选择需要替换的网关</string>
+    <string name="rino_device_gateway_replace_success">替换成功</string>
+    <string name="rino_device_gateway_sub_device_code">编码</string>
+    <!-- family_ui 模块 -->
+
+    <string name="rino_family_management">家庭房间管理</string>
+    <!--    <string name="rino_family_manager">家庭管理</string>-->
+    <string name="rino_family_leave_family">离开家庭</string>
+    <string name="rino_family_name">家庭名称</string>
+    <string name="rino_family_input_add_member_hint">请输入添加人员手机号/邮箱</string>
+    <string name="rino_family_manager">家庭管理</string>
+    <string name="rino_family_device_counnt">全部设备数量</string>
+    <string name="rino_family_room_management">房间管理</string>
+    <string name="rino_family_member">家庭成员</string>
+    <string name="rino_family_role_owner">家庭创建者</string>
+    <string name="rino_family_add_success">家庭创建成功</string>
+    <string name="rino_family_is_join_family">是否加入该家庭？</string>
+    <string name="rino_family_join_family">确定加入</string>
+    <string name="rino_family_reject_join">拒绝加入</string>
+    <string name="rino_family_not_join_family">再想想</string>
+    <string name="rino_common_family_manager">家庭管理</string>
+    <string name="rino_family_set_location_desc">设定家庭位置将使你更好体验场景等功能</string>
+    <string name="rino_family_recommend">推荐</string>
+    <string name="rino_family_add_member_title">添加家庭成员</string>
+    <string name="rino_family_add_room_success">添加房间成功</string>
+    <string name="rino_family_role_admin">管理员</string>
+    <string name="rino_family_role_member">普通成员</string>
+    <string name="rino_family_confirm_delete_family">确定要删除家庭吗？</string>
+    <string name="rino_family_delete_family_desc">家庭删除后，所有成员会被删除、数据会被清空、已添加设备会被解绑和重置</string>
+    <string name="rino_family_role">家庭权限</string>
+    <string name="rino_family_remove_family">移除家庭</string>
+    <string name="rino_family_member_info">成员信息</string>
+    <string name="rino_family_create_family">新建家庭</string>
+    <string name="rino_family_my_home">我的家</string>
+    <string name="rino_family_room_count">%d个房间</string>
+    <string name="rino_family_input_name">请输入家庭名称</string>
+    <string name="rino_family_input_location_hint">请设定家庭位置</string>
+    <string name="rino_family_add_room_title">添加房间</string>
+    <string name="rino_family_continue_edit">继续编辑</string>
+    <string name="rino_family_living_room">客厅</string>
+    <string name="rino_family_exit_title">您当前创建的家庭还没有保存，是否放弃编辑并退出？</string>
+    <string name="rino_family_master_bedroom">主卧</string>
+    <string name="rino_family_second_bedroom">次卧</string>
+    <string name="rino_family_dining_room">餐厅</string>
+    <string name="rino_family_kitchen">厨房</string>
+    <string name="rino_family_balcony">阳台</string>
+    <string name="rino_family_location">家庭位置</string>
+    <string name="rino_family_room_input_hint">请输入房间名称</string>
+    <string name="rino_family_room_name_title">房间名称</string>
+    <string name="rino_family_invitation_sent">已发送邀请</string>
+    <string name="rino_family_waiting_to_join">等待加入</string>
+    <string name="rino_family_update_info">家庭信息已更新</string>
+    <string name="rino_family_join_success">加入成功</string>
+    <string name="rino_family_room_nav_title">房间设置</string>
+    <string name="rino_family_room_equipment_not_in_room">不在此房间的设备</string>
+    <string name="rino_family_delete_member">移除成员</string>
+    <string name="rino_family_delete_member_tips">是否删除此成员？</string>
+    <string name="rino_device_all">全部设备</string>
+    <string name="rino_common_anonymous_voice">1.第三方语音</string>
+    <string name="rino_user_login">登录</string>
+    <string name="rino_user_register">注册</string>
+    <string name="rino_user_without_account_some_functions_cannot_used">没有账号，将无法使用APP中的部分功能</string>
+    <string name="rino_common_anonymous_voice_desc">支持主流的第三方语音平台</string>
+    <string name="rino_common_anonymous_create_family">2.家庭创建</string>
+    <string name="rino_common_anonymous_cloud_storage">3.云端数据存储</string>
+    <string name="rino_common_anonymous_create_family_desc">支持多家庭创建以及邀请其他人员加入家庭</string>
+    <string name="rino_common_anonymous_cloud_storage_desc">登录后所有设备保存在云端，方便信息同步</string>
+    <string name="rino_common_anonymous_title">暂无权限，请先登录！</string>
+    <string name="rino_family_room_name_not_empty">房间名称不能为空</string>
+    <string name="rino_device_home_add_devices">我添加的设备</string>
+    <string name="rino_device_add_sub_device">添加子设备</string>
+    <string name="rino_device_add_gateway">添加子设备前需要先添加网关</string>
+    <string name="rino_family_confirm_remove_family">确定要离开家庭吗？</string>
+    <string name="rino_family_room_update_info">房间信息更新成功</string>
+
+    <!-- feedback-ui 模块 -->
+
+    <string name="rino_mine_feedback_title">我的反馈</string>
+    <string name="rino_mine_feedback_problem_type_title">问题类别</string>
+    <string name="rino_mine_common_problem">常见问题</string>
+    <string name="mf_faq_select_faulty_device">选择设备</string>
+    <string name="mf_faq_type">问题类型</string>
+    <string name="mf_faq_upload_image">上传图片</string>
+    <string name="mf_faq_upload_image_tip_des">(最多 3 张照片)</string>
+    <string name="mf_faq_contact_number">联系电子邮件</string>
+    <string name="mf_faq_time_of_occurrence">发生时间</string>
+    <string name="mf_faq_add_image_over_limit">您添加了超过3张图片!</string>
+    <string name="mf_faq_please_input_question">请填写问题描述</string>
+    <string name="mf_faq_order_number">订单号</string>
+    <string name="mf_faq_order_number_hint">请输入订单号</string>
+    <string name="mf_faq_popur_problem">假设你想看</string>
+    <string name="mf_faq_more_question">更多热点问题</string>
+    <string name="mf_faq_others_question">其他问题</string>
+    <string name="mf_faq_help_center">帮助中心</string>
+    <string name="mf_faq_problem_type">问题分类</string>
+    <string name="mf_faq_popur_problem_type">热点问题</string>
+    <string name="mf_faq_all_problem_type">所有问题</string>
+    <string name="mf_faq_problem_detail">问题详情</string>
+    <string name="mf_faq_robit_replay">您的问题已进入人工客服队列处理，请耐心等待</string>
+    <string name="mf_faq_no_more_data">没有更多数据</string>
+    <string name="mf_faq_device_control">设备控制</string>
+    <string name="mf_faq_third_party_control">第三方控制</string>
+    <string name="mf_faq_application_operation">应用运营</string>
+    <string name="mf_faq_after_sale">售后</string>
+    <string name="mf_faq_other">其他</string>
+    <string name="mf_faq_select_time_tip">请选择发生时间.</string>
+    <string name="mf_faq_new_ticket">新工单</string>
+    <string name="mf_faq_my_feedback">工单</string>
+    <string name="mf_faq_details">工单详情</string>
+    <string name="mf_faq_customer_reply">客服回复</string>
+    <string name="mf_faq_reply">反馈内容</string>
+    <string name="ka_after_sale_service_common_pro">常见问题</string>
+    <string name="mf_faq_processing">待处理</string>
+    <string name="mf_faq_processed">处理</string>
+    <string name="mf_faq_closed">关闭</string>
+    <string name="mf_common_problem">常见问题</string>
+    <string name="ka_after_sale_service_contact_us">联系我们</string>
+    <string name="still_have_problems">仍有问题?</string>
+    <string name="replacement_items">点击退货或换货</string>
+    <string name="mf_faq_type_hint">请选择问题类型</string>
+    <string name="mf_faq_use_video">使用视频</string>
+    <string name="mf_common_please_select">请选择</string>
+    <string name="account_not_empty">请输入您的帐号</string>
+    <string name="mf_user_order_id">订单编号</string>
+    <string name="mf_chat_support_input_hint">请输入</string>
+    <string name="submit">提交</string>
+    <string name="mf_common_problem_resolved">解决了</string>
+    <string name="mf_common_problem_unresolved">未解决</string>
+    <string name="mf_common_problem_feedback">如果您的问题没有得到解决，您可以</string>
+    <string name="mf_common_problem_feedback_all">如果没有找到您的问题，请继续</string>
+    <string name="mf_common_problem_feedback_select">提交工单</string>
+    <string name="mf_common_request_camera">您需要获得相机和存储权限才能上传您的头像</string>
+    <string name="config_failure_try_again">再试一次</string>
+    <string name="Cancel">取消</string>
+    <string name="submit_failed_desc">提交失败，请重试</string>
+    <string name="submit_success_desc">我们的售后支持将在 24 小时内与您联系</string>
+    <string name="I_know">我知道</string>
+    <string name="mf_common_permission_denied">禁止许可</string>
+    <string name="mf_common_select_picture">选择图片来源</string>
+    <string name="mf_common_error_uploading_pic">上传失败，请重试</string>
+    <string name="mf_common_please_enter_correct_email">请输入正确的邮箱</string>
+    <string name="mf_common_please_enter_correct_phone">请输入正确的电话</string>
+    <string name="my_profile_choose_pic_from_camera">拍照</string>
+    <string name="ty_gallery_title">相册</string>
+    <string name="ty_device_connect">连接设备</string>
+    <string name="mf_common_help_cener_hint">请输入问题</string>
+    <string name="mf_user_frag_iconfeedback_str">常见问题 &#038; 工单</string>
+
+    <!-- map 模块 -->
+
+    <string name="rino_common_search_address">搜索地址</string>
+
+    <!-- matter 模块 -->
+
+    <string name="share_mtr_device_hint" translatable="false">要允许其他人控制此设备，他们需要在手机上打开支持 Matter 的应用并扫描此二维码。</string>
+    <string name="action_settings" translatable="false">设置</string>
+    <string name="default_device_name" translatable="false">我的名字很长，但谁在乎</string>
+    <string name="off_status" translatable="false">关闭</string>
+    <string name="on_status" translatable="false">开启</string>
+    <string name="brightness_100_perc" translatable="false">100%</string>
+    <string name="offline" translatable="false">离线</string>
+    <string name="default_home_name" translatable="false">某人的</string>
+    <string name="power" translatable="false">电源</string>
+    <string name="color" translatable="false">颜色</string>
+    <string name="percentage_symbol" translatable="false">%</string>
+    <string name="default_brightness" translatable="false">0</string>
+    <string name="brightness" translatable="false">亮度</string>
+    <string name="in" translatable="false">在 </string>
+    <string name="name" translatable="false">名称</string>
+    <string name="home" translatable="false">主页</string>
+    <string name="basic_info" translatable="false">基本信息</string>
+    <string name="share_device_hint" translatable="false">您可以共享此设备以从其他应用或服务控制它。</string>
+    <string name="share" translatable="false">分享</string>
+    <string name="technical_info" translatable="false">技术信息</string>
+    <string name="added_on" translatable="false">添加于：</string>
+    <string name="default_date_and_time" translatable="false">04.05.22 19:20:33</string>
+    <string name="device_type" translatable="false">设备类型：</string>
+    <string name="unknown" translatable="false">未知</string>
+    <string name="default_device_id" translatable="false">1</string>
+    <string name="id" translatable="false">ID：</string>
+    <string name="manufacturer" translatable="false">制造商：</string>
+    <string name="delete_device" translatable="false">删除设备</string>
+    <string name="power_off" translatable="false">电源已关闭</string>
+    <string name="power_on" translatable="false">电源已打开</string>
+    <string name="device_color" translatable="false">设备颜色</string>
+    <string name="cancel" translatable="false">取消</string>
+    <string name="remove_device_hint" translatable="false">此设备将被删除并与此应用取消关联。 其他服务和连接类型可能仍然可以访问</string>
+    <string name="pairing_code_example" translatable="false">0003–4568–910</string>
+
+    <!-- module_ble 模块 -->
+
+    <string name="ota_error">更新设备%1$s失败，请检查蓝牙连接</string>
+    <string name="update_retry">重试</string>
+    <string name="update_cancel">取消</string>
+    <string name="updating">更新中,请稍后</string>
+
+
+    <!-- msg_ui 模块 -->
+
+    <string name="rino_mine_msg_open_push">启动消息推送</string>
+    <string name="rino_mine_msg_push_title">消息推送设置</string>
+    <string name="rino_mine_msg_alarm">告警</string>
+    <string name="rino_mine_msg_family">家庭</string>
+    <string name="rino_common_notify_center">消息中心</string>
+    <string name="rino_message_all_time">所有时间</string>
+    <string name="rino_message_sun">周日</string>
+    <string name="rino_message_mon">周一</string>
+    <string name="rino_message_tue">周二</string>
+    <string name="rino_message_wed">周三</string>
+    <string name="rino_message_thu">周四</string>
+    <string name="rino_message_fri">周五</string>
+    <string name="rino_message_sat">周六</string>
+    <string name="rino_message_today">同一天</string>
+    <string name="rino_message_next_day">第二天</string>
+    <string name="rino_message_delete">这些录音一旦删除就无法恢复。 您确定要删除这些录音吗？</string>
+    <string name="rino_message_done">完成</string>
+    <string name="rino_message_select_all">全选</string>
+    <string name="rino_message_read">已读</string>
+    <string name="rino_common_header_failed">刷新失败</string>
+    <string name="rino_common_header_finish">刷新成功</string>
+    <string name="rino_common_header_loading">等待加载...</string>
+    <string name="rino_common_header_pulling">下拉刷新</string>
+    <string name="rino_common_header_refreshing">正在刷新...</string>
+    <string name="rino_common_header_release">发布到刷新</string>
+    <string name="rino_common_header_secondary">发布到二楼</string>
+    <string name="rino_common_header_update">\'上次更新\' M-d HH:mm</string>
+    <string name="rino_common_footer_failed">加载失败</string>
+    <string name="rino_common_footer_finish">加载成功</string>
+    <string name="rino_common_footer_loading">正在加载...</string>
+    <string name="rino_common_footer_nothing">没有更多数据</string>
+    <string name="rino_common_footer_pulling">上拉加载更多</string>
+    <string name="rino_common_footer_refreshing">等待刷新...</string>
+    <string name="rino_common_footer_release">释放以加载更多</string>
+    <string name="rino_message_all_homes">全部</string>
+    <string name="rino_message_statement">声明</string>
+    <string name="rino_message_type">消息类型</string>
+    <string name="rino_message_equipment">设备</string>
+    <string name="rino_message_device">设备</string>
+    <string name="rino_message_event_type">事件类型</string>
+    <string name="rino_message_delection_type">检测类型</string>
+    <string name="rino_message_storage_location">存储位置</string>
+    <string name="rino_user_navigation_title_scene">场景</string>
+    <string name="rino_family_room_set_title">房间</string>
+    <string name="rino_common_reset">重置</string>
+
+    <!-- 消息中心设置-->
+
+    <string name="rino_message_setting_home_notification">首页通知</string>
+    <string name="rino_message_setting_scene_notification">场景日志通知</string>
+    <string name="rino_message_setting_device_notification">设备报警通知</string>
+    <string name="rino_message_setting_service_notification">服务通知</string>
+    <string name="rino_message_setting_offcial_notification">官方通知</string>
+    <string name="rino_message_setting_not_disturb">请勿打扰</string>
+    <string name="rino_message_setting_customer_service">客户服务</string>
+    <string name="rino_message_setting_order_notification">订单通知</string>
+    <string name="rino_message_setting_news_notification">新闻通知</string>
+    <string name="rino_message_setting_not_disturb_repeat">重复</string>
+    <string name="rino_message_all">所有</string>
+    <string name="rino_message_only_unread">未读</string>
+    <string name="rino_message_alert">告警</string>
+    <string name="rino_message_video">视频</string>
+    <string name="rino_message_local">本地</string>
+    <string name="rino_message_cloud">云端</string>
+
+    <!-- nfc——ui 模块 -->
+
+    <string name="rino_nfc_unbind_title">解绑NFC智能贴?</string>
+    <string name="rino_nfc_unbind_message">解绑后，可使用手机重新进行感应绑定</string>
+    <string name="rino_nfc_scene_empty">暂无一键执行场景，请先创建</string>
+    <string name="rino_nfc_execute_command_success">指令发送成功</string>
+    <string name="rino_nfc_execute_command_failure">指令发送失败</string>
+    <string name="rino_nfc_execute_success">已执行</string>
+    <string name="rino_nfc_execute_failure">未执行</string>
+    <string name="rino_nfc_scene_manual_empty">创建新一键执行</string>
+    <string name="rino_nfc_save">保存并关联</string>
+    <string name="rino_nfc_bind_scene">绑定一键执行</string>
+    <string name="rino_nfc_bind_device_switch">绑定设备开关</string>
+    <string name="rino_nfc_bind_device_panel">进入设备面板</string>
+    <string name="rino_nfc_associate_scene">关联一键执行</string>
+    <string name="rino_nfc_associate_device_switch">关联设备开关</string>
+    <string name="rino_nfc_associate_device_panel">关联设备</string>
+    <string name="rino_nfc_my_device">我的设备</string>
+    <string name="rino_nfc_unbind">解绑</string>
+    <string name="rino_nfc_smart_touch_tag">Smart Touch 标签</string>
+    <string name="rino_nfc_edit_tag">编辑标签</string>
+    <string name="rino_nfc_unbind_success">解绑成功</string>
+    <string name="rino_common_edit">编辑</string>
+    <string name="rino_nfc_scene_no_exist">场景已删除，请重新绑定！</string>
+    <string name="rino_nfc_device_no_exist">设备已删除，请重新绑定！</string>
+    <string name="rino_nfc_rebind">重新绑定</string>
+    <string name="rino_nfc_home_role_permissions">NFC只能在您创建的家庭下绑定，请切换家庭！</string>
+    <string name="rino_nfc_anonymous_tips">NFC只能在正式账号下绑定！</string>
+    <string name="rino_nfc_bind_not_find_family">该NFC已绑定，您暂无设备使用权限，请先加入该设备家庭组！</string>
+    <string name="rino_nfc_not_finish_tips">请先完成当前NFC绑定流程</string>
+
+    <string name="rino_nfc_bluetooth_distribution_network">蓝牙配网中</string>
+    <string name="rino_nfc_open_bluetooth">打开蓝牙</string>
+    <string name="rino_nfc_init_device">设备初始化</string>
+    <string name="rino_nfc_error_reason_open_bluetooth">失败原因：需要打开系统蓝牙</string>
+    <string name="rino_nfc_choose_2.4GHz_wifi_title">选择 2.4GHz WiFi 网络并输入密码</string>
+    <string name="rino_nfc_choose_2.4GHz_wifi_desc">如果你的 WiFi  5GHz 的，请先设置为 2.4GHz</string>
+    <string name="rino_nfc_router_setting">常见路由器的设置方法</string>
+    <string name="rino_nfc_one_click_distribution">一键配网</string>
+    <string name="rino_nfc_ssid">WiFi名称</string>
+    <string name="rino_nfc_password">输入WiFi密码</string>
+    <string name="rino_nfc_init_device_error">初始化失败，请重试</string>
+    <string name="rino_nfc_cloud_connect">连云激活</string>
+    <string name="rino_nfc_wifi_distribution_network">WiFi配网中</string>
+    <string name="rino_nfc_connect_router">连接路由器</string>
+    <string name="rino_nfc_connect_cloud">连接到云</string>
+    <string name="rino_nfc_cloud_connect_need_bluetooth">连云激活需要开启蓝牙</string>
+    <string name="rino_nfc_go_experience">赶快体验</string>
+    <string name="rino_nfc_device_connect_cloud_success">该设备已连云激活成功</string>
+    <string name="rino_nfc_wifi_signal_weak_check_network">WiFi信号差，请检查网络</string>
+    <string name="rino_nfc_wifi_password_error">WiFi密码错误，请重试</string>
+    <string name="rino_nfc_wifi_not_found">搜索不到WiFi，请重新选择网络</string>
+    <string name="rino_nfc_device_not_connect">设备未连接</string>
+    <string name="rino_nfc_device_connect_describe">1. 请确认设备通电\n2. 请让设备处于配网状态</string>
+    <string name="rino_nfc_distribution_network_describe">配网说明</string>
+    <string name="rino_nfc_previous_step">上一步</string>
+    <string name="rino_nfc_next_step">下一步</string>
+    <string name="rino_nfc_connect_location_setup">手动输入Wi-Fi名称，或开启定位权限，以便自动获取附近Wi-Fi设备</string>
+    <string name="rino_nfc_go_to_settings">去设置</string>
+    <string name="rino_nfc_again_distribution_network">设备在配网模式，需要重新配网</string>
+    <string name="rino_common_nfc_phone_not_support">失败原因：手机不支持蓝牙</string>
+    <string name="rino_device_activator_add_device_success">设备添加成功</string>
+    <string name="rino_nfc_smart_label">智能标签</string>
+
+
+    <!--  panel_sdk 模块 -->
+
+    <string name="rino_panel_device_configuration_instructions">跳转设备配网说明</string>
+    <string name="rino_panel_device_empty">设备基础信息为空，不能打开面板</string>
+    <string name="rino_device_config_network_md5_tips">MD5值不能为空</string>
+    <string name="rino_device_config_network_download_tips">下载地址不能为空</string>
+    <string name="rino_device_share_not_upgrade">被分享的用户不允许固件升级</string>
+    <string name="rino_device_door_call">正在请求与您通话…</string>
+    <string name="rino_device_door_call_video_answering">视频接听</string>
+    <string name="rino_device_door_call_hang_up">挂断</string>
+    <string name="rino_device_door_call_voice_answering">语音接听</string>
+    <string name="rino_device_door_call_closed">通话已关闭</string>
+
+    <!-- scan 模块 -->
+
+    <string name="rino_scan_turn_off_lights">关灯</string>
+    <string name="rino_scan_turn_on_lights">开灯</string>
+    <string name="rino_scan_turn_on_flashlight">打开手电筒</string>
+    <string name="rino_scan_turn_off_flashlight">关闭手电筒</string>
+    <string name="rino_scan_code_type_title">扫二维码/条形码</string>
+    <string name="rino_scan_manual_input_tips">手动输入扫码内容不能为空</string>
+    <string name="rino_scan_cancel">取消</string>
+    <string name="rino_scan_manual_add">手动添加</string>
+    <string name="rino_scan_input_device_id">请输入设备ID</string>
+
+    <!-- scan_ui 模块 -->
+
+    <string name="rino_scan_authorized">即将在中控屏登录，请确认是否是本人操作！</string>
+    <string name="rino_scan_confirm_login">确认登录</string>
+    <string name="rino_scan_fail_tips">二维码验证失败</string>
+
+    <!-- scene_ui 模块 -->
+
+    <string name="rino_scene_create">创建自动化</string>
+    <string name="rino_scene_auto_title">自动化</string>
+    <string name="rino_scene_manual_title">批量控制</string>
+    <string name="rino_scene_home_recommend">推荐</string>
+    <string name="rino_scene_manual_subtitle">例如：批量控制关闭卧室所有的灯</string>
+    <string name="rino_scene_weather_changes_title">天气变化时</string>
+    <string name="rino_scene_weather_changes_subtitle">例如：当前所在城市温度>24℃时</string>
+    <string name="rino_scene_timing_title">定时</string>
+    <string name="rino_scene_timing_subtitle">例如：每天早上8点</string>
+    <string name="rino_scene_device_change_title">设备状态改变</string>
+    <string name="rino_device_scene_add">创建场景</string>
+    <string name="rino_scene_device_change_subtitle">例如：报警器监测到报警时</string>
+    <string name="rino_scene_configuration_page_title">配置</string>
+    <string name="rino_scene_manual_title_new">创建批量控制</string>
+    <string name="rino_scene_condition_section_title">如果满足条件</string>
+    <string name="rino_scene_task_section_title">就执行</string>
+    <string name="rino_scene_add_task_title">添加任务</string>
+    <string name="rino_scene_add_condition_title">添加条件</string>
+    <string name="rino_common_city_locating">定位中</string>
+    <string name="rino_common_save_success">保存成功</string>
+    <string name="rino_scene_group_not_exist">群组已删除或群组中无设备</string>
+    <string name="rino_scene_task_device">操作设备</string>
+    <string name="rino_scene_task_select_scene">选择已有的自动化</string>
+    <string name="rino_scene_task_message_notice">发送通知提醒</string>
+    <string name="rino_scene_task_delay">延时执行</string>
+    <string name="rino_device_group_empty_title">该群组中无设备</string>
+    <string name="rino_scene_device_offline">设备离线</string>
+    <string name="rino_scene_device_select_function">选择功能</string>
+    <string name="rino_scene_select_function_tip">请选择功能</string>
+    <string name="rino_scene_task_select_manual">选择批量控制</string>
+    <string name="rino_scene_task_select_auto">选择自动化</string>
+    <string name="rino_scene_task_select_type_title">选择已有的自动化</string>
+    <string name="rino_scene_task_clicked_tip">Batch control does not support adding one-click execution tasks.</string>
+    <string name="rino_scene_task_auto_list_title">选择要开关的自动化</string>
+    <string name="rino_scene_task_manual_list_title">选择要执行的批量控制</string>
+    <string name="rino_scene_task_auto_start">执行时启用</string>
+    <string name="rino_scene_task_auto_stop">执行时停用</string>
+    <string name="rino_scene_status_start">启用</string>
+    <string name="rino_scene_status_stop">停用</string>
+    <string name="rino_scene_task_no_select_auto_tip">选择要开关的自动化</string>
+    <string name="rino_scene_task_no_select_manual_tip">选择要执行的批量控制</string>
+    <string name="rino_scene_task_auto_text">自动化</string>
+    <string name="rino_scene_task_manual_text">执行</string>
+    <string name="rino_scene_task_message_way">选择提醒方式</string>
+    <string name="rino_scene_task_message_center">消息中心</string>
+    <string name="rino_scene_task_call_message">短信提醒</string>
+    <string name="rino_scene_task_telephone_message">电话提醒</string>
+    <string name="rino_scene_task_no_open">暂未开放</string>
+    <string name="rino_scene_task_message_multiple_selection">消息推送支持多选</string>
+    <string name="rino_scene_task_select_reminder_method">请选择提醒方式</string>
+    <string name="rino_scene_task_message_turn_on">开启</string>
+    <string name="rino_scene_task_delayed_execution">延时执行</string>
+    <string name="rino_scene_weather_change_temperature">温度</string>
+    <string name="rino_scene_weather_change_humidity">湿度</string>
+    <string name="rino_scene_weather_change_status">天气</string>
+    <string name="rino_scene_weather_change_air_quality">空气质量</string>
+    <string name="rino_scene_weather_change_sunrise_sunset">日出日落</string>
+    <string name="rino_scene_weather_change_wind_speed">风速</string>
+    <string name="rino_scene_weather_change_pm25">PM2.5</string>
+    <string name="rino_scene_weather_current_city">当前城市</string>
+    <string name="rino_scene_value_less_than">小于</string>
+    <string name="rino_scene_value_equal">等于</string>
+    <string name="rino_scene_value_more_than">大于</string>
+    <string name="rino_scene_select_condition_tip">请选择条件</string>
+    <string name="rino_scene_time_repeat_title">重复</string>
+    <string name="rino_scene_time_every_day_title">每天</string>
+    <string name="rino_scene_time_set_execution_time">设置执行时间</string>
+    <string name="rino_scene_time_working_day">工作日</string>
+    <string name="rino_scene_time_weekend">周末</string>
+    <string name="rino_scene_time_sunday">周日</string>
+    <string name="rino_scene_time_monday">周一</string>
+    <string name="rino_scene_time_tuesday">周二</string>
+    <string name="rino_scene_time_wednesday">周三</string>
+    <string name="rino_scene_time_thursday">周四</string>
+    <string name="rino_scene_time_friday">周五</string>
+    <string name="rino_scene_time_saturday">周六</string>
+    <string name="rino_scene_time_one_time_only">仅限一次</string>
+    <string name="rino_scene_time_executed_once_default">不勾选则默认只执行一次</string>
+    <string name="rino_scene_more_enter_name">请输入名称</string>
+    <string name="rino_scene_more_style_title">风格</string>
+    <string name="rino_scene_more_title">更多</string>
+    <string name="rino_scene_more_show_home">出现在首页</string>
+    <string name="rino_scene_more_style_color">颜色</string>
+    <string name="rino_scene_more_style_icon">图标</string>
+    <string name="rino_scene_more_effective_period">生效时间段</string>
+    <string name="rino_scene_effective_period_allday">全天</string>
+    <string name="rino_scene_effective_period_allday_sub">24小时</string>
+    <string name="rino_scene_effective_period_daytime">白天</string>
+    <string name="rino_scene_effective_period_daytime_sub">从日出到日落</string>
+    <string name="rino_scene_effective_period_atnight">夜间</string>
+    <string name="rino_scene_effective_period_atnight_sub">从日落到日出</string>
+    <string name="rino_scene_effective_period_custom"> 自定义</string>
+    <string name="rino_scene_effective_period_custom_sub">手动设定时间段</string>
+    <string name="rino_scene_effective_start_time">开始时间</string>
+    <string name="rino_scene_effective_end_time">结束时间</string>
+    <string name="rino_scene_effective_today">今天</string>
+    <string name="rino_scene_effective_next_day">次日</string>
+    <string name="rino_scene_humidity_for_dry">干燥</string>
+    <string name="rino_scene_humidity_for_comfortable">舒适</string>
+    <string name="rino_scene_humidity_for_damp">潮湿</string>
+    <string name="rino_scene_weather_for_sunny_day">晴天</string>
+    <string name="rino_scene_weather_for_overcast">阴天</string>
+    <string name="rino_scene_weather_for_rain">雨天</string>
+    <string name="rino_scene_weather_for_snowy_day">雪天</string>
+    <string name="rino_scene_weather_for_greasy">霾天</string>
+    <string name="rino_scene_excellent">优</string>
+    <string name="rino_scene_good">良</string>
+    <string name="rino_scene_contaminated">污染</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset">日出</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise">日落</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset_value1">日出时</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset_value2">日出前%1s</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset_value3">日出后%1s</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise_value1">日落时</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise_value2">日落前%1s</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise_value3">日落后%1s</string>
+    <string name="rino_scene_if">如果</string>
+    <string name="rino_scene_condition_error_for_manual">批量控制不能与其他条件同时存在</string>
+    <string name="rino_scene_condition_section_sub_title1">当满足所有条件时</string>
+    <string name="rino_scene_condition_section_sub_title2">当满足任意条件时</string>
+    <string name="rino_scene_task_error_for_manual">批量控制不支持添加发送提醒的任务</string>
+    <string name="rino_scene_delete">删除</string>
+    <string name="rino_scene_at_least_one_day">请至少选择一天</string>
+    <string name="rino_scene_create_success">创建自动化成功</string>
+    <string name="rino_scene_please_set_condition">请设置条件</string>
+    <string name="rino_scene_please_set_action">请设置任务</string>
+    <string name="rino_scene_can_not_only_one_delay_action">不能只添加一个延时任务</string>
+    <string name="rino_scene_can_not_last_one_delay_action">延时不能作为最后一个执行的任务</string>
+    <string name="rino_scene_auto_action_num">%1s个任务</string>
+    <string name="rino_scene_is_cancel_edit_scene">是否取消编辑</string>
+    <string name="rino_scene_sure_delete_scene">确定要删除“%1s”吗？</string>
+    <string name="rino_scene_sure_delete_scene_tip">删除后，设备任务将无法正常执行</string>
+    <string name="rino_scene_is_enable_now">自动化创建成功，是否立即启用？</string>
+    <string name="rino_scene_is_enable_now_no">暂不启用</string>
+    <string name="rino_scene_is_enable_now_yes">马上启用</string>
+    <string name="rino_scene_delete_success">删除成功</string>
+    <string name="rino_scene_manual_execution_succeed">执行成功</string>
+    <string name="rino_scene_action_not_support_this_condition">设定的任务不支持该类型的条件</string>
+    <string name="rino_scene_update_successfully">修改成功</string>
+    <string name="rino_scene_add_two_delay_hint">不能添加两个延时执行</string>
+    <string name="rino_scene_task_only_delay_hint">不能只添加一个延时任务</string>
+    <string name="rino_scene_device_not_exist">设备已删除</string>
+    <string name="rino_scene_time_month">月</string>
+    <string name="rino_scene_time_day">日</string>
+    <string name="rino_scene_city_select_title">选择城市</string>
+    <string name="rino_scene_city_input_title">请输入城市</string>
+    <string name="rino_scene_current_location_address">当前定位地址</string>
+    <string name="rino_scene_to_reposition">重新定位</string>
+    <string name="rino_scene_all_device">所有设备</string>
+    <string name="rino_scene_device_online">设备在线</string>
+    <string name="rino_scene_please_select_city">请选择城市</string>
+    <string name="rino_scene_edit_name_not_empty">名称不能为空</string>
+    <string name="rino_scene_manual_no_data_tip">去创建批量控制，来实现设备一键操作</string>
+    <string name="rino_scene_automatic_no_data_tip">去创建一个自动化场景，来实现智能操控</string>
+    <string name="rino_scene_member_no_data_tip">可以让家庭创建者创建一个自动化，创建后您也可以一起使用</string>
+    <string name="rino_scene_auto_open">自动化启用</string>
+    <string name="rino_scene_auto_close">自动化停用</string>
+    <string name="rino_scene_delete_auto">删除任务后，任务将无法执行。确定删除此自动化？</string>
+    <string name="rino_scene_delete_manual">删除任务后，任务将无法执行。确定删除此批量控制？</string>
+    <string name="rino_scene_edit_scene">编辑自动化</string>
+    <string name="rino_scene_local">本地</string>
+    <string name="rino_scene_dry_percent">干燥（0%-40%）</string>
+    <string name="rino_scene_comfortable_percent">舒适（40%-70%）</string>
+    <string name="rino_scene_damp_percent">潮湿（70%-100%）</string>
+    <string name="rino_device_no_data_title">欢迎来到%1s</string>
+    <string name="rino_scene_not_recommend_data">当前没有推荐数据</string>
+    <string name="rino_scene_recommend_add">去添加</string>
+    <string name="rino_scene_batch_control">批量控制</string>
+    <string name="rino_scene_auto_empty">未添加自动化</string>
+    <string name="rino_scene_batch_type_name">添加批量控制</string>
+    <string name="rino_scene_input_batch_name">请输入批量控制名称</string>
+    <string name="rino_scene_auto_type_name">添加自动化</string>
+    <string name="rino_nfc_associate_tag">已关联Smart Touch 标签</string>
+    <string name="rino_scan_add">添加</string>
+    <string name="rino_nfc_bind_success">绑定成功</string>
+    <string name="rino_scene_user_use_recommand">人用过</string>
+    <string name="rino_scene_input_auto_name">请输入自动化名称</string>
+
+    <!-- upush 模块 -->
+
+    <string name="rino_user_book_name_fill">《%1s》</string>
+    <string name="rino_user_user_agreement">用户协议</string>
+    <string name="rino_user_login_one_click">一键登录</string>
+    <string name="rino_user_agree_tip">登录注册代表同意</string>
+    <string name="rino_user_privacy_policy">隐私政策</string>
+    <string name="rino_push_notify_permission_desc">是否允许"%1s"接收通知，请前往设置中开启通知权限</string>
+    <string name="rino_push_notify_confirm">确定</string>
+    <string name="rino_push_notify_cancel">取消</string>
+
+    <!-- user_sdk 模块 -->
+
+    <string name="tencent_app_id">tencent1112223724</string>
+    <string name="rino_mine_google_assistant_voice_guide">https://integration.rinoiot.com/googleAssistantZh</string>
+    <string name="rino_mine_alexa_voice_guide">https://integration.rinoiot.com/connectAlexaZh</string>
+    <string name="rino_user_please_install_wechat">请先安装微信</string>
+    <string name="rino_user_please_install_qq">请先安装QQ</string>
+
+    <!-- user_ui 模块 -->
+
+    <string name="rino_common_latest_version">已是最新版本</string>
+    <string name="rino_app_upgrade_tips">有新版本是否升级？</string>
+    <string name="rino_mine_nickname_rule2">最长支持20字符</string>
+    <string name="rino_mine_alexa">Alexa</string>
+    <string name="rino_common_version_check">检查更新</string>
+    <string name="rino_app_upgrade_no_version">无更新</string>
+    <string name="rino_common_old_version">版本 %1s</string>
+    <string name="rino_app_upgrade_new_version">有更新</string>
+    <string name="rino_mine_profile">头像</string>
+    <string name="rino_mine_profile_name">昵称</string>
+    <string name="rino_mine_set_about">关于%1s</string>
+    <string name="rino_mine_set_account">账号</string>
+    <string name="rino_mine_set_account_cancellation">注销账号</string>
+    <string name="rino_mine_set_account_email">邮箱</string>
+    <string name="rino_mine_set_account_get_code">获取验证码</string>
+    <string name="rino_mine_set_account_location">账号所在地</string>
+    <string name="rino_mine_set_account_phone">手机</string>
+    <string name="rino_mine_set_account_security">账号与安全</string>
+    <string name="rino_mine_set_account_verification">账号验证</string>
+    <string name="rino_mine_set_account_verification_decs">点击“获取验证码”，验证码将发送到你的%1s：%1s</string>
+    <string name="rino_mine_set_avatar">头像</string>
+    <string name="rino_mine_account_local">账号所在地</string>
+    <string name="rino_mine_account_security">账号与安全</string>
+    <string name="rino_mine_account">手机号</string>
+    <string name="rino_mine_change_pwd">修改登录密码</string>
+    <string name="rino_mine_logout">注销账号</string>
+    <string name="rino_mine_feedback_select_picture">选择图片来源</string>
+    <string name="rino_mine_feedback_file_limit_size">文件上传大小不能超过50M</string>
+    <string name="rino_user_disagree_exit">不同意并退出</string>
+    <string name="rino_user_email">邮箱</string>
+    <string name="rino_user_get_verify_code">获取验证码</string>
+    <string name="rino_user_input_code_decs1">请输入发送至</string>
+    <string name="rino_user_input_code_decs2">的4位验证码，有效期10分钟</string>
+    <string name="rino_user_input_country">请输入国家/地区</string>
+    <string name="rino_user_input_email">请输入邮箱</string>
+    <string name="rino_user_input_phone">请输入手机号/邮箱</string>
+    <string name="rino_user_input_rino_email">请输入你注册犀云邮箱</string>
+    <string name="rino_user_input_verify_code">请输入验证码</string>
+    <string name="rino_user_input_verify_code_title">输入验证码</string>
+    <string name="rino_user_login_account_pws">密码登录</string>
+    <string name="rino_user_login_account_tip_title">请输入账号</string>
+    <string name="rino_user_login_decs_title">登录后更精彩</string>
+    <string name="rino_user_login_email">邮箱登录</string>
+    <string name="rino_user_login_email_account">邮箱账号登录</string>
+    <string name="rino_user_login_forget_title">忘记密码</string>
+    <string name="rino_user_account_registered_log_in">当前账号已注册，是否需要登录</string>
+    <string name="rino_user_anonymous">立即体验</string>
+    <string name="rino_user_been_sent">已发送至</string>
+    <string name="rino_user_been_sent_code">我们发送了%1s位验证码至%1s</string>
+    <string name="rino_user_cancel_account">注销账号</string>
+    <string name="rino_user_cancel_account_confirm">确定申请注销</string>
+    <string name="rino_user_cancel_account_describe1">亲爱的用户</string>
+    <string name="rino_user_cancel_account_describe2">如果您确定提交“注销账户”的申请，账号将于%1s注销完成。再此期间，如果您登录账号将会撤销您的注销申请。</string>
+    <string name="rino_user_cancel_account_describe3">注销后，平台将会删除您账号下的所有个人数据如果您想撤销申请，在%1s前登录应用即可撤销</string>
+    <string name="rino_user_cancel_account_describe4">感谢您这段期间的使用</string>
+    <string name="rino_user_cancel_account_get_verify_code">点击“获取验证码”，验证码将发送到你的%1s</string>
+    <string name="rino_user_cancel_account_key_word">注销完成</string>
+    <string name="rino_user_cancel_account_message">一周后账号才会永久停用并删除以下您账户中的所有信息，在此之前重新登录，则您的停用请求将被取消</string>
+    <string name="rino_user_cancel_account_resend_verify_code">%1s秒后可重新获取验证码</string>
+    <string name="rino_user_cancel_account_success">账号已注销，如想撤回，请重新登录</string>
+    <string name="rino_user_cancel_account_title">您确定注销账号吗?</string>
+    <string name="rino_user_certification_services">%1s提供认证服务</string>
+    <string name="rino_user_code_check_tip">验证码校验失败，请确认验证码是否正确!</string>
+    <string name="rino_user_register_now">立即注册</string>
+    <string name="rino_user_resend">重新发送</string>
+    <string name="rino_user_unable_accept_email_code">未收到验证码？</string>
+    <string name="rino_mine_set_change_pwd_verify">验证</string>
+    <string name="rino_user_unable_accept_SMS">无法接受短信？</string>
+    <string name="rino_user_send_code_success">发送成功请查收</string>
+    <string name="rino_mine_feedback_choose_pic_from_camera">拍照</string>
+    <string name="rino_mine_feedback_gallery_title">相册</string>
+    <string name="rino_user_set_password">设置密码</string>
+    <string name="rino_user_phone">手机</string>
+    <string name="rino_mine_setting">设置</string>
+    <string name="rino_mine_time_zone">时区</string>
+    <string name="rino_mine_temp_unit">温度单位</string>
+    <string name="rino_mine_clear_cache">清除缓存</string>
+    <string name="rino_mine_clear_cache_tips">您要清除缓存吗？</string>
+    <string name="rino_mine_about_info">关于</string>
+    <string name="rino_user_logout">退出登录</string>
+    <string name="rino_voice_bind_alexa">已绑定Amazon Alexa</string>
+    <string name="rino_voice_bind_alexa_describe">绑定后，您可以通过Amazon Echo系列音响来语音控制购买的设备：</string>
+    <string name="rino_voice_bind_google_assistant">已绑定Google Assistant</string>
+    <string name="rino_voice_bind_google_assistant_describe">绑定后，您可以通过Google Home系列产品来语音控制购买的设备:</string>
+    <string name="rino_voice_eg">例如：</string>
+    <string name="rino_voice_google_auth_confirm">同意并链接</string>
+    <string name="rino_voice_google_auth_cancel">取消</string>
+    <string name="rino_voice_google_auth_desc">授权后该应用将会获得以下权限</string>
+    <string name="rino_voice_google_auth_desc_2">设备控制权限</string>
+    <string name="rino_voice_google_auth_tips">将 %1s 与 Google 连接</string>
+    <string name="rino_voice_guide">手机绑定教程</string>
+    <string name="rino_voice_not_install_google_home">请先安装google Home App！</string>
+    <string name="rino_voice_unbind">解除绑定</string>
+    <string name="rino_voice_unbind_alexa">未绑定Amazon Alexa</string>
+    <string name="rino_voice_unbind_describe">解除绑定后，无法通过语音来操控设备，请确定</string>
+    <string name="rino_voice_unbind_google_assistant">未绑定Google Assistant</string>
+    <string name="rino_mine_voice_eg">1.  Aelxa,turn on/off living room light.\n\n2.  Aelxa,set living room light to 50 percent.\n\n3.  Aelxa,brighten/dim living room light.\n\n4.  Aelxa,set living room light to christmas mode.</string>
+    <string name="rino_mine_voice_google_assistant_eg">1. Ok Google, turn on bedroom light.\n\n2. Ok Google, turn off bedroom light.\n\n3. Ok Google, set bedroom light to 50 percent.\n\n4. Ok Google, brighten bedroom light.</string>
+    <string name="rino_voice_auth">一键授权</string>
+    <string name="rino_mine_google_assistant">Google Assistant</string>
+    <string name="rino_mine_voice">第三方语音等服务</string>
+    <string name="rino_user_select_country">选择国家/地区</string>
+    <string name="rino_user_one_click_agree">同意</string>
+    <string name="rino_user_one_click_agree_service_terms">请同意服务条款</string>
+    <string name="rino_user_one_click_agreement_and_privacy">用户协议与隐私政策</string>
+    <string name="rino_user_one_click_disagree">不同意</string>
+    <string name="rino_common_agreement_privacy_content">我们深知隐私对您的重要性，为了更全面的呈现我们收集和使用您个人信息的相关情况，我们根据最新法律法规的要求，对隐私政策和用户协议进行了详细的修订。当您点击【同意】即表示您已充分阅读、理解并接受更新过的《隐私政策》和《用户协议》的全部内容。请花一些时间熟悉我们的隐私政策，如果您有任何问题，请随时联系我们。</string>
+    <string name="rino_common_agree_tip">我同意</string>
+    <string name="rino_common_and">和</string>
+    <string name="rino_user_please_agree_privacy">请先勾选同意</string>
+    <string name="rino_user_login_phone_tip1">登录体验更多精彩</string>
+    <string name="rino_user_password">密码</string>
+    <string name="rino_user_retrieve_password">找回密码</string>
+    <string name="rino_user_please_input_right_format">请输入正确格式的账号</string>
+    <string name="rino_user_not_receive_verify_code_desc1">如果没有收到验证码，建议您先确认以下操作：</string>
+    <string name="rino_user_not_receive_verify_code_desc2">1.  请您先核实 App注册页面的国家/地区是否选择正确</string>
+    <string name="rino_user_not_receive_verify_code_desc3">2.  请检查您的手机是否停机或者无网络</string>
+    <string name="rino_user_not_receive_verify_code_desc4">3.  请检查您输入的手机/邮箱是否正确</string>
+    <string name="rino_user_not_receive_verify_code_desc5">4.  请检查您的验证码是否被系统屏蔽或者隔离</string>
+    <string name="rino_user_not_receive_verify_code_desc6">如果以上确认无误，或者无法收到校验码，可以发邮件%1s</string>
+    <string name="rino_user_protection_rules">儿童/青少年个人信息保护规则</string>
+    <string name="rino_user_service_terms">中国移动认证服务条款</string>
+    <string name="rino_user_unset">未设置</string>
+    <string name="rino_user_login_phone_tip2">未注册手机号登录后将自动创建账号</string>
+    <string name="rino_device_upgrade_now">立即升级</string>
+    <string name="rino_app_upgrade_later">以后再说</string>
+    <string name="rino_user_navigation_title_home">首页</string>
+    <string name="rino_user_navigation_title_shop">商城</string>
+    <string name="rino_user_navigation_title_mine">我的</string>
+    <string name="rino_common_faq">常见问题</string>
+    <string name="rino_common_customer_service">在线客服</string>
+    <string name="rino_mine_login_security">登录安全</string>
+    <string name="rino_mine_login_security_switch">两步验证</string>
+    <string name="rino_mine_login_security_trusted_devices">受信任的设备</string>
+    <string name="rino_mine_login_security_tips">使用两步验证，从无法识别的设备登录时，您将需要密码和验证码。验证码将发送到帐户电子邮件。</string>
+    <string name="rino_mine_trusted_devices_tips">您的账户信任以下设备，您可以删除该设备，删除后登录该设备时需要进行两步验证。</string>
+    <string name="rino_mine_current_trusted_device">此设备</string>
+    <string name="rino_mine_delete_trusted_device">删除后，下次登录时需要进行两步验证。</string>
+    <string name="rino_user_login_security">您正在登录到新设备。 为了您的账户安全，添加此设备需要额外的验证。</string>
+    <string name="rino_user_login_security_expored">登录授权已过期，请重新登录。</string>
+    <string name="rino_user_device_last_login">上次登录</string>
+    <string name="rino_common_unit_minute">分钟</string>
+    <string name="rino_user_reset_password_success_tips">密码修改成功，请重新登录</string>
+    <string name="rino_user_password_rule">密码长度为6-20个字符，必须包含字母、数字，支持特殊字符：!@#$%^&amp;*()._-</string>
+    <string name="rino_mine_set_logout_account">是否退出账号？</string>
+
+    <!-- xpopup 模块 -->
+
+    <string name="xpopup_cancel">取消</string>
+    <string name="xpopup_ok">确定</string>
+    <string name="xpopup_save">保存</string>
+    <string name="xpopup_saved_to_gallery">已保存到相册</string>
+    <string name="xpopup_image_not_exist">图片不存在</string>
+    <string name="xpopup_saved_fail">图片保存失败</string>
+</resources>

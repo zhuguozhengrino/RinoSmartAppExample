@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "368203222637",
+    "project_id": "rinoiot-57f50",
+    "storage_bucket": "rinoiot-57f50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368203222637:android:a44263ac80444ba145b964",
+        "android_client_info": {
+          "package_name": "com.smart.rinoiot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368203222637-3e27un5qj4ccanepb3mvrumlcpkk5uhv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Lj1hDmCI4bwYGoila0wNltRrwTt53e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368203222637-3e27un5qj4ccanepb3mvrumlcpkk5uhv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "368203222637-0gmp1feg3etljt4dmkgh5m75o2uqqbug.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.smart.rinoiot"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

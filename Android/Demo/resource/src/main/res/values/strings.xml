@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  app 模块  -->
+    <!-- alexa  app to app 第三方语音配置 -->
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://baidu.com\" }]</string>
+
+    <!-- 高德地址key -->
+    <string name="rino_user_amap_apikey">dsjldsfljfsohfweroiwnfcmvfewecsd</string>
+    <string name="rino_app_name">Rino Smart</string>
+    <string name="rino_user_feedback_account">accountapp@rinoiot.com</string>
+    <!-- 第一次安装用户协议和隐私政策 -->
+    <string name="rino_user_first_user_agreement_url">https://h5.rinoiot.com/agreement/user-agreement?appId=6e9QcQlsUtUPx1mG&amp;apiPath=https://service.rinoiot.com/api</string>
+    <string name="rino_user_first_privacy_policy_url">https://h5.rinoiot.com/agreement/private-policy?appId=6e9QcQlsUtUPx1mG&amp;apiPath=https://service.rinoiot.com/api</string>
+
+
+    <!-- bridge_SDK 模块-->
+
+    <string name="rino_h5_pay_wechat_error">Wechat app not found</string>
+
+    <!-- chat 模块 -->
+
+    <string name="rino_chat_support_score">Comment on this service</string>
+    <string name="rino_chat_tab_support">Customer Support</string>
+    <string name="rino_chat_support_input_hint">Please enter the content of the inquiry</string>
+    <string name="rino_chat_video_list">Video presentation list</string>
+    <string name="rino_chat_connect_tip">Sorry, Since the server has not been connected for a long time the online customer service is temporaily unavaliable, you can submit a ticket to deal with your problem</string>
+    <string name="rino_chat_question_btn">Submit Ticket</string>
+    <string name="rino_chat_support_score_title">Did this service solve your problem?</string>
+    <string name="rino_chat_support_score_solved">Solved</string>
+    <string name="rino_chat_support_score_unsolved">Continue consultation</string>
+    <string name="rino_chat_issue_title">Guess you want to ask:</string>
+    <string name="rino_chat_score_success">Review posted successfully</string>
+    <string name="rino_chat_support_faq">FAQ</string>
+    <string name="rino_chat_support">Online Service</string>
+    <string name="rino_chat_action_send">Send</string>
+    <string name="rino_chat_video">Video</string>
+    <string name="rino_common_request_camera">Camera permission required</string>
+
+    <!-- common_SDK 模块-->
+
+    <!-- 用户协议和隐私政策 -->
+    <string name="rino_user_user_agreement_url">%1s/agreement/user-agreement</string>
+    <string name="rino_user_privacy_policy_url">%1s/agreement/private-policy</string>
+
+    <string name="rino_common_cancel">Cancel</string>
+    <string name="rino_common_no_data_title">No Data Exist</string>
+    <string name="rino_common_loading">Loading</string>
+    <string name="rino_common_network_unavailable">Current network is not available</string>
+    <string name="rino_user_country_the_uniteds_states">America</string>
+    <string name="rino_common_permission_opened">opened</string>
+    <string name="rino_common_permission_go_to_open">go to open</string>
+    <string name="rino_common_permission_rationale">In order to use the app normally you must open all permissions, click agree</string>
+    <string name="rino_common_open_setting_permission">You have denied some permissions, now go to change the settings?</string>
+    <string name="rino_common_confirm">Confirm</string>
+    <string name="rino_common_access_location">Location</string>
+    <string name="rino_common_access_location_tips">Use to search for nearby devices, display WiFi names, and automate scenes</string>
+    <string name="rino_common_camera">Photograph</string>
+    <string name="rino_common_camera_tips">Use to scanning, taking photos, recording videos, etc</string>
+    <string name="rino_common_media_files">Media file</string>
+    <string name="rino_common_media_files_tips">Use to access files such as device-related pictures, audio, and video</string>
+    <string name="rino_common_alert_title">Alert</string>
+    <string name="rino_common_permission_denied_desc">Permissions to access %1s is not allowed.Please turn on this permission in the settings</string>
+    <string name="rino_family_permission_denied_title">Regular members are not permitted</string>
+    <string name="rino_family_permission_denied_tips">Contact the home owner to enable access</string>
+    <string name="rino_device_not_support_network_config_cancel">Got it</string>
+    <string name="rino_common_save">Save</string>
+    <string name="rino_nfc_i_know">Yes</string>
+    <string name="rino_common_permission_location">Location</string>
+    <string name="rino_common_permission_camera">Camera</string>
+    <string name="rino_common_permission_title">%1s App requests the following permissions</string>
+    <string name="rino_common_ble_permission">Allow "Bluetooth" permission</string>
+    <string name="rino_common_ble_nearby_permission">Allow "Nearby Devices" permission</string>
+    <string name="rino_common_open_system_ble_permission">Turn on Bluetooth (or try again)</string>
+    <string name="rino_device_enable_bluetooth">Bluetooth is currently turned off, turn it on to scan?</string>
+    <string name="rino_common_user_location_service">Whether the user location service is closed or not</string>
+    <string name="rino_common_second_unit">Second</string>
+    <string name="rino_common_minutes_unit">Mins</string>
+    <string name="rino_common_hour_unit">Hour</string>
+    <string name="rino_common_operation_failure">Fail</string>
+    <string name="rino_common_operation_success">Success</string>
+    <string name="rino_common_permission_notification">Notification</string>
+    <string name="rino_common_jan">Jan</string>
+    <string name="rino_common_feb">Feb</string>
+    <string name="rino_common_mar">Mar</string>
+    <string name="rino_common_apr">Apr</string>
+    <string name="rino_common_may">May</string>
+    <string name="rino_common_jun">Jun</string>
+    <string name="rino_common_jul">Jul</string>
+    <string name="rino_common_aug">Aug</string>
+    <string name="rino_common_sep">Sep</string>
+    <string name="rino_common_oct">Oct</string>
+    <string name="rino_common_nov">Nov</string>
+    <string name="rino_common_dec">Dec</string>
+    <string name="rino_common_hour_unit_simple">h</string>
+    <string name="rino_common_minutes_unit_simple">m</string>
+    <string name="rino_common_second_unit_simple">s</string>
+    <string name="rino_common_timeout">Timeout</string>
+    <string name="rino_common_success">Success</string>
+    <string name="rino_common_fail">Failed</string>
+    <string name="rino_scene_local_scene">Local scene</string>
+    <string name="rino_scene_local_scene_wait">This is a local scene, please wait for the gateway to respond</string>
+    <string name="rino_scene_local_scene_condition">Condition</string>
+    <string name="rino_scene_local_scene_task">Task</string>
+    <string name="rino_common_retry">Retry</string>
+
+    <!-- connect SDK 模块-->
+
+    <string name="rino_common_ble_is_support">Support Bluetooth？</string>
+    <string name="rino_device_cloud">Cloud</string>
+    <string name="rino_device_edge_gateway">Edge</string>
+    <string name="rino_device_activator_brink_gateway">Edge Gateway List</string>
+    <string name="rino_device_activator_brink_gateway_number">Number</string>
+    <string name="rino_common_back">Back</string>
+    <string name="rino_device_activator_ble_connect">Bluetooth</string>
+    <string name="rino_device_activator_wifi_title">Select the Wi-Fi and enter the password</string>
+    <string name="rino_device_activator_wifi_desc">Please select 2.4Gz Wifi </string>
+    <string name="rino_device_wifi_5g_tips">This may be a 5GHz WiFi</string>
+    <string name="rino_device_user_wifi">Last used network</string>
+    <string name="rino_device_available_network">Available networks</string>
+    <string name="rino_device_wifi_search">Searching...</string>
+    <string name="rino_common_refresh">Refresh</string>
+    <string name="rino_common_next">Next</string>
+    <string name="rino_device_current_no_wifi">The phone is not connected to WiFi</string>
+    <string name="rino_device_to_connect">Go to Connect</string>
+    <string name="rino_device_add_all">Add All</string>
+    <string name="rino_device_distribution_network_tips">Click to add a device</string>
+    <string name="rino_device_activator_to_be_add_device">Devices can be added</string>
+    <string name="rino_device_activator_wait_reset_device">Pending device reset</string>
+    <string name="rino_device_distribution_network_success">Added successfully</string>
+    <string name="rino_device_add">Add device</string>
+    <string name="rino_common_finish">Finish</string>
+    <string name="rino_device_activator_error">Network failure</string>
+    <string name="rino_device_activator_wifi_error"> Wi-Fi SSID or Password incorrect</string>
+    <string name="rino_device_activator_connect_wifi_failure"> Wi-Fi fail to connect</string>
+    <string name="rino_device_activator_bind_failure">Bind failed </string>
+    <string name="rino_device_activator_unbind_failure">Unbind failed</string>
+    <string name="rino_device_activator_init_failure">Initialize failed</string>
+    <string name="rino_device_activator_parse_model_failure">Physical model parse failed</string>
+    <string name="rino_device_connect_wifi_failure">Device network failed</string>
+    <string name="rino_device_activator_exit_title">Device is being added, do you want to exit?</string>
+    <string name="rino_device_activator_exit_desc">Device may be in the process of being added. If you confirm out, please follow the procedure to reset the device the next time you add it</string>
+    <string name="rino_device_detail_info_ipmac">IP address</string>
+    <string name="rino_device_activator_error_binded">Already bound</string>
+    <string name="rino_connect_wifi_content">Do you want to turn on system wifi</string>
+
+    <!-- connect_ui 模块 -->
+
+    <string name="rino_device_not_support_network_config">If you want to bind the device, you need to put the device in the wiring mode</string>
+    <string name="rino_device_not_support_network_config_confirm">View guide</string>
+    <string name="rino_device_scan">Scan</string>
+    <string name="rino_device_activator_add_device_adding">Device is being added</string>
+    <string name="rino_device_activator_add_device_timeout">Device time out</string>
+    <string name="rino_device_not_support_qrcode">QR code pairing not support</string>
+    <string name="rino_device_found_add">%1s devices found</string>
+    <string name="rino_device_automatic_find">Automatic search for nearby devices in...</string>
+    <string name="rino_device_manual_add">Adding devices manually</string>
+    <string name="rino_device_activator_open_bluetooth_tip">Please turn on the Bluetooth</string>
+    <string name="rino_device_activator_scan_timeout">Please keep the mobile phone close to the device and router, and keep the network normal-Fi</string>
+    <string name="rino_device_activator_device_retry">Retry step by step</string>
+    <string name="rino_device_activator_device_success">Network provisioning success</string>
+    <string name="rino_device_connect_ipc_tips">Facing the QR code directly to the camera, keep a distance of 15-20cm</string>
+    <string name="rino_device_activator_not_scan_title">Scan failed...</string>
+    <string name="rino_device_activator_not_scan_subtitle">What should I do if the scan fails?</string>
+    <string name="rino_device_activator_not_scan_desc1">Probably due to the current network environment is poor or has been bind by others.</string>
+    <string name="rino_device_activator_not_scan_desc2">1. Make sure the distance between the phone and the device is close enough and there is no strong interference in the surrounding network environment.</string>
+    <string name="rino_device_activator_not_scan_desc3">2. Make sure the location permission of the app is open.</string>
+    <string name="rino_device_activator_not_scan_desc4">3. If you still can\'t find the device, it may be because the device has been bind by someone else. If you are not sure who has bound the device, you can reset it, please refer to the manual or select "manually add" device in the app and follow the guide.</string>
+    <string name="rino_device_activator_not_scan_desc5">4. Bluetooth devices, please check whether the device is normally powered on, or phone Bluetooth has been opened.</string>
+    <string name="rino_user_input_password">Enter your password</string>
+    <string name="rino_device_detail_list_info">Device Information</string>
+    <string name="rino_device_update_room">Select the room</string>
+    <string name="rino_device_activator_connect_wifi">Connect WI-Fi</string>
+    <string name="rino_device_activator_find_device">Find a device</string>
+    <string name="rino_device_activator_bind_device">Bind device</string>
+    <string name="rino_device_activator_register_cloud">Register to the cloud</string>
+    <string name="rino_device_activator_init_device">Device initialisation</string>
+    <string name="rino_device_activator_continue_add">Continue adding</string>
+    <string name="rino_device_activator_not_scan_device">What if I can\'t scan?</string>
+    <string name="rino_device_guide_empty_tips">Unconfigured pairing guide</string>
+    <string name="rino_device_activator_ap_wifi_guide_decs1">1. Please connect your phone to the hotspot shown in the picture below</string>
+    <string name="rino_device_activator_ap_wifi_guide_decs4">2. Return to this application and continue to add devices. If the local network permission is not enabled, the device will fail to connect to the network</string>
+    <string name="rino_device_activator_ap_wifi_guide_sure">Make sure the connection to the hotspot is correct, continue to the next step</string>
+    <string name="rino_device_activator_ap_wifi_guide_again_connect">Reconnect</string>
+
+    <!-- device_sdk 模块 -->
+
+    <string name="rino_device_upgrade_tips">Auto-installation.Do not exit the app in the middle of the process.</string>
+    <string name="rino_device_drag_to_sort">Long press and drag to sort</string>
+    <string name="rino_common_delete">Delete</string>
+    <string name="rino_device_reset_sort">Reset sort</string>
+    <string name="rino_device_panel_dialog_rename_title">Rename</string>
+    <string name="rino_device_delete_message">After the device is removed, the scenarios related to the device become invalid </string>
+    <string name="rino_device_management">Device Management</string>
+    <string name="rino_device_delete_title">Are you sure you want to remove device or disband group?</string>
+    <string name="rino_device_update">Device upgrade</string>
+    <string name="rino_family_delete_success">Deletion is successful</string>
+    <string name="rino_device_remove_group">Disband group</string>
+    <string name="rino_device_detail_gateway_connect_method">Gateway connection method</string>
+    <string name="rino_device_detail_run_time">running time</string>
+    <string name="rino_device_detail_sub_device_count">The number of sub-device</string>
+    <string name="rino_device_detail_run_status">running status</string>
+
+    <!-- device_share_ui -->
+
+    <string name="rino_device_home_receive_share">I received the share</string>
+    <string name="rino_device_share_cancel_title">Whether to cancel sharing</string>
+    <string name="rino_device_detail_share">Shared device</string>
+    <string name="rino_device_detail_share_group">share group</string>
+    <string name="rino_device_alert_remove_shared">Whether to remove sharing</string>
+    <string name="rino_device_home_receive_share_detail">Share details</string>
+    <string name="rino_device_detail_share_input_account">Please enter your account number</string>
+    <string name="rino_device_detail_share_coutry_title">Countries and Regions</string>
+    <string name="rino_device_detail_add_share_title">Add Shared</string>
+    <string name="rino_device_detail_share_title">The device has been shared with the following %1s APP users</string>
+    <string name="rino_device_shared_help">Help</string>
+    <string name="rino_device_share_user_home_title">the home</string>
+    <string name="rino_device_home_receive_share_device">Shared device received</string>
+    <string name="rino_device_detail_share_add_remark">Add Remark</string>
+    <string name="rino_device_detail_share_alert_input_remark">Please enter remark</string>
+    <string name="rino_device_home_receive_share_decs">The shared device you receive is not visible to other members of your family</string>
+    <string name="rino_device_detail_cancel_share">Cancel Shared</string>
+    <string name="rino_device_detail_remove_share">Remove share</string>
+    <string name="rino_device_deteil_share_from">Equipment from</string>
+    <string name="rino_device_home_receive_share_from">Shared From</string>
+    <string name="rino_device_home_receive_share_notes">Remark</string>
+    <string name="rino_device_shared_help_unsupport_shared_model">The current device does not support this sharing mode</string>
+    <string name="rino_device_shared_help_unsupport_shared_model_sub">Devices such as Bluetooth Mesh, single Bluetooth, and gateway cannot be shared with other users in this mode.</string>
+    <string name="rino_device_shared_help_family_recommand">You are advised to add a family member sharing mode</string>
+    <string name="rino_device_shared_help_family_recommand_sub">Add members in the family management portal. After adding members, you can share the devices in the family in batches.</string>
+    <string name="rino_device_group_item_online">online</string>
+    <string name="rino_device_group_item_select_num"> pitch on</string>
+    <string name="rino_device_group_item_offline">offline</string>
+    <string name="rino_device_group_item_existing_group">Existing group</string>
+    <string name="rino_device_group_max_nums">Up to 4 cameras</string>
+    <string name="rino_device_mulit_screen_name">Multi-screen group name</string>
+    <string name="rino_common_create_success">Create Success</string>
+    <string name="rino_device_group">Group</string>
+
+    <!-- device_ui 模块 -->
+
+    <string name="rino_device_status_offline">Offline</string>
+    <string name="rino_device_upgrading">Upgrading... %1s  %%</string>
+    <string name="rino_device_upgrading_version_to">Upgrading to Version:V %1s</string>
+    <string name="rino_device_upgrade_success">Update Successed</string>
+    <string name="rino_device_upgrade_fail">Update Failed</string>
+    <string name="rinp_device_group_input_name">Please enter a group name</string>
+    <string name="rino_device_detail_name_input">Enter the device name</string>
+    <string name="rino_device_dissolve_group">Are you sure you want to disband?</string>
+    <string name="rino_device_create_group_rename">Change Name</string>
+    <string name="rino_device_upgrade_stop">The device is being upgraded, exit in the middle of the upgrade, the upgrade may fail.</string>
+    <string name="rino_device_upgrade_quit">Insist on quitting</string>
+    <string name="rino_device_upgrade_not_quit">Do not exit</string>
+    <string name="rino_device_cancel_upgrade_title">Exit Upgrade？</string>
+    <string name="rino_device_cancel_upgrade_tips">The device is being upgraded, and the device may fail to upgrade after exiting</string>
+    <string name="rino_family_exit">Exit</string>
+    <string name="rino_device_detail_delete_type_unbind">Unbind</string>
+    <string name="rino_device_detail_delete_type_unbind_clear">Unbind and clear data</string>
+    <string name="rino_device_upgrade_tips_1">Upgrading, to ensure upgrade success</string>
+    <string name="rino_device_upgrade_tips_2">Please stay on the current page</string>
+    <string name="rino_device_upgrade_tips_3">Make phone close to the device</string>
+    <string name="rino_device_upgrade_tips_4">Make sure the device is powered on</string>
+    <string name="rino_device_upgrade_precautions">Upgrade Notes</string>
+    <string name="rino_device_upgrade_precautions_info">The upgrade may take a long time, please ensure that the device is fully charged, and the device cannot be used during the upgrade.</string>
+    <string name="rino_device_start_upgrade">Start Upgrading</string>
+    <string name="rino_device_upgrade_instructions">Upgrade Instructions:</string>
+    <string name="rino_device_module_ota_target">Module firmware can be upgraded: %1s</string>
+    <string name="rino_device_module_ota_current">Current module firmware version: %1s</string>
+    <string name="rino_device_mcu_ota_target">MCU firmware can be upgraded: %1s</string>
+    <string name="rino_device_mcu_ota_current">Current MCU firmware version: %1s</string>
+    <string name="rino_device_panel_rename_title">Name</string>
+    <string name="rino_common_copy">Copy</string>
+    <string name="rino_device_detail_info_signal">Signal Connect</string>
+    <string name="rino_device_reboot">Device reboot</string>
+    <string name="rino_device_create_group">Create Group </string>
+    <string name="rino_device_latest">Already the latest version</string>
+    <string name="rino_device_detail_delete_title">Remove Device</string>
+    <string name="rino_device_detail_title">Device Detail</string>
+    <string name="rino_device_detail_location">Device Location</string>
+    <string name="rino_common_cope_success">Copy successfully</string>
+    <string name="rino_device_detail_info_dev_sn">Device SN</string>
+    <string name="rino_device_detail_info_devid">Device ID</string>
+    <string name="rino_device_time_zone">Device Time Zone</string>
+    <string name="rino_device_group_manager">Manage</string>
+    <string name="rino_device_edit_group_name">Group devices</string>
+    <string name="rino_device_create_group_name">Group name</string>
+    <string name="rino_device_ota_upgrade">Firmware available for update</string>
+    <string name="rino_device_position_manager">position management</string>
+    <string name="rino_family_delete_room_tip">Are you sure to delete the room?</string>
+    <string name="rino_device_create_group_desc">Create Group to Control</string>
+    <string name="rino_device_create_group_condition_tips">At least 2 identical products to form a group</string>
+    <string name="rino_device_save_group_condition_tips">Please add at least 2 devices</string>
+    <string name="rino_device_edit_group_tips">Can add more devices to the group</string>
+    <string name="rino_device_firmware_upgrade">Upgrade</string>
+    <string name="rino_device_no_data_desc">No device yet</string>
+    <string name="rino_device_member_no_data_tips">You can have family creators add products, and after adding them, you can also use</string>
+    <string name="rino_family_device_count">%d Device</string>
+    <string name="rino_device_detail_unbind_device_title">Are you sure you want to unbind the device? </string>
+    <string name="rino_device_detail_unbind_clear_device_title">Are you sure to unbind and clear the data? </string>
+    <string name="rino_device_detail_unbind_device_tips">After the device is unbind, the "automation" scene related to it will be unavailable</string>
+    <string name="rino_device_detail_unbind_clear_device_tips">The device will be restored to factory settings, removed from the device list, and all device-related data will be cleared</string>
+    <string name="rino_common_unselect_all">Unselect all</string>
+    <string name="rino_common_unit_day">day</string>
+    <string name="rino_common_unit_hour">Hour</string>
+    <string name="rino_device_ota_upgrading">upgrading</string>
+    <string name="rino_device_batch_upgrade">Batch firmware upgrade</string>
+    <string name="rino_device_batch_upgrade_empty_tips">There are currently no devices available for upgrade</string>
+    <string name="rino_device_batch_upgrade_product_id">Product ID</string>
+    <string name="rino_device_batch_upgrade_product_title">Device batch upgrade</string>
+    <string name="rino_device_batch_upgrade_product_tips">Please select the product to be upgraded</string>
+    <string name="rino_device_batch_upgrade_device">Batch upgrade</string>
+    <string name="rino_device_batch_upgrade_device_version">Version</string>
+    <string name="rino_device_batch_upgrade_device_selected_all_tips">Up to forty all tips</string>
+    <string name="rino_device_gateway_sub_share_remove">The shared gateway sub-device does not support share removal</string>
+    <string name="rino_device_edit_group">Edit Group</string>
+    <string name="rino_device_hibernated">Hibernated</string>
+    <string name="rino_device_share_matter_title">Associate Matter-enabled apps</string>
+    <string name="rino_device_share_matter_content">Select a Matter-enabled app to control and manage this device, and you can also use code to connect or invite others</string>
+    <string name="rino_device_share_manual_code">Use pairing code</string>
+    <string name="rino_device_share_qr_code">Use QR code</string>
+    <string name="rino_device_share_qr_code_title">Share using QR code</string>
+    <string name="rino_device_share_qr_code_content">%1s is already in pairing mode and can connect to the device by scanning the code. This QR code will fail after 15 minutes. Please do not exit this interface before the sharing is completed, otherwise the sharing may fail</string>
+    <string name="rino_device_share_manual_code_title">Share using pairing code</string>
+    <string name="rino_device_share_manual_code_content">%1s is already in pairing mode. You can connect the device by copying and pasting the pairing code. This QR code will fail after 15 minutes. Please do not exit this interface before the sharing is completed, otherwise the sharing may fail</string>
+    <string name="rino_device_share_copy_code">Copy pairing code</string>
+    <string name="rino_device_share_offline_tips">The device is offline and does not support sharing</string>
+    <string name="rino_device_delete_group_tips">Forcibly disbanding the group will be removed from the scene. Are you sure you want to disband the group? </string>
+    <string name="rino_device_delete_device_tips">Forcibly unbinding the device will be removed from the scene and group. Are you sure you want to unbind the device? </string>
+    <string name="rino_device_delete_cache_tips">Forced unbinding. The device will be removed from the scene and group. Are you sure you want to unbind and clear the data? </string>
+    <string name="rino_common_replace">Replace</string>
+    <string name="rino_device_sub_device_cancel_operation">Cancel operation</string>
+    <string name="rino_device_gateway_replace_empty_tips">There is currently no replacement gateway device</string>
+    <string name="rino_device_gateway_replace">Gateway replacement</string>
+    <string name="rino_device_gateway_replace_select">Please select the gateway to be replaced</string>
+    <string name="rino_device_gateway_replace_success">Replacement successful</string>
+    <string name="rino_device_gateway_sub_device_code">Code</string>
+
+    <!-- family_ui 模块 -->
+
+    <string name="rino_family_location">Home Location</string>
+    <string name="rino_family_management">Home room management</string>
+    <string name="rino_family_waiting_to_join">Waiting to join</string>
+    <string name="rino_family_name">Home name</string>
+    <string name="rino_common_family_manager">Home</string>
+    <string name="rino_family_is_join_family">Do you want to join this home?</string>
+    <string name="rino_family_join_family">Yes</string>
+    <string name="rino_family_reject_join">Refuse to join</string>
+    <string name="rino_family_manager">Home Management</string>
+    <string name="rino_family_device_counnt">Number of all devices</string>
+    <string name="rino_family_room_management">Room management</string>
+    <string name="rino_family_member">Home members</string>
+    <string name="rino_family_add_success">Home successfully created</string>
+    <string name="rino_family_update_info">Home information updated</string>
+    <string name="rino_family_room_count">%d rooms</string>
+    <string name="rino_family_set_location_desc">Setting home location will offer better experience</string>
+    <string name="rino_family_recommend">Recommend</string>
+    <string name="rino_family_input_add_member_hint">Enter the phone number/email</string>
+    <string name="rino_family_member_info">Member information</string>
+    <string name="rino_family_role">Home Permissions</string>
+    <string name="rino_family_not_join_family">Later</string>
+    <string name="rino_family_role_owner">Home owner</string>
+    <string name="rino_family_role_admin">Administrators</string>
+    <string name="rino_family_role_member">Members</string>
+    <string name="rino_family_confirm_delete_family">Are you sure you want to delete home?</string>
+    <string name="rino_family_delete_family_desc">After the home is deleted, all members will be deleted, data will be emptied, and all devices will be unpaired</string>
+    <string name="rino_family_remove_family">Remove Home</string>
+    <string name="rino_family_leave_family">Leave home</string>
+    <string name="rino_family_create_family">Add home</string>
+    <string name="rino_family_my_home">My Home</string>
+    <string name="rino_family_input_name">Enter the home name</string>
+    <string name="rino_family_input_location_hint">Set home location</string>
+    <string name="rino_family_add_member_title">Add home member</string>
+    <string name="rino_family_continue_edit">Continue</string>
+    <string name="rino_family_exit_title">The Home you are currently creating has not been saved, do you want to exit?</string>
+    <string name="rino_family_add_room_title">Add room</string>
+    <string name="rino_family_room_name_title">Room name</string>
+    <string name="rino_family_room_input_hint">Please enter a room name</string>
+    <string name="rino_family_living_room">Living room</string>
+    <string name="rino_family_master_bedroom">Master Bedroom</string>
+    <string name="rino_family_second_bedroom">Second Bedroom</string>
+    <string name="rino_family_dining_room">Dining room</string>
+    <string name="rino_family_kitchen">Kitchen</string>
+    <string name="rino_family_invitation_sent">Invitation Sent</string>
+    <string name="rino_family_balcony">Balcony</string>
+    <string name="rino_family_add_room_success">Add room successfully</string>
+    <string name="rino_family_join_success">Join successfully</string>
+    <string name="rino_family_room_nav_title">Room settings</string>
+    <string name="rino_family_room_equipment_not_in_room">Devices not in this room</string>
+    <string name="rino_device_all">All device</string>
+    <string name="rino_family_delete_member">remove member</string>
+    <string name="rino_user_without_account_some_functions_cannot_used">No account to use full function</string>
+    <string name="rino_user_register">Register</string>
+    <string name="rino_family_delete_member_tips">Delete this member? </string>
+    <string name="rino_family_room_name_not_empty">Room name is not empty</string>
+    <string name="rino_common_anonymous_title">No access yet, please log in!</string>
+    <string name="rino_common_anonymous_create_family">2.Creat Home</string>
+    <string name="rino_common_anonymous_create_family_desc">Support multiple families creation and invite members to join</string>
+    <string name="rino_common_anonymous_cloud_storage_desc">Device data store in cloud for easy synchronization</string>
+    <string name="rino_common_anonymous_cloud_storage">Data cloud storage</string>
+    <string name="rino_common_anonymous_voice">1.Third-Party Services</string>
+    <string name="rino_common_anonymous_voice_desc">Third-Party Platforms</string>
+    <string name="rino_device_home_add_devices">The device I added</string>
+    <string name="rino_device_add_sub_device">Add sub-device</string>
+    <string name="rino_device_add_gateway">You need to add a gateway before adding sub-device</string>
+    <string name="rino_family_confirm_remove_family">Are you sure you want to leave the home?</string>
+    <string name="rino_family_room_update_info">Room information updated successfully</string>
+
+    <!-- feedback-ui 模块 -->
+
+    <string name="rino_mine_feedback_title">My Feedback</string>
+    <string name="rino_mine_feedback_problem_type_title">Problem category</string>
+    <string name="rino_mine_common_problem">Common Problem</string>
+    <string name="mf_faq_select_faulty_device">Select Device</string>
+    <string name="mf_faq_type">Type of problem</string>
+    <string name="mf_faq_upload_image">Upload images</string>
+    <string name="mf_faq_upload_image_tip_des">(Up to 3 photos)</string>
+    <string name="mf_faq_contact_number">Contact Email</string>
+    <string name="mf_faq_time_of_occurrence">Time of occurrence</string>
+    <string name="mf_faq_add_image_over_limit">You have added more than 3 pictures!</string>
+    <string name="mf_faq_please_input_question">Please fill in the problem description</string>
+    <string name="mf_faq_order_number">Order Number</string>
+    <string name="mf_faq_order_number_hint">Please enter the order number</string>
+    <string name="mf_faq_popur_problem">Suppose you want to see</string>
+    <string name="mf_faq_more_question">More hot issues</string>
+    <string name="mf_faq_others_question">other questions</string>
+    <string name="mf_faq_help_center">Help center</string>
+    <string name="mf_faq_problem_type">Problem classification</string>
+    <string name="mf_faq_popur_problem_type">Hot issues</string>
+    <string name="mf_faq_all_problem_type">All questions</string>
+    <string name="mf_faq_problem_detail">Question details</string>
+    <string name="mf_faq_robit_replay">Your question has entered the manual customer service queue for processing, please wait patiently</string>
+    <string name="mf_faq_no_more_data">No more data</string>
+    <string name="mf_faq_device_control">Device Control</string>
+    <string name="mf_faq_third_party_control">Third-party Control</string>
+    <string name="mf_faq_application_operation">Application Operation</string>
+    <string name="mf_faq_after_sale">After sale</string>
+    <string name="mf_faq_other">Other</string>
+    <string name="mf_faq_select_time_tip">Please select the time of occurrence.</string>
+    <string name="mf_faq_new_ticket">New Ticket</string>
+    <string name="mf_faq_my_feedback">Ticket</string>
+    <string name="mf_faq_details">Tickets details</string>
+    <string name="mf_faq_customer_reply">Customer service reply</string>
+    <string name="mf_faq_reply">Feedback content</string>
+    <string name="ka_after_sale_service_common_pro">Common problem</string>
+    <string name="mf_faq_processing">To be processed</string>
+    <string name="mf_faq_processed">Processed</string>
+    <string name="mf_faq_closed">Closed</string>
+    <string name="mf_common_problem">Common problem</string>
+    <string name="ka_after_sale_service_contact_us">Contact us</string>
+    <string name="still_have_problems">Still Have Problems?</string>
+    <string name="replacement_items"> Click return or replacement items</string>
+    <string name="mf_faq_type_hint">Please select the type of problem</string>
+    <string name="mf_faq_use_video">Use video</string>
+    <string name="mf_common_please_select">Please select</string>
+    <string name="account_not_empty">Please enter your account</string>
+    <string name="mf_user_order_id">Order ID</string>
+    <string name="mf_chat_support_input_hint">Please enter</string>
+    <string name="submit">Submit</string>
+    <string name="mf_common_problem_resolved">Solved</string>
+    <string name="mf_common_problem_unresolved">Unsolved</string>
+    <string name="mf_common_problem_feedback">If your problem is not resolved, you can</string>
+    <string name="mf_common_problem_feedback_all">If your question is not found, please proceed</string>
+    <string name="mf_common_problem_feedback_select">Submit a ticket</string>
+    <string name="mf_common_request_camera">You need to obtain camera and storage permissions to upload your avatar</string>
+    <string name="config_failure_try_again">Try Again</string>
+    <string name="Cancel">Cancel</string>
+    <string name="submit_failed_desc">Submit failed.Please try again</string>
+    <string name="submit_success_desc">Our after-sales support will contact you within 24 hours</string>
+    <string name="I_know">I know</string>
+    <string name="mf_common_permission_denied">Permission is forbidden</string>
+    <string name="mf_common_select_picture">Select image source</string>
+    <string name="mf_common_error_uploading_pic">Upload failed, please try again</string>
+    <string name="mf_common_please_enter_correct_email">Please enter the correct email.</string>
+    <string name="mf_common_please_enter_correct_phone">Please enter the correct phone.</string>
+    <string name="my_profile_choose_pic_from_camera">Take Photo</string>
+    <string name="ty_gallery_title">Album</string>
+    <string name="ty_device_connect">Connect Device</string>
+    <string name="mf_common_help_cener_hint">Please enter a question</string>
+    <string name="mf_user_frag_iconfeedback_str">FAQs &#038; Tickets</string>
+
+    <!-- map 模块 -->
+
+    <string name="rino_common_search_address">Search address</string>
+
+    <!-- matter 模块 -->
+
+    <string name="share_mtr_device_hint" translatable="false">To allow others to control this device, they need to open a Matter-enabled app on their phone and scan this QR code.</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="default_device_name" translatable="false">My name is very long but who cares</string>
+    <string name="off_status" translatable="false">Off</string>
+    <string name="on_status" translatable="false">On</string>
+    <string name="brightness_100_perc" translatable="false">100%</string>
+    <string name="offline" translatable="false">Offline</string>
+    <string name="default_home_name" translatable="false">Someone\'s</string>
+    <string name="power" translatable="false">Power</string>
+    <string name="color" translatable="false">Color</string>
+    <string name="percentage_symbol" translatable="false">%</string>
+    <string name="default_brightness" translatable="false">0</string>
+    <string name="brightness" translatable="false">Brightness</string>
+    <string name="in" translatable="false">In </string>
+    <string name="name" translatable="false">Name</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="basic_info" translatable="false">Basic info</string>
+    <string name="share_device_hint" translatable="false">You can share this device to control it from other apps or services.</string>
+    <string name="share" translatable="false">Share</string>
+    <string name="technical_info" translatable="false">Technical Info</string>
+    <string name="added_on" translatable="false">Added on:</string>
+    <string name="default_date_and_time" translatable="false">04.05.22 19:20:33</string>
+    <string name="device_type" translatable="false">Device Type:</string>
+    <string name="unknown" translatable="false">Unknown</string>
+    <string name="default_device_id" translatable="false">1</string>
+    <string name="id" translatable="false">ID:</string>
+    <string name="manufacturer" translatable="false">Manufacturer:</string>
+    <string name="delete_device" translatable="false">Delete device</string>
+    <string name="power_off" translatable="false">Power is Off</string>
+    <string name="power_on" translatable="false">Power is On</string>
+    <string name="device_color" translatable="false">Device Color</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="remove_device_hint" translatable="false">This device will be removed and unlinked from this app. Other services and connection-type may still have access</string>
+    <string name="pairing_code_example" translatable="false">0003–4568–910</string>
+
+    <!-- module_ble 模块 -->
+
+    <string name="ota_error">Failed to update device %1s, please check Bluetooth connection</string>
+    <string name="update_retry">Retry</string>
+    <string name="update_cancel">Cancel</string>
+    <string name="updating">Updating, please wait</string>
+
+    <!-- msg_ui 模块 -->
+
+    <string name="rino_mine_msg_open_push">Enable Notification</string>
+    <string name="rino_mine_msg_push_title">Notification Setting</string>
+    <string name="rino_mine_msg_alarm">Alarm</string>
+    <string name="rino_mine_msg_family">Home</string>
+    <string name="rino_common_notify_center">Message</string>
+    <string name="rino_message_all_time">All time</string>
+    <string name="rino_message_sun">SUN</string>
+    <string name="rino_message_mon">MON</string>
+    <string name="rino_message_tue">TUE</string>
+    <string name="rino_message_wed">WED</string>
+    <string name="rino_message_thu">THU</string>
+    <string name="rino_message_fri">FRI</string>
+    <string name="rino_message_sat">SAT</string>
+    <string name="rino_message_today">Same Day</string>
+    <string name="rino_message_next_day">Next day</string>
+    <string name="rino_message_delete">These recordings cannot be recovered once you\'ve deleted them. Are you sure to delete these recordings? </string>
+    <string name="rino_message_done">Done</string>
+    <string name="rino_message_select_all">Select All</string>
+    <string name="rino_message_read">Read</string>
+    <string name="rino_common_header_failed">Refresh Failed</string>
+    <string name="rino_common_header_finish">Refresh Success</string>
+    <string name="rino_common_header_loading">Wait For Loading…</string>
+    <string name="rino_common_header_pulling">Pull Down To Refresh</string>
+    <string name="rino_common_header_refreshing">Refreshing…</string>
+    <string name="rino_common_header_release">Release To Refresh</string>
+    <string name="rino_common_header_secondary">Release To Second Floor</string>
+    <string name="rino_common_header_update">\'Last Update\' M-d HH:mm</string>
+
+    <string name="rino_common_footer_failed">Load Failed</string>
+    <string name="rino_common_footer_finish">Load Success</string>
+    <string name="rino_common_footer_loading">Loading…</string>
+    <string name="rino_common_footer_nothing">No More Data</string>
+    <string name="rino_common_footer_pulling">Pull Up To Load More</string>
+    <string name="rino_common_footer_refreshing">Wait For Refreshing…</string>
+    <string name="rino_common_footer_release">Release To Load More</string>
+    <string name="rino_message_all_homes">All homes</string>
+    <string name="rino_message_statement">Statement</string>
+    <string name="rino_message_type">Message Type</string>
+    <string name="rino_message_equipment">Equipment</string>
+    <string name="rino_message_device">Device</string>
+    <string name="rino_message_event_type">Event type</string>
+    <string name="rino_message_delection_type">Detection type</string>
+    <string name="rino_message_storage_location">Storage location</string>
+    <string name="rino_user_navigation_title_scene">Scene</string>
+    <string name="rino_family_room_set_title">Room</string>
+    <string name="rino_common_reset">Reset</string>
+    <!-- 消息中心 设置-->
+
+    <string name="rino_message_setting_home_notification">Home Notification</string>
+    <string name="rino_message_setting_scene_notification">Scene Log Notification</string>
+    <string name="rino_message_setting_device_notification">Device Alarm Notification</string>
+    <string name="rino_message_setting_service_notification">Service Notification</string>
+    <string name="rino_message_setting_offcial_notification">Official Notification</string>
+    <string name="rino_message_setting_not_disturb">Do not disturb</string>
+
+    <string name="rino_message_setting_customer_service">Customer Service</string>
+    <string name="rino_message_setting_order_notification">Order Notification</string>
+    <string name="rino_message_setting_news_notification">News Notification</string>
+    <string name="rino_message_setting_not_disturb_repeat">Repeat</string>
+    <string name="rino_message_all">All</string>
+    <string name="rino_message_only_unread">Only unread</string>
+    <string name="rino_message_alert">Alert</string>
+    <string name="rino_message_video">Video</string>
+    <string name="rino_message_local">Local</string>
+    <string name="rino_message_cloud">Cloud</string>
+
+    <!-- nfc——ui 模块 -->
+
+    <string name="rino_nfc_unbind_title">Unbind the NFC Smart Tag?</string>
+    <string name="rino_nfc_unbind_message">Unbind, Tap the NFC Tag to bind again</string>
+    <string name="rino_nfc_scene_empty">No Tap-to-Go, Pls create firstly</string>
+    <string name="rino_nfc_execute_command_success">Command Success</string>
+    <string name="rino_nfc_execute_command_failure">Command Failure</string>
+    <string name="rino_nfc_execute_success">Success</string>
+    <string name="rino_nfc_execute_failure">Failure</string>
+    <string name="rino_nfc_scene_manual_empty">Create new Tap-to-Go</string>
+    <string name="rino_nfc_save">Save</string>
+    <string name="rino_nfc_bind_scene">Bind Tap-to-Go</string>
+    <string name="rino_nfc_bind_device_switch">Bind Device On/Off</string>
+    <string name="rino_nfc_bind_device_panel">Enter Device UI</string>
+    <string name="rino_nfc_associate_scene">Relate Tap-to-Go</string>
+    <string name="rino_nfc_associate_device_switch">Relate Device On/Off</string>
+    <string name="rino_nfc_associate_device_panel">Relate Device</string>
+    <string name="rino_nfc_my_device">My Device</string>
+    <string name="rino_nfc_unbind">Unbind</string>
+    <string name="rino_nfc_smart_touch_tag">Smart Touch Tag</string>
+    <string name="rino_nfc_edit_tag">Edit Tag</string>
+    <string name="rino_nfc_unbind_success">Unbind Successfully</string>
+    <string name="rino_common_edit">Edit</string>
+    <string name="rino_nfc_scene_no_exist">Tap-to-Go is deleted,Pls bind again</string>
+    <string name="rino_nfc_device_no_exist">Device is deleted,Pls bind again</string>
+    <string name="rino_nfc_rebind">Rebind</string>
+    <string name="rino_nfc_home_role_permissions">NFC can only be created in your Home,Pls switch to your Home</string>
+    <string name="rino_nfc_anonymous_tips">NFC Tag can only bind in formal account</string>
+    <string name="rino_nfc_bind_not_find_family">The NFC Tag is binded, No access to use.</string>
+    <string name="rino_nfc_not_finish_tips">Pls complete ongoing NFC binding firstly</string>
+    <string name="rino_nfc_bluetooth_distribution_network">Ble pairing</string>
+    <string name="rino_nfc_open_bluetooth">Open bluetooth</string>
+    <string name="rino_nfc_turn_on_bluetooth">Enable bluetooth</string>
+    <string name="rino_nfc_connect_device">Device connecing</string>
+    <string name="rino_nfc_init_device">Device initialization</string>
+    <string name="rino_nfc_error_reason_open_bluetooth">Error： please enable ble </string>
+    <string name="rino_nfc_choose_2.4GHz_wifi_title">Please select 2.4Ghz WiFi and input password</string>
+    <string name="rino_nfc_choose_2.4GHz_wifi_desc">Please use 2.4Ghz Wi-Fi， 5Ghz Wi-Fi  not support</string>
+    <string name="rino_nfc_router_setting">Router  setting instruction</string>
+    <string name="rino_nfc_one_click_distribution">One click pairing</string>
+    <string name="rino_nfc_ssid">Wi-Fi SSID</string>
+    <string name="rino_nfc_password">Please input Wi-Fi password</string>
+    <string name="rino_nfc_init_device_error">Device initialization failed， please try again</string>
+    <string name="rino_nfc_cloud_connect">Cloud connect success</string>
+    <string name="rino_nfc_wifi_distribution_network">Wi-Fi connecting</string>
+    <string name="rino_nfc_connect_router">Connecting to a router</string>
+    <string name="rino_nfc_connect_cloud">Success</string>
+    <string name="rino_nfc_cloud_connect_need_bluetooth">Please enable bluetooth </string>
+    <string name="rino_nfc_go_experience">Experience it now!</string>
+    <string name="rino_nfc_device_connect_cloud_success">The device has been successfully activated</string>
+    <string name="rino_nfc_wifi_signal_weak_check_network">WiFi signal is poor, please check the network</string>
+    <string name="rino_nfc_wifi_password_error">WiFi password is wrong, please try again</string>
+    <string name="rino_nfc_wifi_not_found">WiFi search is not available, please select the network again</string>
+    <string name="rino_nfc_device_not_connect">The device is not connected</string>
+    <string name="rino_nfc_device_connect_describe">1. Please make sure the device is powered on \n2. Please leave the device in the network configuration state</string>
+    <string name="rino_nfc_distribution_network_describe">Wiring instructions</string>
+    <string name="rino_nfc_previous_step">Previous</string>
+    <string name="rino_nfc_next_step">Next step</string>
+    <string name="rino_nfc_connect_location_setup">Manually enter the Wi-Fi name or turn on the location permission in order to get the nearby Wi-Fi devices automatically</string>
+    <string name="rino_nfc_go_to_settings">Go to Settings</string>
+    <string name="rino_nfc_again_distribution_network">The device is in wiring mode and needs to be rewired</string>
+    <string name="rino_common_nfc_phone_not_support">Failure reason: Bluetooth is not supported</string>
+    <string name="rino_device_activator_add_device_success">Device added successfully</string>
+    <string name="rino_nfc_smart_label">Smart Tag</string>
+
+    <!--  panel_sdk 模块 -->
+
+    <string name="rino_panel_device_configuration_instructions">Jump device configuration instructions</string>
+    <string name="rino_panel_device_empty">The basic information of the device is empty, and the panel cannot be opened</string>
+    <string name="rino_device_config_network_md5_tips">MD5 value cannot be empty</string>
+    <string name="rino_device_config_network_download_tips">The download address cannot be empty</string>
+    <string name="rino_device_share_not_upgrade">The shared user does not allow firmware upgrade</string>
+    <string name="rino_device_door_call">Requesting to call you...</string>
+    <string name="rino_device_door_call_video_answering">Video answering</string>
+    <string name="rino_device_door_call_hang_up">hang up</string>
+    <string name="rino_device_door_call_voice_answering">Voice answering</string>
+    <string name="rino_device_door_call_closed">The call is closed</string>
+
+    <!-- scan 模块 -->
+
+    <string name="rino_scan_turn_off_lights">Turn off the lights</string>
+    <string name="rino_scan_turn_on_lights">Turn on the lights</string>
+    <string name="rino_scan_turn_on_flashlight">turn on the flashlight</string>
+    <string name="rino_scan_turn_off_flashlight">turn off the flashlight</string>
+    <string name="rino_scan_code_type_title">Scan QR code/barcode</string>
+    <string name="rino_scan_manual_input_tips">Manually input scan code content cannot be empty</string>
+    <string name="rino_scan_cancel">Cancel</string>
+    <string name="rino_scan_manual_add">Add manually</string>
+    <string name="rino_scan_input_device_id">Input device id</string>
+
+    <!-- scan_ui 模块 -->
+
+    <string name="rino_scan_authorized">You will be logging in on the central control screen soon, please confirm whether it is operated by yourself! </string>
+    <string name="rino_scan_confirm_login">Confirm login</string>
+    <string name="rino_scan_fail_tips">QR code verification failed</string>
+
+    <!-- scene_ui 模块 -->
+
+    <string name="rino_scene_create">Create automation</string>
+    <string name="rino_scene_auto_title">Automation</string>
+    <string name="rino_scene_manual_title">Batch control</string>
+    <string name="rino_scene_home_recommend">Recommendations</string>
+    <string name="rino_scene_manual_subtitle">E.g., Turn off all the lights in the bedroom</string>
+    <string name="rino_scene_weather_changes_title">When the weather changes</string>
+    <string name="rino_scene_weather_changes_subtitle">E.g., When the current city\'s temperature is > 24°C</string>
+    <string name="rino_scene_timing_title">Timer</string>
+    <string name="rino_device_scene_add">Create</string>
+    <string name="rino_scene_timing_subtitle">E.g., Every day at 8 a.m.</string>
+    <string name="rino_scene_device_change_title">Device status changes</string>
+    <string name="rino_scene_device_change_subtitle">E.g., When the alarm is triggered</string>
+    <string name="rino_scene_configuration_page_title">Setting</string>
+    <string name="rino_scene_manual_title_new">Create batch control</string>
+    <string name="rino_scene_condition_section_title">if the conditions are met</string>
+    <string name="rino_scene_task_section_title">Execute </string>
+    <string name="rino_scene_add_task_title">Add task</string>
+    <string name="rino_scene_add_condition_title">Add condition</string>
+    <string name="rino_scene_task_device">Operate device</string>
+    <string name="rino_scene_task_select_scene">Select existing automation</string>
+    <string name="rino_scene_task_message_notice">Send a notification</string>
+    <string name="rino_scene_task_delay">Delay the action</string>
+    <string name="rino_scene_group_not_exist">Group  deleted or No devices in this group</string>
+    <string name="rino_device_group_empty_title">No devices in this group</string>
+    <string name="rino_common_city_locating">Locating </string>
+    <string name="rino_common_save_success">Save Success</string>
+    <string name="rino_scene_device_offline">Device offline</string>
+    <string name="rino_scene_device_select_function">Select function</string>
+    <string name="rino_scene_select_function_tip">Please select function</string>
+    <string name="rino_scene_task_select_manual">Select batch control</string>
+    <string name="rino_scene_task_select_auto">Select automation</string>
+    <string name="rino_scene_task_select_type_title">Select existing automation</string>
+    <string name="rino_scene_task_clicked_tip">Batch control does not support adding one-click execution tasks.</string>
+    <string name="rino_scene_task_auto_list_title">Select the automation to toggle</string>
+    <string name="rino_scene_task_manual_list_title">Select the batch control to execute</string>
+    <string name="rino_scene_task_auto_start">Enable on execution</string>
+    <string name="rino_scene_task_auto_stop">Disable on execution</string>
+    <string name="rino_scene_status_start">Enable</string>
+    <string name="rino_scene_status_stop">Disable</string>
+    <string name="rino_scene_task_no_select_auto_tip">Select the automation to toggle</string>
+    <string name="rino_scene_task_no_select_manual_tip">Select the batch control to execute</string>
+    <string name="rino_scene_task_auto_text">Automation</string>
+    <string name="rino_scene_task_manual_text">Execute</string>
+    <string name="rino_scene_task_message_way">Select notification method</string>
+    <string name="rino_scene_task_message_center">Message Center</string>
+    <string name="rino_scene_task_call_message">Message Notification</string>
+    <string name="rino_scene_task_telephone_message">Phone Notification</string>
+    <string name="rino_scene_task_no_open">Currently unavailable</string>
+    <string name="rino_scene_task_message_multiple_selection">Send notification support multiple choice</string>
+    <string name="rino_scene_task_select_reminder_method">Select reminder method</string>
+    <string name="rino_scene_task_message_turn_on">Open</string>
+    <string name="rino_scene_task_delayed_execution">Delayed the action</string>
+    <string name="rino_scene_weather_change_temperature">Temperature</string>
+    <string name="rino_scene_weather_change_humidity">Humidity</string>
+    <string name="rino_scene_weather_change_status">Weather</string>
+    <string name="rino_scene_weather_change_air_quality">Air Quality</string>
+    <string name="rino_scene_weather_change_sunrise_sunset">Sunset/Sunrise</string>
+    <string name="rino_scene_weather_change_wind_speed">Wind Speed</string>
+    <string name="rino_scene_weather_change_pm25">PM2.5</string>
+    <string name="rino_scene_weather_current_city">Current City</string>
+    <string name="rino_scene_value_less_than">＜</string>
+    <string name="rino_scene_value_equal">＝</string>
+    <string name="rino_scene_value_more_than">＞</string>
+    <string name="rino_scene_select_condition_tip">Add condition</string>
+    <string name="rino_scene_time_repeat_title">Repeat</string>
+    <string name="rino_scene_time_every_day_title">Every day</string>
+    <string name="rino_scene_time_set_execution_time">Execution time</string>
+    <string name="rino_scene_time_working_day">Weekday</string>
+    <string name="rino_scene_time_weekend">Weekend</string>
+    <string name="rino_scene_time_sunday">Sun.</string>
+    <string name="rino_scene_time_monday">Mon.</string>
+    <string name="rino_scene_time_tuesday">Tues.</string>
+    <string name="rino_scene_time_wednesday">Wed.</string>
+    <string name="rino_scene_time_thursday">Thur.</string>
+    <string name="rino_scene_time_friday">Fri.</string>
+    <string name="rino_scene_time_saturday">Sat.</string>
+    <string name="rino_scene_time_one_time_only">Once only</string>
+    <string name="rino_scene_time_executed_once_default">If unchecked, it will only be executed once by default</string>
+    <string name="rino_scene_more_enter_name">Enter a name</string>
+    <string name="rino_scene_more_style_title">Style</string>
+    <string name="rino_scene_more_title">More</string>
+    <string name="rino_scene_more_show_home">Show on Home page</string>
+    <string name="rino_scene_more_style_color">Colour</string>
+    <string name="rino_scene_more_style_icon">Icon</string>
+    <string name="rino_scene_more_effective_period">Effective time period</string>
+    <string name="rino_scene_effective_period_allday">All day</string>
+    <string name="rino_scene_effective_period_allday_sub">24 hours</string>
+    <string name="rino_scene_effective_period_daytime">Daytime</string>
+    <string name="rino_scene_effective_period_daytime_sub">From sunrise to sunset</string>
+    <string name="rino_scene_effective_period_atnight">Night</string>
+    <string name="rino_scene_effective_period_atnight_sub">From sunset to sunrise</string>
+    <string name="rino_scene_effective_period_custom">Custom</string>
+    <string name="rino_scene_effective_period_custom_sub">Manually set time period</string>
+    <string name="rino_scene_effective_start_time">Start time</string>
+    <string name="rino_scene_effective_end_time">End time</string>
+    <string name="rino_scene_effective_today">Today</string>
+    <string name="rino_scene_effective_next_day">Next day</string>
+    <string name="rino_scene_humidity_for_dry">Dry</string>
+    <string name="rino_scene_humidity_for_comfortable">Comfortable</string>
+    <string name="rino_scene_humidity_for_damp">Damp</string>
+    <string name="rino_scene_weather_for_sunny_day">Sunny</string>
+    <string name="rino_scene_weather_for_overcast">Overcast</string>
+    <string name="rino_scene_weather_for_rain">Rainy</string>
+    <string name="rino_scene_weather_for_snowy_day">Snowy</string>
+    <string name="rino_scene_weather_for_greasy">Greasy</string>
+    <string name="rino_scene_excellent">Excellent</string>
+    <string name="rino_scene_good">Good</string>
+    <string name="rino_scene_contaminated">Contaminated</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset">Sunrise</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise">Sunset</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset_value1">at sunrise</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset_value2">Before sunrise %1s</string>
+    <string name="rino_scene_sunset_sunrise_for_sunset_value3">After sunrise %1s</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise_value1">at sunset</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise_value2">Before sunset%1s</string>
+    <string name="rino_scene_sunset_sunrise_for_sunrise_value3">After sunset%1s</string>
+    <string name="rino_scene_if">If</string>
+    <string name="rino_scene_condition_error_for_manual">Batch control cannot coexist with other conditions</string>
+    <string name="rino_scene_condition_section_sub_title1">When all conditions are met</string>
+    <string name="rino_scene_condition_section_sub_title2">When any condition is met</string>
+    <string name="rino_scene_task_error_for_manual">Batch control doesn\'t support adding tasks to send notifications</string>
+    <string name="rino_scene_delete">Delete</string>
+    <string name="rino_scene_at_least_one_day">Please select one day</string>
+    <string name="rino_scene_create_success">Create automation successfully</string>
+    <string name="rino_scene_please_set_condition">Set the condition</string>
+    <string name="rino_scene_please_set_action">Set a task</string>
+    <string name="rino_scene_can_not_only_one_delay_action">Cannot add only one delayed task</string>
+    <string name="rino_scene_can_not_last_one_delay_action">Delay cannot be the last task </string>
+    <string name="rino_scene_auto_action_num">%1s of tasks</string>
+    <string name="rino_scene_is_cancel_edit_scene">Cancel editing</string>
+    <string name="rino_scene_sure_delete_scene">Are you sure you want to delete "%1s"?</string>
+    <string name="rino_scene_sure_delete_scene_tip">Once deleted, the device tasks will not be executed properly</string>
+    <string name="rino_scene_is_enable_now">Automation created successfully, do you want to enable it now?</string>
+    <string name="rino_scene_is_enable_now_no">Not enable now </string>
+    <string name="rino_scene_is_enable_now_yes">Enable Now</string>
+    <string name="rino_scene_delete_success">Delete successful</string>
+    <string name="rino_scene_manual_execution_succeed">Success</string>
+    <string name="rino_scene_action_not_support_this_condition">Does not support </string>
+    <string name="rino_scene_update_successfully">Modification successful</string>
+    <string name="rino_scene_add_two_delay_hint">Cannot add two delayed tasks</string>
+    <string name="rino_scene_task_only_delay_hint">Cannot add only one delayed task</string>
+    <string name="rino_scene_device_not_exist">Device deleted</string>
+    <string name="rino_scene_time_month">Month</string>
+    <string name="rino_scene_time_day">Date</string>
+    <string name="rino_scene_city_select_title">Select city</string>
+    <string name="rino_scene_city_input_title">Enter city</string>
+    <string name="rino_scene_current_location_address">Current location</string>
+    <string name="rino_scene_to_reposition">Relocate</string>
+    <string name="rino_scene_all_device">All</string>
+    <string name="rino_scene_device_online">Online</string>
+    <string name="rino_scene_please_select_city">City</string>
+    <string name="rino_scene_edit_name_not_empty">Cannot be empty</string>
+    <string name="rino_scene_manual_no_data_tip">Let\'s set up batch control for easy one-click device operation.</string>
+    <string name="rino_scene_automatic_no_data_tip">Let\'s make a smart control scenario by creating an automation.</string>
+    <string name="rino_scene_member_no_data_tip">The home creator can make an automation, and then you can use it too.</string>
+    <string name="rino_scene_auto_open">Automation enabled</string>
+    <string name="rino_scene_auto_close">Automation disabled</string>
+    <string name="rino_scene_delete_auto">The task will not be executed. Are you sure to delete this automation?</string>
+    "
+    <string name="rino_scene_delete_manual">The task will not be executed. Are you sure to delete this batch control?</string>
+    "
+    <string name="rino_scene_edit_scene">Edit automation</string>
+    <string name="rino_scene_local">Local</string>
+    <string name="rino_scene_dry_percent">Dry</string>
+    <string name="rino_scene_comfortable_percent">Comfortable</string>
+    <string name="rino_scene_damp_percent">Moist</string>
+    <string name="rino_device_no_data_title">Welcome to %1s</string>
+    <string name="rino_scene_not_recommend_data">No recommended data</string>
+    <string name="rino_scene_recommend_add">Add</string>
+    <string name="rino_scene_batch_control">Batch control</string>
+    <string name="rino_scene_auto_empty">No automation added</string>
+    <string name="rino_scene_batch_type_name">Add batch control</string>
+    <string name="rino_scene_input_batch_name">Please enter the batch control name</string>
+    <string name="rino_scene_auto_type_name">Add automation</string>
+    <string name="rino_nfc_associate_tag">Related Smart Touch Tag already</string>
+    <string name="rino_scan_add">Add</string>
+    <string name="rino_nfc_bind_success">Success</string>
+    <string name="rino_scene_user_use_recommand">people have used</string>
+    <string name="rino_scene_input_auto_name">Please enter the automation name</string>
+
+    <!-- upush 模块 -->
+
+    <string name="rino_user_book_name_fill">《%1s》</string>
+    <string name="rino_user_user_agreement">User Agreement</string>
+    <string name="rino_user_login_one_click">One-click login</string>
+    <string name="rino_user_agree_tip">Signing in and registering means agree</string>
+    <string name="rino_user_privacy_policy">Privacy Policy</string>
+    <string name="rino_push_notify_permission_desc">Whether to allow "%1s" to receive notifications, please go to the settings to enable notification permissions</string>
+    <string name="rino_push_notify_confirm">Confirm</string>
+    <string name="rino_push_notify_cancel">Cancel</string>
+
+    <!-- user_sdk 模块 -->
+
+    <string name="tencent_app_id">tencent1112223724</string>
+    <string name="rino_mine_google_assistant_voice_guide">https://integration.rinoiot.com/googleAssistantEn</string>
+    <string name="rino_mine_alexa_voice_guide">https://integration.rinoiot.com/connectAlexaEn</string>
+    <string name="rino_user_please_install_wechat">Please install WeChat first</string>
+    <string name="rino_user_please_install_qq">Please install QQ first</string>
+
+    <!-- user_ui 模块 -->
+
+    <string name="rino_common_latest_version">Already latest version</string>
+    <string name="rino_app_upgrade_tips">Upgrade to new version?</string>
+    <string name="rino_mine_nickname_rule2">Max 20 characters</string>
+    <string name="rino_mine_alexa">Alexa</string>
+    <string name="rino_common_version_check">Check updates</string>
+    <string name="rino_app_upgrade_no_version">No updates available</string>
+    <string name="rino_common_old_version">Version  %1s</string>
+    <string name="rino_app_upgrade_new_version">New update</string>
+    <string name="rino_mine_profile">Profile Photo</string>
+    <string name="rino_mine_profile_name">Nickname</string>
+    <string name="rino_mine_set_about">About %1s</string>
+    <string name="rino_mine_set_account">Account</string>
+    <string name="rino_mine_set_account_cancellation">Delete Account</string>
+    <string name="rino_mine_set_account_email">Email</string>
+    <string name="rino_mine_set_account_get_code">Get verification code</string>
+    <string name="rino_mine_set_account_location">Account location</string>
+    <string name="rino_mine_set_account_phone">Phone</string>
+    <string name="rino_mine_set_account_security">Account and Security</string>
+    <string name="rino_mine_set_account_verification">Account verification</string>
+    <string name="rino_mine_set_account_verification_decs">Click on "Get Verification Code" and the verification code will be sent to your %1s:%1s</string>
+    <string name="rino_mine_set_avatar">Profile Photo</string>
+    <string name="rino_mine_account_local">Account Location</string>
+    <string name="rino_mine_account_security">Account and Security</string>
+    <string name="rino_mine_account">Mobile number</string>
+    <string name="rino_mine_change_pwd">Change Login Password</string>
+    <string name="rino_mine_logout">Delete Account</string>
+    <string name="rino_mine_feedback_select_picture">Select picture</string>
+    <string name="rino_mine_feedback_file_limit_size">File upload size cannot exceed 50M</string>
+    <string name="rino_user_disagree_exit">Disagree and Exit</string>
+    <string name="rino_user_email">Email</string>
+    <string name="rino_user_get_verify_code">Get verification code</string>
+    <string name="rino_user_input_code_decs1">Please enter send to</string>
+    <string name="rino_user_input_code_decs2">4-digit verification code, valid for 10 minutes</string>
+    <string name="rino_user_input_country">Country/Region</string>
+    <string name="rino_user_input_email">Please enter your email address</string>
+    <string name="rino_user_input_phone">Phone/Email</string>
+    <string name="rino_user_input_rino_email">Please enter your registered email</string>
+    <string name="rino_user_input_verify_code">Enter the verification code</string>
+    <string name="rino_user_input_verify_code_title">Enter the verification code</string>
+    <string name="rino_user_login">Sign In</string>
+    <string name="rino_user_login_account_pws">Password Login</string>
+    <string name="rino_user_login_account_tip_title">Please enter your account</string>
+    <string name="rino_user_login_decs_title">Sign in for more</string>
+    <string name="rino_user_login_email">Email Login</string>
+    <string name="rino_user_login_email_account">Email account login</string>
+    <string name="rino_user_login_forget_title">Forgot your password</string>
+    <string name="rino_user_account_registered_log_in">Current account has been registered, do you want to login?</string>
+    <string name="rino_user_anonymous">Experience</string>
+    <string name="rino_user_been_sent">Sent to</string>
+    <string name="rino_user_been_sent_code">We sent a %1s-digit verification code to %1s</string>
+    <string name="rino_user_cancel_account">Cancel account</string>
+    <string name="rino_user_cancel_account_confirm">Confirm cancellation</string>
+    <string name="rino_user_cancel_account_describe1">Dear User</string>
+    <string name="rino_user_cancel_account_describe2">Make sure submit a request to "cancel account" and it will be cancelled on %1s. During this time, if you log in to your account, your cancellation request will be revoked.</string>
+    <string name="rino_user_cancel_account_describe3">After the cancellation, the platform will delete all personal data under your account, if you want to cancel your request, you can do so by logging in before %1s.</string>
+    <string name="rino_user_cancel_account_describe4">Thank you for your use.</string>
+    <string name="rino_user_cancel_account_get_verify_code">Click "Get Verification Code" and the verification code will be sent to your %1s</string>
+    <string name="rino_user_cancel_account_key_word">Logout complete</string>
+    <string name="rino_user_cancel_account_message">Your account will be permanently deactivated after one week and all the following information in your account will be deleted, if you log in again before then, your deactivation request will be cancelled</string>
+    <string name="rino_user_cancel_account_resend_verify_code">You can retrieve the verification code after %1s seconds</string>
+    <string name="rino_user_cancel_account_success">The account has been cancelled, if you want to withdraw, please log in again</string>
+    <string name="rino_user_cancel_account_title">Are you sure you want to cancel？</string>
+    <string name="rino_user_certification_services">%1s Provide authentication service</string>
+    <string name="rino_user_code_check_tip">Verification code failed, please confirm whether the verification code is correct!</string>
+    <string name="rino_user_register_now">Register Now</string>
+    <string name="rino_user_resend">Resend</string>
+    <string name="rino_user_unable_accept_email_code">Didn\'t receive the verification code?</string>
+    <string name="rino_mine_set_change_pwd_verify">Verify</string>
+    <string name="rino_user_unable_accept_SMS">Can\'t receive text messages?</string>
+    <string name="rino_user_send_code_success">Check if you have sent it successfully</string>
+    <string name="rino_mine_feedback_choose_pic_from_camera">Take a photo</string>
+    <string name="rino_mine_feedback_gallery_title">Album</string>
+    <string name="rino_user_set_password">Set password</string>
+    <string name="rino_user_phone">Phone</string>
+    <string name="rino_mine_setting">Setting</string>
+    <string name="rino_mine_time_zone">Time zone</string>
+    <string name="rino_mine_temp_unit">Temperature unit</string>
+    <string name="rino_mine_clear_cache">Clear cache</string>
+    <string name="rino_mine_clear_cache_tips">Do you want to clear your cache?</string>
+    <string name="rino_mine_about_info">About</string>
+    <string name="rino_user_logout">Log out</string>
+    <string name="rino_voice_bind_alexa">Bound to Amazon Alexa</string>
+    <string name="rino_voice_bind_alexa_describe">Once bound, you can voice control your purchased device through the Amazon Echo series of speakers.</string>
+    <string name="rino_voice_bind_google_assistant">Bound to Google Assistant</string>
+    <string name="rino_voice_bind_google_assistant_describe">After binding, you can use Google Home series products to control the purchased devices by voice:</string>
+    <string name="rino_voice_eg">For example:</string>
+    <string name="rino_voice_google_auth_cancel">Cancel</string>
+    <string name="rino_voice_google_auth_confirm">Agree and link</string>
+    <string name="rino_voice_google_auth_desc">After authorization, the application will get the following permissions</string>
+    <string name="rino_voice_google_auth_desc_2">Device control permissions</string>
+    <string name="rino_voice_google_auth_tips">Link %1s with Google</string>
+    <string name="rino_voice_guide">Manual binding tutorial</string>
+    <string name="rino_voice_not_install_google_home">Please install the google Home App first! </string>
+    <string name="rino_voice_unbind">unbind</string>
+    <string name="rino_voice_unbind_alexa">Unbundled Amazon Alexa</string>
+    <string name="rino_voice_unbind_describe">After unbinding, the device cannot be controlled by voice, please confirm</string>
+    <string name="rino_voice_unbind_google_assistant">Unbundled Google Assistant</string>
+    <string name="rino_mine_voice_eg">1.  Aelxa,turn on/off living room light.\n\n2.  Aelxa,set living room light to 50 percent.\n\n3.  Aelxa,brighten/dim living room light.\n\n4.  Aelxa,set living room light to christmas mode.</string>
+    <string name="rino_mine_voice_google_assistant_eg">1. Ok Google, turn on bedroom light.\n\n2. Ok Google, turn off bedroom light.\n\n3. Ok Google, set bedroom light to 50 percent.\n\n4. Ok Google, brighten bedroom light.</string>
+    <string name="rino_voice_auth">One-click authorization</string>
+    <string name="rino_mine_google_assistant">Google Assistant</string>
+    <string name="rino_mine_voice">Third-party voice and other services</string>
+    <string name="rino_user_select_country">Select country/region</string>
+    <string name="rino_user_one_click_agree">Agree</string>
+    <string name="rino_user_one_click_agree_service_terms">Please agree to the TOS</string>
+    <string name="rino_user_one_click_agreement_and_privacy">User Agreement and Privacy Policy</string>
+    <string name="rino_user_one_click_disagree">Disagree</string>
+    <string name="rino_common_agreement_privacy_content">We are well aware of the importance of privacy to you. In order to present our collection and use of your personal information more comprehensively, we have made detailed revisions to the Privacy Policy and User Agreement in accordance with the requirements of the latest laws and regulations. When you click [Agree], it means that you have fully read, understood and accepted the entire contents of the updated Privacy Policy and User Agreement. Please take some time to familiarize yourself with our Privacy Policy and please feel free to contact us if you have any questions.</string>
+    <string name="rino_common_agree_tip">Agree</string>
+    <string name="rino_common_and">And</string>
+    <string name="rino_user_please_agree_privacy">Please agree</string>
+    <string name="rino_user_login_phone_tip1">Login for more</string>
+    <string name="rino_user_password">Password</string>
+    <string name="rino_user_retrieve_password">Retrieve password</string>
+    <string name="rino_user_please_input_right_format">Please enter the correct format of account number</string>
+    <string name="rino_user_not_receive_verify_code_desc1">If you do not receive the verification code, we recommend you to confirm the following actions.</string>
+    <string name="rino_user_not_receive_verify_code_desc2">1. Please check if the country/region on the App registration page is selected correctly</string>
+    <string name="rino_user_not_receive_verify_code_desc3">2. Please check whether your phone is off or no network</string>
+    <string name="rino_user_not_receive_verify_code_desc4">3. Please check if the number/email you entered is correct</string>
+    <string name="rino_user_not_receive_verify_code_desc5">4. Please check whether your verification code is blocked or quarantined by the system</string>
+    <string name="rino_user_not_receive_verify_code_desc6">If the above confirmation is correct, or you cannot receive the verification code, can send email to %1s</string>
+    <string name="rino_user_protection_rules">Personal Information Protection Rules for Children/Youth</string>
+    <string name="rino_user_service_terms">China Mobile Authentication Terms of Service</string>
+    <string name="rino_user_unset">Not set</string>
+    <string name="rino_user_login_phone_tip2">Unregistered phone number will automatically create</string>
+    <string name="rino_device_upgrade_now">Upgrade now</string>
+    <string name="rino_app_upgrade_later">Later</string>
+    <string name="rino_user_navigation_title_home">Home</string>
+    <string name="rino_user_navigation_title_shop">Store</string>
+    <string name="rino_user_navigation_title_mine">My</string>
+    <string name="rino_common_faq">FAQ</string>
+    <string name="rino_common_customer_service">CS</string>
+    <string name="rino_mine_login_security">Login Security</string>
+    <string name="rino_mine_login_security_switch">Two-Step Verification</string>
+    <string name="rino_mine_login_security_trusted_devices">Trusted Devices</string>
+    <string name="rino_mine_login_security_tips">With Two-Step Verification, you’ll need both your password and a verification code when logging in from an unrecognized device.A verification code will be sent to the account email.</string>
+    <string name="rino_mine_trusted_devices_tips">Your account trusts the following devices. When Two-Step Verification is enabled, you can delete the trusted devices. After deleting, you need to log in to the device with Two-Step Verification.</string>
+    <string name="rino_mine_current_trusted_device">This Device</string>
+    <string name="rino_mine_delete_trusted_device">After deleting, Two-Step Verification will be required for your next login.</string>
+    <string name="rino_user_login_security">You are logging in to a new device. For your account security, additional verification is required to add this device.</string>
+    <string name="rino_user_login_security_expored">Login authorization has expired, please log in again.</string>
+    <string name="rino_user_device_last_login">Last login</string>
+    <string name="rino_common_unit_minute">Mins</string>
+    <string name="rino_user_reset_password_success_tips">Successfully, Please log in again</string>
+    <string name="rino_user_password_rule">The password length is 6-20 characters, must contain letters, numbers, and supports special characters: !@#$%^&amp;*()._-</string>
+    <string name="rino_mine_set_logout_account">Logout account？</string>
+
+    <!-- xpopup 模块 -->
+
+    <string name="xpopup_cancel">Cancel</string>
+    <string name="xpopup_ok">OK</string>
+    <string name="xpopup_save">save</string>
+    <string name="xpopup_saved_to_gallery">Saved to album</string>
+    <string name="xpopup_image_not_exist">Image not exist</string>
+    <string name="xpopup_saved_fail">Image save failed</string>
+</resources>
