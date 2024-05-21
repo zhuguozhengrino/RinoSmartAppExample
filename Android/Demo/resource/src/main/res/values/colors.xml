@@ -4,6 +4,8 @@
     <color name="map_text_color">#333333</color>
     <!-- 地图标题字体颜色 -->
     <color name="map_title_color">#454545</color>
+    <!-- 地图状态栏颜色色 -->
+    <color name="map_status_color">#FFFFFF</color>
 
     <!--    客服-->
     <color name="c_fff7f9fa">#fff7f9fa</color>
@@ -232,18 +234,20 @@
     <!-- 扫码模块 -->
 
     <color name="mn_scan_viewfinder_laser">#FFff3535</color>
-    <color name="mn_scan_viewfinder_mask">#80000000</color>
+    <color name="mn_scan_viewfinder_mask">#7F000000</color>
     <color name="mn_scan_viewfinder_laser_result_point">#CCFF3535</color>
     <color name="mn_scan_viewfinder_laser_result_point_border">#FFFFFFFF</color>
+    <color name="s_main_theme_color">#343EEF</color>
     <color name="s_454545">#454545</color>
     <color name="s_transparent">#00000000</color>
     <color name="s_black">#000000</color>
     <color name="s_EEEEEE">#EEEEEE</color>
     <color name="s_ABABAB">#ABABAB</color>
-    <color name="s_black_20">#33000000</color>
+    <color name="s_black_20">#19000000</color>
     <!-- 蓝色字体颜色 -->
     <color name="s_3761F3">#3761F3</color>
     <color name="s_003761F3">#003761F3</color>
+
 
     <!-- 用户模块 -->
     <color name="user_main_theme_color">@color/main_theme_color</color>
@@ -267,4 +271,11 @@
     <color name="c_F5D4CF">#F5D4CF</color>
     <color name="c_CACACA">#CACACA</color>
     <color name="c_DEDEE4">#DEDEE4</color>
+
+    <!-- 第三方登录 -->
+    <color name="c_EBEBEB">#ffebebeb</color>
+    <color name="c_B6B6B6">#B6B6B6</color>
+
+    <!-- 信号强度 -->
+    <color name="c_4ECA8E">#4ECA8E</color>
 </resources>

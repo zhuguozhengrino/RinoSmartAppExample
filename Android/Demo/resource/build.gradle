@@ -38,12 +38,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    if (rootProject.ext.android.dependenciesSdk) {
-        api (rootProject.ext.app_impl_sdk.user_ui){//过滤高德地图sdk包冲突问题，sdk 高版本已处理
-            exclude group: 'com.amap.api',module :'search'
-        }
-        api "com.amap.api:search:9.7.0"
+    if (!rootProject.ext.android.isVestBag) {
+        api rootProject.ext.app_impl_sdk.user_ui
     } else {
-        api project(path: ':user_ui')
+        api rootProject.ext.app_impl_sdk.vest_bag
     }
 }

@@ -1,62 +1,74 @@
 ext {
     android = [
-            applicationId    : "com.smart.rinoiot",
+            applicationId    : "com.smart.rinoiot1",
             buildToolsVersion: "30.0.3",
             compileSdkVersion: 33,
             targetSdkVersion : 33,
             minSdkVersion    : 21,
-            versionCode      : 1,
+            versionCode      : 11,
             versionName      : "1.0.0",
             rnCoreVersion    : "1.0.1",//RN核心版本号
-            dependenciesSdk  : true//是依赖本地模块还是依赖maven库，true:依赖maven库
+            h5CoreVersion    : "v1",
+            isVestBag        : true,
+
     ]
     isDebugType = false //module
     isPrintLog = true
     //依赖 sdk
     app_impl_sdk = [
-            "bridge"          : 'com.smart.rinoiot:rinoBridge:1.0.0_alpha_7',//H5模块
+            "mqtt_base"       : 'com.smart.rinoiot:rinoMqttBase:1.0.1',//MQTT 基类
 
-            "common_sdk"      : 'com.smart.rinoiot:rinoCommon:1.0.0_alpha_6',//公共模块
+            "bridge"          : 'com.smart.rinoiot:rinoBridge:1.0.0_alpha_10',//H5模块
 
-            "connect_sdk"     : 'com.smart.rinoiot:rinoConnect:1.0.0_alpha_4',//配网
+            "common_sdk"      : 'com.smart.rinoiot:rinoCommon:1.0.2_alpha_5',//公共模块
 
-            "crash"           : 'com.smart.rinoiot:rinoCrash:1.0.0_alpha_5',//异常捕获
+            "connect_sdk"     : 'com.smart.rinoiot:rinoConnect:1.0.0_alpha_8',//配网
 
-            "device_sdk"      : 'com.smart.rinoiot:rinoDevice:1.0.0_alpha_12',//设备模块
+            "crash"           : 'com.smart.rinoiot:rinoCrash:1.0.0_alpha_8',//异常捕获
 
-            "family"          : 'com.smart.rinoiot:rinoFamily:1.0.0_alpha_2',//家庭
+            "device_sdk"      : 'com.smart.rinoiot:rinoDevice:1.0.1_alpha_5',//设备模块
 
-            "ipc"             : 'com.smart.rinoiot:rinoIpc:1.0.0_alpha_2',//IPC
+            "family"          : 'com.smart.rinoiot:rinoFamily:1.0.0_alpha_6',//家庭
 
-            "map"             : 'com.smart.rinoiot:rinoMap:1.0.0_alpha_2',//地图
+            "ipc"             : 'com.smart.rinoiot:rinoIpc:1.0.1_alpha_1',//IPC
 
-            "matter"          : 'com.smart.rinoiot:rinoMatter:1.0.0_alpha_3',//matter配网
+            "ipcPlayer"       : 'com.smart.rinoiot:rinoIpcPlayer:1.0.0',//IPC播放器
 
-            "module_ble"      : 'com.smart.rinoiot:rinoBle:1.0.0',//蓝牙
+            "map"             : 'com.smart.rinoiot:rinoMap:1.0.1_alpha_6',//地图
 
-            "mqtt"            : 'com.smart.rinoiot:rinoMqtt:1.0.0_alpha_6',//mqtt通信
+            "glMap"           : 'com.smart.rinoiot:rinoGlMap:1.0.4',//google 地图
 
-            "msg"             : 'com.smart.rinoiot:rinoMsg:1.0.0_alpha_2',//消息
+            "gdMap"           : 'com.smart.rinoiot:rinoGdMap:1.0.4',//高德 地图
 
-            "nfc"             : 'com.smart.rinoiot:rinoNfc:1.0.0_alpha_2',//nfc
+            "matter"          : 'com.smart.rinoiot:rinoMatter:1.0.0_alpha_6',//matter配网
 
-            "oss"             : 'com.smart.rinoiot:rinoOss:1.0.0_alpha_5',//文件上传
+            "module_ble"      : 'com.smart.rinoiot:rinoBle:1.0.1',//蓝牙
 
-            "panel"           : 'com.smart.rinoiot:rinoPanel:1.0.0_alpha_4',//面板
+            "mqtt"            : 'com.smart.rinoiot:rinoMqtt:1.0.1_alpha_8',//mqtt通信
 
-            "scan_sdk"        : 'com.smart.rinoiot:rinoScan:1.0.0_alpha_2',//扫码sdk
+            "matter_sdk"      : 'com.smart.rinoiot:rinoMatterSdk:1.0.0',//matter sdk配网
 
-            "scene"           : 'com.smart.rinoiot:rinoScene:1.0.0_alpha_9',//场景
+            "msg"             : 'com.smart.rinoiot:rinoMsg:1.0.0_alpha_6',//消息
 
-            "user"            : 'com.smart.rinoiot:rinoUser:1.0.0_alpha_5',//用户
+            "nfc"             : 'com.smart.rinoiot:rinoNfc:1.0.0_alpha_5',//nfc
 
-            "chat"            : 'com.smart.rinoiot:rinoChat:1.0.0_alpha_2',//在线客服
+            "oss"             : 'com.smart.rinoiot:rinoOss:1.0.0_alpha_8',//文件上传
 
-            "xpopup"          : 'com.smart.rinoiot:rinoPopup:1.0.0',//提示框
+            "panel"           : 'com.smart.rinoiot:rinoPanel:1.0.0_alpha_9',//面板
 
-            "feedback"        : 'com.smart.rinoiot:rinoFeedback:1.0.0_alpha_5',//常见问题
+            "scan_sdk"        : 'com.smart.rinoiot:rinoScan:1.0.1_alpha_3',//扫码sdk
 
-            "device_share"    : 'com.smart.rinoiot:rinoDeviceShare:1.0.0_alpha_3',//设备分享
+            "scene"           : 'com.smart.rinoiot:rinoScene:1.0.1_alpha_4',//场景
+
+            "user"            : 'com.smart.rinoiot:rinoUser:1.0.1_alpha_4',//用户
+
+            "chat"            : 'com.smart.rinoiot:rinoChat:1.0.0_alpha_4',//在线客服
+
+            "xpopup"          : 'com.smart.rinoiot:rinoPopup:1.0.1',//提示框
+
+            "feedback"        : 'com.smart.rinoiot:rinoFeedback:1.0.0_alpha_7',//常见问题
+
+            "device_share"    : 'com.smart.rinoiot:rinoDeviceShare:1.0.0_alpha_5',//设备分享
 
             "oppo_push"       : 'com.smart.rinoiot:oppoPush:1.0.0_alpha_1',//oppo 推送
 
@@ -64,26 +76,36 @@ ext {
 
             "vivoPush"        : 'com.smart.rinoiot:vivoPush:1.0.0_alpha_1',//vivo 推送
 
-            "rinoUpush"       : 'com.smart.rinoiot:rinoUpush:1.0.0_alpha_5',//消息 推送
+            "rinoUpush"       : 'com.smart.rinoiot:rinoUpush:1.0.0_alpha_9',//消息 推送
 
-            "msg_ui"          : 'com.smart.rinoiot:rinoMsgUi:1.0.0_alpha_2',//消息中心ui
+            "rinoAliAuth"     : 'com.smart.rinoiot:rinoAliAuth:1.0.0',//阿里一键登录
 
-            "feedback_ui"     : 'com.smart.rinoiot:rinoFeedbackUi:1.0.0_alpha_2',//问题反馈ui
+            "rinoAliLogger"   : 'com.smart.rinoiot:rinoAliLogger:1.0.0',//阿里一键登录
 
-            "scan_ui"         : 'com.smart.rinoiot:rinoScanUi:1.0.0_alpha_2',//扫码配网ui
+            "rinoAliMain"     : 'com.smart.rinoiot:rinoAliMain:1.0.0',//阿里一键登录
 
-            "scene_ui"        : 'com.smart.rinoiot:rinoSceneUi:1.0.0_alpha_2',//场景ui
+            "msg_ui"          : 'com.smart.rinoiot:rinoMsgUi:1.0.0_alpha_3',//消息中心ui
 
-            "device_shared_ui": 'com.smart.rinoiot:rinoDeviceSharedUi:1.0.0_alpha_2',//设备、群组分享ui
+            "feedback_ui"     : 'com.smart.rinoiot:rinoFeedbackUi:1.0.0_alpha_3',//问题反馈ui
 
-            "connect_ui"      : 'com.smart.rinoiot:rinoConnectUi:1.0.0_alpha_2',//设备配网ui
+            "scan_ui"         : 'com.smart.rinoiot:rinoScanUi:1.0.0_alpha_3',//扫码配网ui
 
-            "device_ui"       : 'com.smart.rinoiot:rinoDeviceUi:1.0.0_alpha_2',//设备ui
+            "scene_ui"        : 'com.smart.rinoiot:rinoSceneUi:1.0.0_alpha_4',//场景ui
 
-            "nfc_ui"          : 'com.smart.rinoiot:rinoNfcUi:1.0.0_alpha_2',//nfc  ui
+            "device_shared_ui": 'com.smart.rinoiot:rinoDeviceSharedUi:1.0.0_alpha_3',//设备、群组分享ui
 
-            "family_ui"       : 'com.smart.rinoiot:rinoFamilyUi:1.0.0_alpha_2',//家庭  ui
+            "connect_ui"      : 'com.smart.rinoiot:rinoConnectUi:1.0.0_alpha_4',//设备配网ui
 
-            "user_ui"         : 'com.smart.rinoiot:rinoUserUi:1.0.0_alpha_3',//用户  ui
+            "device_ui"       : 'com.smart.rinoiot:rinoDeviceUi:1.0.0_alpha_4',//设备ui
+
+            "nfc_ui"          : 'com.smart.rinoiot:rinoNfcUi:1.0.0_alpha_3',//nfc  ui
+
+            "family_ui"       : 'com.smart.rinoiot:rinoFamilyUi:1.0.0_alpha_3',//家庭  ui
+
+            "user_ui"         : 'com.smart.rinoiot:rinoUserUi:1.0.0_alpha_5',//用户  ui
+
+            "vest_bag"        : 'com.smart.rinoiot:rinoVest:1.0.0_alpha_1',//马甲包
+
     ]
+
 }

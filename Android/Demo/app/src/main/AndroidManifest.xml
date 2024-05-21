@@ -95,6 +95,14 @@
         <meta-data
             android:name="RN_CORE_VERSION"
             android:value="${rn_core_version}" />
+        <!-- 是否开启马甲包 -->
+        <meta-data
+            android:name="IS_VEST_BAG"
+            android:value="${is_vest_bag}" />
+        <!-- H5 核心版本号 -->
+        <meta-data
+            android:name="H5_CORE_VERSION"
+            android:value="${h5_core_version}" />
         <activity
             android:name=".activity.LoginActivity"
             android:exported="true"
@@ -109,6 +117,8 @@
         <activity android:name=".activity.FamilyActivity" />
         <activity android:name=".activity.DeviceListActivity" />
         <activity android:name=".activity.SceneListActivity" />
+        <activity android:name=".activity.RinoIpcDemoActivity" />
+        <activity android:name=".activity.RinoIpcCloudReviewActivity" />
         <!-- 状态栏工具配置 -->
         <meta-data
             android:name="android.notch_support"
@@ -134,6 +144,27 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/xufei_image_filepaths" />
         </provider>
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="http://04790e434b46fbd2495ce43d5221138c31@121.201.57.25:61704/20112" />
+
+        <!-- enable automatic breadcrumbs for user interactions (clicks, swipes, scrolls) -->
+        <meta-data
+            android:name="io.sentry.traces.user-interaction.enable"
+            android:value="true" />
+        <!-- enable screenshot for crashes -->
+        <meta-data
+            android:name="io.sentry.attach-screenshot"
+            android:value="true" />
+        <!-- enable view hierarchy for crashes -->
+        `        <meta-data
+        android:name="io.sentry.attach-view-hierarchy"
+        android:value="true" />
+        `
+        <!-- enable the performance API by setting a sample-rate, adjust in production env -->
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" />
     </application>
 
 </manifest>

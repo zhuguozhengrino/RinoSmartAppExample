@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:368203222637:android:a44263ac80444ba145b964",
         "android_client_info": {
-          "package_name": "com.smart.rinoiot"
+          "package_name": "com.smart.rinoiot1"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "368203222637-0gmp1feg3etljt4dmkgh5m75o2uqqbug.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.smart.rinoiot"
+                "bundle_id": "com.smart.rinoiot1"
               }
             }
           ]
