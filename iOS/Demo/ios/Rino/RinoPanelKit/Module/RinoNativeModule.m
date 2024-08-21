@@ -116,16 +116,15 @@ RCT_EXPORT_METHOD(openAppBusinessPage:(NSString *)page
     __block RCTPromiseRejectBlock bReject = reject;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([RinoFamilyPermissionManager sharedInstance].checkFamilyRole == YES) {
-            [[RinoReactNativeModuleManager sharedInstance] openAppBusinessPage:page
-                                                                       success:^{
+        if ([RinoFamilyPermissionManager sharedInstance].checkFamilyRole || [page containsString:@"isIPF_selectPhoto"]) {
+            [[RinoReactNativeModuleManager sharedInstance] openAppBusinessPage:page success:^(NSString * _Nonnull result) {
                 if (bResolve) {
-                    bResolve(@"");
+                    bResolve(result);
                     bResolve = nil;
                 }
-            } failure:^{
+            } failure:^(NSError * _Nonnull error) {
                 if (bReject) {
-                    bReject(@"", @"", [NSError new]);
+                    bReject(@"", @"", error);
                     bReject = nil;
                 }
             }];

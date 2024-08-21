@@ -32,37 +32,36 @@ target 'Rino' do
   )
   
   #--------------基本库----------------
-  pod 'RinoBaseKit'
-  pod 'RinoAppConfigModule'
-  pod 'RinoBusinessLibraryModule'
-  pod 'RinoBizCore'
-  pod 'RinoDeviceDetailDefaultUISkin'
-  pod 'RinoUIKit'
-  pod 'RinoBizCore'
-  pod 'RinoWebViewKit'
+  pod 'RinoBaseKit', '~> 1.0.5'
+  pod 'RinoAppConfigModule', '~> 1.0.4'
+  pod 'RinoBusinessLibraryModule', '~> 1.0.3'
+  pod 'RinoBizCore', '~> 1.0.5'
+  pod 'RinoDeviceDetailDefaultUISkin', '~> 1.0.5'
+  pod 'RinoUIKit', '~> 1.0.3'
+  pod 'RinoWebViewKit', '~> 1.0.4'
   #--------------面板----------------
-  pod 'RinoPanelKit'
+  pod 'RinoPanelKit', '~> 1.0.5'
   #--------------设备----------------
-  pod 'RinoDeviceKit'
+  pod 'RinoDeviceKit', '~> 1.0.6'
   
   
   #--------------配网----------------
-  pod 'RinoActivatorDefaultUISkin'     #配网UI库
-  pod 'RinoActivatorKit'               #配网接口库
+  pod 'RinoActivatorDefaultUISkin', '~> 1.0.4'     #配网UI库
+  pod 'RinoActivatorKit', '~> 1.0.3'               #配网接口库
   #--------------场景----------------
-  pod 'RinoSceneKit'                   #场景接口库
-  pod 'RinoSceneDefaultUISkin'         #场景UI库
+  pod 'RinoSceneKit', '~> 1.0.5'                   #场景接口库
+  pod 'RinoSceneDefaultUISkin', '~> 1.0.5'         #场景UI库
   #--------------消息----------------
-  pod 'RinoMessageDefaultUISKin'       #消息UI库
-  pod 'RinoMessageKit'                 #消息接口库
+  pod 'RinoMessageDefaultUISKin', '~> 1.0.5'       #消息UI库
+  pod 'RinoMessageKit', '~> 1.0.3'                 #消息接口库
   
   #--------------家庭管理----------------
-  pod 'RinoHomeDefaultUISkin'          #家庭管理UI库
-  pod 'RinoHomeKit'                    #家庭管理接口库
+  pod 'RinoHomeDefaultUISkin', '~> 1.0.4'          #家庭管理UI库
+  pod 'RinoHomeKit', '~> 1.0.2'                    #家庭管理接口库
   
   
   #--------------设置----------------
-  pod 'RinoUserSettingsDefaultUISkin'  #设置UI库
+  pod 'RinoUserSettingsDefaultUISkin', '~> 1.0.4'  #设置UI库
   
       
   post_install do |installer|

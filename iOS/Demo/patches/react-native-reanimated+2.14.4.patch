@@ -1,0 +1,32 @@
+diff --git a/node_modules/react-native-reanimated/ios/LayoutReanimation/REAUIManager.mm b/node_modules/react-native-reanimated/ios/LayoutReanimation/REAUIManager.mm
+index 16ed327..d0d6026 100644
+--- a/node_modules/react-native-reanimated/ios/LayoutReanimation/REAUIManager.mm
++++ b/node_modules/react-native-reanimated/ios/LayoutReanimation/REAUIManager.mm
+@@ -216,14 +216,20 @@ std::weak_ptr<reanimated::Scheduler> _scheduler;
+       CGSize contentSize = shadowView.layoutMetrics.frame.size;
+ 
+       RCTExecuteOnMainQueue(^{
+-        NSMutableDictionary<NSNumber *, UIView *> *viewRegistry = [self valueForKey:@"_viewRegistry"];
+-        UIView *view = viewRegistry[reactTag];
+-        RCTAssert(view != nil, @"view (for ID %@) not found", reactTag);
++          @try {
++              NSMutableDictionary<NSNumber *, UIView *> *viewRegistry = [self valueForKey:@"_viewRegistry"];
++              UIView *view = viewRegistry[reactTag];
++              RCTAssert(view != nil, @"view (for ID %@) not found", reactTag);
++
++              RCTRootView *rootView = (RCTRootView *)[view superview];
++              if ([rootView isKindOfClass:[RCTRootView class]]) {
++                rootView.intrinsicContentSize = contentSize;
++              }
++          } @catch (NSException *exception) {
++              NSLog(@"[REAUIManager]:%@", exception);
++          } @finally {
+               
+-        RCTRootView *rootView = (RCTRootView *)[view superview];
+-        if ([rootView isKindOfClass:[RCTRootView class]]) {
+-          rootView.intrinsicContentSize = contentSize;
+-        }
++          }
+       });
+     }
+   }

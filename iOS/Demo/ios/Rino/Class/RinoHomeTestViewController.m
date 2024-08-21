@@ -10,7 +10,7 @@
 #import "RinoDemoFamilyListController.h"
 #import "RinoDemoDeviceListController.h"
 #import "RinoDemoSceneListController.h"
-#import <RinoMessageDefaultUISKin/RinoMessageManager.h>
+#import <RinoMessageDefaultUISKin/RinoMessageDefaultUISKin.h>
 #import <RinoSceneDefaultUISkin/RinoSceneDefaultUISkin.h>
 #import <RinoActivatorDefaultUISkin/RinoActivatorDefaultUISkin.h>
 #import <RinoUserSettingsDefaultUISkin/RinoUserSettingsDefaultUISkin.h>
@@ -74,7 +74,7 @@
         sceneVC.homeId = self.home.homeModel.homeId;
         [self.navigationController pushViewController:sceneVC animated:YES];
     }else if([titleStr isEqualToString:@"消息中心"]){
-        [[RinoMessageManager sharedInstance] gotoMessageViewController];
+        [[RinoMessageDefaultUISKinManager sharedInstance] gotoMessageViewController];
     }else if([titleStr isEqualToString:@"添加设备"]){
         [[RinoActivatorManager sharedInstance] gotoActivatorViewControllerWithHomeId:self.home.homeModel.homeId];
     }else if([titleStr isEqualToString:@"添加一键执行场景"]){

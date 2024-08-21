@@ -47,7 +47,7 @@ RCT_EXPORT_METHOD(getRooms:(RCTPromiseResolveBlock)resolve
 RCT_EXPORT_METHOD(getFamilies:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSArray *homes = [[RinoHomeArchiver sharedInstance] loadHomeList];
+        NSArray *homes = [[RinoHomeArchiver sharedInstance] loadHomeModelCache];
         NSMutableArray *homeList = [NSMutableArray array];
         for (RinoHomeModel *homeModel in homes) {
             NSDictionary *homeDict = [homeModel mj_JSONObject];
