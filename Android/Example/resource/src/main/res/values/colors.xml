@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 地图文案字体颜色 -->
-    <color name="map_text_color">#333333</color>
-    <!-- 地图标题字体颜色 -->
-    <color name="map_title_color">#454545</color>
 
     <!--    客服-->
     <color name="c_fff7f9fa">#fff7f9fa</color>
     <color name="c_ffc0ccd4">#ffc0ccd4</color>
     <color name="c_ffede3e3">#ffede3e3</color>
-    <color name="support_status_bar_color">@color/main_theme_color</color>
-    <color name="support_robot_color">@color/main_theme_color</color>
+    <color name="support_status_bar_color">@color/rn_light_theme</color>
+    <color name="support_robot_color">@color/rn_light_theme</color>
     <color name="support_chat_left_bg">@color/white</color>
     <color name="support_chat_right_bg">@color/main_theme_color</color>
     <color name="support_chat_faq_color">@color/white</color>r
@@ -23,11 +19,7 @@
     <color name="blue">#688ccc</color>
     <color name="c_7FF5F6F6">#7FF5F6F6</color>
 
-    <!-- common 模块 -->
-    <color name="transparent">#00000000</color>
 
-    <color name="black">#000000</color>
-    <color name="black_10">#19000000</color>
     <color name="black_2">#05000000</color>
 
     <color name="white">#ffffff</color>
@@ -129,7 +121,6 @@
     <color name="c_003761F3">#003761F3</color>
     <color name="c_EEEEEE">#EEEEEE</color>
     <color name="c_ABABAB">#ABABAB</color>
-    <color name="black_20">#33000000</color>
     <color name="c_353FEF">#353FEF</color>
     <color name="c_DEDEDE">#DEDEDE</color>
     <color name="c_BBBBBD">#BBBBBD</color>
@@ -154,14 +145,7 @@
     <color name="c_AEB3B0">#AEB3B0</color>
 
     <!-- 首页场景背景颜色 -->
-    <color name="c_858AE2">#858AE2</color>
-    <color name="c_6ECCD0">#6ECCD0</color>
-    <color name="c_6588E0">#6588E0</color>
-    <color name="c_9F7DDA">#9F7DDA</color>
     <color name="c_65C395">#65C395</color>
-    <color name="c_DE9B59">#DE9B59</color>
-    <color name="c_DE6556">#DE6556</color>
-    <color name="c_DC7287">#DC7287</color>
     <color name="c_E0E1F7">#E0E1F7</color>
     <color name="c_9A9EDF">#9A9EDF</color>
     <color name="black_25">#3F000000</color>
@@ -174,28 +158,18 @@
     <color name="c_fff6f7f8">#fff6f7f8</color>
     <color name="c_F4F4F4">#F4F4F4</color>
     <color name="c_5861FF">#5861FF</color>
-    <color name="c_6ABCD1">#6ABCD1</color>
     <color name="c_F7FDFF">#F7FDFF</color>
-    <color name="c_EFF8F9">#EFF8F9</color>
     <color name="c_B55173">#B55173</color>
-    <color name="c_FFFAFC">#FFFAFC</color>
-    <color name="c_FCF3F7">#FCF3F7</color>
     <color name="c_B29C54">#B29C54</color>
-    <color name="c_FFFCF1">#FFFCF1</color>
-    <color name="c_FFF6D5">#FFF6D5</color>
-    <color name="c_F0F0FB">#F0F0FB</color>
     <color name="c_E5000000">#E5000000</color>
     <color name="c_E524293E">#E524293E</color>
     <color name="c_949494">#949494</color>
-    <color name="c_0fffffff">#0fffffff</color>
     <color name="c_ffe5ecfc">#ffe5ecfc</color>
     <color name="c_888888">#888888</color>
     <color name="c_CECECE">#CECECE</color>
     <color name="c_AFB3B0">#AFB3B0</color>
 
     <!-- 全局toasy设置默认颜色 -->
-    <color name="infoColor">@color/black</color>
-    <color name="defaultTextColor">@color/white</color>
     <color name="c_DFDFDF">#DFDFDF</color>
     <color name="c_F4F5F6">#F4F5F6</color>
     <color name="c_4D45FF">#4D45FF</color>
@@ -231,40 +205,204 @@
 
     <!-- 扫码模块 -->
 
-    <color name="mn_scan_viewfinder_laser">#FFff3535</color>
-    <color name="mn_scan_viewfinder_mask">#80000000</color>
-    <color name="mn_scan_viewfinder_laser_result_point">#CCFF3535</color>
-    <color name="mn_scan_viewfinder_laser_result_point_border">#FFFFFFFF</color>
     <color name="s_454545">#454545</color>
-    <color name="s_transparent">#00000000</color>
-    <color name="s_black">#000000</color>
-    <color name="s_EEEEEE">#EEEEEE</color>
-    <color name="s_ABABAB">#ABABAB</color>
-    <color name="s_black_20">#33000000</color>
     <!-- 蓝色字体颜色 -->
-    <color name="s_3761F3">#3761F3</color>
     <color name="s_003761F3">#003761F3</color>
+
 
     <!-- 用户模块 -->
     <color name="user_main_theme_color">@color/main_theme_color</color>
 
-    <!-- 提示框 -->
-    <color name="_xpopup_list_divider">#EEEEEE</color>
-    <color name="_xpopup_title_color">#444444</color>
-    <color name="_xpopup_content_color">#333333</color>
-    <color name="_xpopup_white_color">#f1f1f1</color>
-    <color name="_xpopup_dark_color">#232323</color>
-    <color name="_xpopup_light_color">#FFFFFF</color>
-    <color name="_xpopup_list_dark_divider">#444444</color>
+
+    <!-- 本地场景同步成功 -->
+    <color name="c_01C953">#01C953</color>
+
+    <!-- 第三方登录 -->
+    <color name="c_EBEBEB">#ffebebeb</color>
+    <color name="c_B6B6B6">#B6B6B6</color>
+
+    <!-- 信号强度 -->
+    <color name="c_4ECA8E">#4ECA8E</color>
+
+
+    <!-- V2 浅色 颜色，上面兼容之前版本颜色值 -->
+
+
+    <!-- 地图文案字体颜色 -->
+    <color name="map_text_color">@color/rn_light_text_1</color>
+    <!-- 地图标题字体颜色 -->
+    <color name="map_title_color">@color/rn_light_text_1</color>
+    <!-- 地图状态栏颜色色 -->
+    <color name="map_status_color">@color/rn_light_bg</color>
+    <!-- 地图文案字体颜色 -->
+    <color name="hint_text_color">@color/rn_light_text_3</color>
+    <!-- 主题色 -->
+    <color name="map_right_color">@color/rn_light_theme</color>
+    <color name="map_divider">@color/rn_light_d_l</color>
+    <color name="map_cancel">@color/rn_light_text_2</color>
+
+    <color name="_xpopup_list_divider">@color/rn_light_d_l</color>
+    <color name="_xpopup_title_color">@color/rn_light_text_1</color>
+    <color name="_xpopup_content_color">@color/rn_light_text_1</color>
+    <color name="_xpopup_content_hint_color">@color/rn_light_text_3</color>
+    <color name="_xpopup_content_color_2">@color/rn_light_text_2</color>
+    <color name="_xpopup_white_color">@color/rn_light_text_1</color>
+    <color name="_xpopup_dark_color">@color/rn_light_text_1</color>
+    <color name="_xpopup_light_color">@color/rn_light_card_bg</color>
+    <color name="_xpopup_list_dark_divider">@color/rn_light_d_l</color>
+    <!-- 置灰按钮背景颜色 -->
+    <color name="_xpopup_bt_b_2">@color/rn_light_bt_b_2</color>
+    <!-- 弹框背景颜色 -->
+    <color name="_xpopup_bg">@color/rn_light_card_bg</color>
+    <!-- 弹框输入内容背景颜色 -->
+    <color name="_xpopup_input_bg">@color/rn_light_bg</color>
+
+    <!--弹框 主题色 -->
+    <color name="_xpopup_theme">@color/rn_light_theme</color>
+
+    <!-- 特殊颜色，通用-->
+    <color name="_xpopup_g_1">@color/rn_light_g_1</color>
+
+    <!-- 主要按钮文字颜色 -->
+    <color name="_xpopup_bt_c_1">@color/rn_light_bt_c_1</color>
+
+    <!-- 主要按钮背景颜色 -->
+    <color name="_xpopup_bt_b_1">@color/rn_light_theme</color>
+    <!-- 告警提示颜色 -->
+    <color name="_xpopu_w_t">@color/rn_light_w_t</color>
+
+    <!-- 扫码模块 -->
+    <color name="s_black">@color/rn_light_text_1</color>
+    <color name="mn_scan_viewfinder_laser">@color/rn_light_w_t</color>
+    <color name="mn_scan_viewfinder_mask">@color/black_50</color>
+    <color name="mn_scan_viewfinder_laser_result_point">@color/rn_light_w_t</color>
+    <color name="mn_scan_viewfinder_laser_result_point_border">@color/rn_light_card_bg</color>
+    <color name="s_EEEEEE">@color/rn_light_d_l</color>
+    <color name="s_main_theme_color">@color/rn_light_theme</color>
+    <color name="s_transparent">#00000000</color>
+    <color name="s_ABABAB">@color/rn_light_text_3</color>
+    <color name="s_black_20">@color/rn_light_d_l</color>
+    <color name="s_3761F3">@color/rn_light_theme</color>
+
+    <!-- 首页场景背景颜色 -->
+    <color name="c_858AE2">#858AE2</color>
+    <color name="c_6ECCD0">#6ECCD0</color>
+    <color name="c_6588E0">#6588E0</color>
+    <color name="c_9F7DDA">#9F7DDA</color>
+    <color name="c_DE9B59">#DE9B59</color>
+    <color name="c_DE6556">#DE6556</color>
+    <color name="c_DC7287">#DC7287</color>
+
+    <!-- 场景二期UI -->
+
+    <color name="c_6ABCD1">#6ABCD1</color>
+    <color name="c_EFF8F9">#EFF8F9</color>
+    <color name="c_FFFAFC">#FFFAFC</color>
+    <color name="c_FCF3F7">#FCF3F7</color>
+    <color name="c_FFFCF1">#FFFCF1</color>
+    <color name="c_FFF6D5">#FFF6D5</color>
+    <color name="c_F0F0FB">#F0F0FB</color>
 
     <!-- 本地场景同步超时 -->
     <color name="c_FF784D">#FF784D</color>
     <color name="c_FFE7DF">#FFE7DF</color>
     <!-- 本地场景同步成功 -->
-    <color name="c_01C953">#01C953</color>
     <color name="c_CCF4DC">#CCF4DC</color>
     <!-- 本地场景同步失败-->
     <color name="c_F5D4CF">#F5D4CF</color>
     <color name="c_CACACA">#CACACA</color>
     <color name="c_DEDEE4">#DEDEE4</color>
+    <color name="c_E6E6E6">#E6E6E6</color>
+
+    <!-- common 模块 -->
+    <color name="transparent">#00000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black">#000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_50">#7f000000</color>
+    <color name="black_10">#19000000</color>
+    <color name="c_0fffffff">#0fffffff</color>
+
+    <!-- 全局toasy设置默认颜色 -->
+    <color name="infoColor">@color/rn_light_toast_bg</color>
+    <color name="defaultTextColor">@color/rn_light_toast_text</color>
+
+    <!-- 门铃呼叫页面 -->
+    <color name="rn_ipc_call">#010101</color>
+
+
+    <!--- =============浅色============  -->
+    <!-- 背景色 -->
+    <color name="rn_light_bg">#F8F8F8</color>
+    <!-- 卡片背景色 -->
+    <color name="rn_light_card_bg">#FFFFFF</color>
+    <!-- 主要文字颜色 -->
+    <color name="rn_light_text_1">#333333</color>
+    <!-- 次要文字颜色 -->
+    <color name="rn_light_text_2">#666666</color>
+    <!-- 说明文字颜色 -->
+    <color name="rn_light_text_3">#999999</color>
+    <!-- 主题色 -->
+    <color name="rn_light_theme">#343EEF</color>
+    <!-- 分割线颜色 -->
+    <color name="rn_light_d_l">#E4E4E4</color>
+    <!-- 告警提示颜色 -->
+    <color name="rn_light_w_t">#E44D4D</color>
+    <!-- 主要按钮背景颜色 -->
+    <color name="rn_light_bt_b_1">#343EEF</color>
+    <!-- 主要按钮文字颜色 -->
+    <color name="rn_light_bt_c_1">#FFFFFF</color>
+    <!-- 置灰按钮背景颜色 -->
+    <color name="rn_light_bt_b_2">#E4E4E4</color>
+    <!-- 置灰按钮文字颜色 -->
+    <color name="rn_light_bt_c_2">#FFFFFF</color>
+    <!-- 次要按钮背景颜色 -->
+    <color name="rn_light_bt_b_3">#F5F5F5</color>
+    <!-- 次要按钮文字颜色 -->
+    <color name="rn_light_bt_c_3">#333333</color>
+    <!-- 次要按钮背景颜色2 -->
+    <color name="rn_light_bt_b_4">#19343EEF</color>
+    <!-- 次要按钮文字颜色2 -->
+    <color name="rn_light_bt_c_4">#343EEF</color>
+    <!-- 特殊颜色，通用-->
+    <color name="rn_light_g_1">#FF8D49</color>
+    <!-- 成功提示颜色 -->
+    <color name="rn_light_s_t">#00C795</color>
+
+    <!-- 用户背景色 -->
+    <color name="rn_light_user_bg">#FFFFFF</color>
+    <!-- 用户背景色 -->
+    <color name="rn_light_user_et_bg">#F8F8F8</color>
+    <!-- 配网背景色 -->
+    <color name="rn_light_activator_bg">#FFFFFF</color>
+    <!-- 配网卡片背景色 -->
+    <color name="rn_light_activator_card_bg">#F8F8F8</color>
+    <!-- 吐司提示背景颜色 -->
+    <color name="rn_light_toast_bg">#CC000000</color>
+    <!-- 吐司提示字体颜色 -->
+    <color name="rn_light_toast_text">#FFFFFF</color>
+    <!-- NFC 场景绑定背景 -->
+    <color name="rn_light_nfc_bg">#F0F0F0</color>
+    <!-- 首页tab 选中字体颜色-->
+    <color name="rn_light_tab_text">#343EEF</color>
+    <!-- 登录注册用户名和密码已输入时，用户协议未统一颜色背景 -->
+    <color name="rn_light_user_agree_toast_bg">#404040</color>
+    <!-- 登录注册用户名和密码已输入时，用户协议未统一字体背景 -->
+    <color name="rn_light_user_agree_toast_text">#FFFFFF</color>
+    <!-- 首页天气字体颜色 特殊 -->
+    <color name="rn_light_weather_text_1">#333333</color>
+    <!-- 首页天气字体颜色 2 特殊 -->
+    <color name="rn_light_weather_text_2">#999999</color>
+    <!-- 特殊提示框背景颜色 -->
+    <color name="rn_light_special_toast_bg">#F2333333</color>
+    <!-- 底部导航栏 颜色 -->
+    <color name="rn_light_navigation_bar_color">@color/rn_light_card_bg</color>
+    <!-- 首页背景  开始渐变颜色 -->
+    <color name="rn_light_home_gradient_start">#F7F7FA</color>
+    <!-- 首页背景  结束渐变颜色 -->
+    <color name="rn_light_home_gradient_end">#D1E4FB</color>
+    <!-- 骨架卡片背景颜色 -->
+    <color name="rn_light_skeleton_card_bg">#FFFFFF</color>
+    <!-- 骨架内容背景颜色 -->
+    <color name="rn_light_skeleton_content_bg">#F8F8F8</color>
 </resources>

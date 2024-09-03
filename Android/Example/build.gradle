@@ -20,15 +20,6 @@ buildscript {
         mavenCentral()
         //华为厂商推送
         maven { url 'https://developer.huawei.com/repo/' }
-
-        maven {
-            url = 'http://39.98.108.227:8081/artifactory/libs-release-local/'
-            setAllowInsecureProtocol(true)
-            credentials {
-                username = 'rino-smart-iot'
-                password = 'xYbpok-wexmog-dyxqe9'
-            }
-        }
         //公司maven
         maven {
             url 'https://artifactory.rinoiot.com/artifactory/Rino_app/'
@@ -40,7 +31,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "com.android.tools.build:gradle:7.4.2"
         //华为厂商推送
         classpath 'com.huawei.agconnect:agcp:1.6.0.300'
         classpath 'com.google.gms:google-services:4.3.14'
@@ -92,14 +83,6 @@ allprojects {
         //华为厂商推送
         maven { url 'https://developer.huawei.com/repo/' }
 
-        maven {
-            url = 'http://39.98.108.227:8081/artifactory/libs-release-local/'
-            setAllowInsecureProtocol(true)
-            credentials {
-                username = 'rino-smart-iot'
-                password = 'xYbpok-wexmog-dyxqe9'
-            }
-        }
         //公司maven
         maven {
             url 'https://artifactory.rinoiot.com/artifactory/Rino_app/'

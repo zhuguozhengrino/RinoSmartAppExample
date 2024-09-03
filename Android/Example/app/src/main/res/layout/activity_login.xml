@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/viewCountry"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_100"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginTop="@dimen/dpp_70"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textColor="@color/f_535353"
+            android:textSize="@dimen/spp_19" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_down" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:background="@color/f_d4d4d4" />
+    <com.smart.rinoiot.common_sdk.view.CustomEditText
+        android:id="@+id/etAccount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_100"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:layout_marginTop="@dimen/dpp_40"
+        app:hintText="@string/rino_user_input_email"
+        app:isPassword="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:background="@color/f_d4d4d4" />
+
+
+    <com.smart.rinoiot.common_sdk.view.CustomEditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_100"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:layout_marginTop="@dimen/dpp_40"
+        app:hintText="@string/rino_user_password"
+        app:isPassword="true" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:background="@color/f_d4d4d4" />
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_100"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginTop="@dimen/dpp_60"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:background="@drawable/shape_btn_bg_user_8"
+        android:gravity="center"
+        android:text="@string/rino_user_login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spp_18" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_100"
+        android:layout_marginStart="@dimen/dpp_100"
+        android:layout_marginTop="@dimen/dpp_60"
+        android:layout_marginEnd="@dimen/dpp_100"
+        android:background="@drawable/shape_btn_bg_e6e9f1_8"
+        android:gravity="center"
+        android:text="@string/rino_user_register"
+        android:textColor="@color/black"
+        android:textSize="@dimen/spp_18" />
+</LinearLayout>

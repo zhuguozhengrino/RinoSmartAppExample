@@ -100,14 +100,14 @@ android {
             dimension = "version"
             manifestPlaceholders = [
                     current_channel: "googlePlay",
-                    rn_core_version: rootProject.ext.android.rnCoreVersion
+                    is_vest_bag    : rootProject.ext.android.isVestBag,
             ]
         }
         domestic {//国内
             dimension = "version"
             manifestPlaceholders = [
                     current_channel: "domesticStore",
-                    rn_core_version: rootProject.ext.android.rnCoreVersion
+                    is_vest_bag    : rootProject.ext.android.isVestBag,
             ]
         }
 //        huawei {//华为
@@ -174,12 +174,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.0'
     testImplementation 'junit:junit:4.+'
 
-    if (rootProject.ext.android.dependenciesSdk) {
-        implementation rootProject.ext.app_impl_sdk.common_sdk
-    } else {
-        implementation project(path: ':common_sdk')
-    }
     api project(path: ':resource')
+
     // Hilt
     implementation "com.google.dagger:hilt-android:2.45"
     annotationProcessor "com.google.dagger:hilt-compiler:2.45"

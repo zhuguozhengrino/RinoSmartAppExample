@@ -87,34 +87,31 @@
         <meta-data
             android:name="asset_statements"
             android:resource="@string/asset_statements" />
-        <!-- 根据不同渠道走不同的业务场景 -->
         <meta-data
             android:name="CURRENT_CHANNEL"
             android:value="${current_channel}" />
-        <!-- Rn 核心版本号 -->
+
         <meta-data
-            android:name="RN_CORE_VERSION"
-            android:value="${rn_core_version}" />
+            android:name="IS_VEST_BAG"
+            android:value="${is_vest_bag}" />
+
         <activity
-            android:name="com.smart.rinoiot.user_ui.activity.BlankActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Rino.flash">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="com.smart.rinoiot.user_ui.activity.BlankActivity" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="INTENT_ACTION_FROM_CONSOLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
-         <!-- 状态栏工具配置 -->
-        <!-- 适配华为刘海屏 -->
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.FamilyActivity" />
+        <activity android:name=".activity.DeviceListActivity" />
+        <activity android:name=".activity.SceneListActivity" />
+        <activity android:name=".activity.RinoIpcDemoActivity" />
+        <activity android:name=".activity.RinoIpcCloudReviewActivity" />
+        <!-- 状态栏工具配置 -->
         <meta-data
             android:name="android.notch_support"
             android:value="true" /> <!-- 适配小米刘海屏 -->
@@ -131,7 +128,7 @@
         <service android:name="com.amap.api.location.APSService" />
 
         <provider
-            android:name="com.smart.rinoiot.user_ui.update.CustomFileProvider"
+            android:name="com.smart.rinoiot.user_biz.update.CustomFileProvider"
             android:authorities="${applicationId}"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -139,6 +136,27 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/xufei_image_filepaths" />
         </provider>
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="http://04790e434b46fbd2495ce43d5221138c31@121.201.57.25:61704/20112" />
+
+        <!-- enable automatic breadcrumbs for user interactions (clicks, swipes, scrolls) -->
+        <meta-data
+            android:name="io.sentry.traces.user-interaction.enable"
+            android:value="true" />
+        <!-- enable screenshot for crashes -->
+        <meta-data
+            android:name="io.sentry.attach-screenshot"
+            android:value="true" />
+        <!-- enable view hierarchy for crashes -->
+        `        <meta-data
+        android:name="io.sentry.attach-view-hierarchy"
+        android:value="true" />
+        `
+        <!-- enable the performance API by setting a sample-rate, adjust in production env -->
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" />
     </application>
 
 </manifest>
