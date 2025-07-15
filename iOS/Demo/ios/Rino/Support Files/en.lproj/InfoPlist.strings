@@ -1,4 +1,4 @@
-"CFBundleDisplayName" = "Rino Smart";
+"CFBundleDisplayName" = "RINO_SDK";
 "NSAppleMusicUsageDescription" = "The app needs to access your media library to get music. If you do not allow access, local music cannot be added.";
 "NSBluetoothAlwaysUsageDescription" = "This will allow the app to find and connect Bluetooth accessories. This app may also use Bluetooth to locate Bluetooth device.";
 "NSBluetoothPeripheralUsageDescription" = "To add or use Bluetooth devices, enable Bluetooth on your mobile phone.";

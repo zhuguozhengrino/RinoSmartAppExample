@@ -13,5 +13,34 @@
         "#DE9B59",
         "#DE6556",
         "#DC7287"
-    ]
+    ],
+    "toast_config":{
+        "position":"",
+        "duration":"",
+        "offset_top":"",
+        "offset_left":"",
+        "alpha":"",
+        "cornerRadius":"",
+        "red":"",
+        "green":"",
+        "blue":"",
+        "font_size":"",
+        "font_color":""
+    },
+    "hud_config":{
+        "hud_border_color":""
+    },
+    "device_details_config":[
+        {
+            "name":"add_home_screen",
+            "show":false
+        },
+        {
+            "name":"network",
+            "show":true
+        }
+    ],
+    "start_up_mode":"image",
+    "country_priority_sort":"",
+    "vest_switch":false
 }

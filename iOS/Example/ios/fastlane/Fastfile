@@ -1,0 +1,162 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+# 解决 fastlane 无法获取list price bug
+require 'spaceship'
+Spaceship::ConnectAPI::App.const_set('ESSENTIAL_INCLUDES', 'appStoreVersions')
+
+default_platform(:ios)
+
+
+platform :ios do
+
+  desc '构建前的准备工作'
+  desc '这是一个私有任务，仅供 Fastfile 内部 lane 调用使用'
+  lane :prepare do
+    cocoapods(
+      clean: true,
+      podfile: "Podfile"
+    )
+  end
+      
+  desc "获取 apple connect api key"
+  desc '这是一个私有任务，仅供 Fastfile 内部 lane 调用使用'
+  lane :get_api_key do
+    # 获取访问 App Store Connect API 的 key
+    api_key = app_store_connect_api_key(
+    key_id: ENV["key_id"],
+    issuer_id: ENV["issuer_id"],
+    key_filepath: ENV["key_filepath"],
+    duration: 500,  # App Store Connect 会话时长的上限
+    in_house: false # 企业级开发者
+  )
+  end
+
+  desc "编译 IOS 包"
+  lane :build do |options|
+    prepare
+    
+    #获取最后一次git提交 
+    commit = last_git_commit
+
+    # 构建版本 Debug/Release ......
+    config_type = options[:config_type] || "Debug"
+
+    api_key = get_api_key
+
+    # 获取 app 在 TestFlight 上的最新 build 值
+    # previous_build_number = latest_testflight_build_number(
+    #   app_identifier: ENV["app_identifier"],
+    #   api_key: api_key
+    # )
+    # current_build_number = increment_build_number
+
+    # 把 app 的 build 值设为 current_build_number
+    # increment_build_number(
+    #   xcodeproj: ENV["Rino.xcodeproj"],
+    #   build_number: current_build_number
+    # )
+    # current_build_number = previous_build_number + 1
+    # current_build_number = increment_build_number
+    current_build_number = get_build_number(xcodeproj: "Rino.xcodeproj")
+
+    export_method = options[:export_method] || 'ad-hoc'
+    gym(
+      configuration: config_type,
+      export_method: export_method,
+      export_xcargs: '-allowProvisioningUpdates',
+      output_directory: ENV["output_dir"],
+      output_name: ENV["output_name"],
+    )
+    case options[:upload_to]
+    when 'testflight'
+      puts "*************| 开始上传到 Testflight... |*************"
+      pilot(
+        ipa: ENV["output_dir"] + '/' + ENV["output_name"],
+        skip_submission: true,
+        skip_waiting_for_build_processing: true,
+        build_number: current_build_number
+      )
+      puts "*************| 上传到 Testflight 成功🎉 |*************"
+      notify_wechat_bot(message: "Rino IOS 版本已上传 Testflight - #{git_branch} 分支, #{config_type} 版本(Debug版本可以使用摇一摇)")
+    when 'applestore'
+      puts "*************| 开始上传到 Apple Connect... |*************"
+      deliver(
+        build_number: current_build_number,
+        submit_for_review: true,
+        skip_screenshots: true, # 跳过上传截图
+        force: true, # 上传之前不生成html报告
+        overwrite_screenshots: false, # 是否覆盖ITC上已有的截图
+        api_key: api_key,
+        run_precheck_before_submit: false
+      )
+      puts "*************| 上传到 Apple Connect 成功🎉 |*************"
+      notify_wechat_bot(message: "Rino IOS 版本已上传 Apple 进行审核！！！  - #{git_branch} 分支, #{config_type} 版本(Debug版本可以使用摇一摇)")
+    else 
+      commit_info = commit[:message] + "作者："+ commit[:author]
+      # 上传 fir
+      puts "*************| 开始上传到 Fir... |*************"
+      fir_cli(
+        api_token: ENV["api_token"],
+        specify_file_path: ENV["output_dir"] + '/' + ENV["output_name"],
+        wxwork_access_token: ENV["wxwork_access_token"],
+        changelog: "#{commit_info}",
+        specify_icon_file: ENV["app_logo"],
+        need_release_id: true,
+        force_pin_history: true,
+        wxwork_pic_url: "https://rinoiot.com/img/aboutUs_1_1.png",
+        wxwork_custom_message: "更新内容: \n#{commit_info}\n 点击卡片下载 APP ↑↑↑↑↑↑  - #{git_branch} 分支, #{config_type} 版本(Debug版本可以使用摇一摇)"
+      )
+      puts "*************| 上传到 Fir 成功🎉 |*************"
+      # notify_wechat_bot(message: "Rino IOS 版本已上传 Fir, 访问上方链接下载 APP ↑↑↑↑↑↑  - #{git_branch} 分支, #{config_type} 版本(Debug版本可以使用摇一摇)")
+    end
+    clean
+  end
+
+  desc "清除已经构建的IPA等文件"
+  lane :clean do
+    clean_build_artifacts
+  end
+
+  desc "通知企业微信"
+  lane :notify_wechat_bot do |options|
+    message = options[:message]
+    # 定义发送企业微信通知的 Lane
+      # 使用 sh action 执行 curl 命令
+    command = "curl -H 'Content-Type: application/json' -X POST " \
+      "-d '{\"msgtype\": \"text\", \"text\": {\"content\": \"#{message}\"}}' " \
+      "'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=#{ENV["wxwork_access_token"]}'"
+    sh(command)
+  end
+
+  desc "打包失败通知"
+  error do |lane, exception|
+    # 获取当前正在执行的 lane 名称
+    current_lane = lane_context[Fastlane::Actions::SharedValues::LANE_NAME]
+  
+    # 打包失败，发送通知到企业微信
+    notify_wechat_bot(message: "#{current_lane} 打包失败") 
+  
+    # 清理构建文件
+    clean_build_artifacts
+  end
+
+  desc "测试版本号"
+  lane :get_current_version do |options|
+    current_build_number = get_build_number(xcodeproj: "Rino.xcodeproj")
+    puts "当前本地版本：#{current_build_number}"
+  end
+
+end

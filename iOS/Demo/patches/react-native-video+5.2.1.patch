@@ -1,17 +1,1000 @@
 diff --git a/node_modules/react-native-video/.DS_Store b/node_modules/react-native-video/.DS_Store
 new file mode 100644
-index 0000000..045f641
+index 0000000..696d324
 Binary files /dev/null and b/node_modules/react-native-video/.DS_Store differ
 diff --git a/node_modules/react-native-video/ios/.DS_Store b/node_modules/react-native-video/ios/.DS_Store
 new file mode 100644
-index 0000000..3781176
+index 0000000..7868187
 Binary files /dev/null and b/node_modules/react-native-video/ios/.DS_Store differ
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/.DS_Store b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/.DS_Store
+new file mode 100644
+index 0000000..820287d
+Binary files /dev/null and b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/.DS_Store differ
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKAVMoviePlayerController.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKAVMoviePlayerController.h
+new file mode 100644
+index 0000000..39465c9
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKAVMoviePlayerController.h
+@@ -0,0 +1,79 @@
++/*
++ * IJKAVMoviePlayerController.h
++ *
++ * Copyright (c) 2014 Bilibili
++ * Copyright (c) 2014 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++/*
++ File: AVPlayerDemoPlaybackViewController.h
++ Abstract: UIViewController managing a playback view, thumbnail view, and associated playback UI.
++ Version: 1.3
++
++ Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
++ Inc. ("Apple") in consideration of your agreement to the following
++ terms, and your use, installation, modification or redistribution of
++ this Apple software constitutes acceptance of these terms.  If you do
++ not agree with these terms, please do not use, install, modify or
++ redistribute this Apple software.
++
++ In consideration of your agreement to abide by the following terms, and
++ subject to these terms, Apple grants you a personal, non-exclusive
++ license, under Apple's copyrights in this original Apple software (the
++ "Apple Software"), to use, reproduce, modify and redistribute the Apple
++ Software, with or without modifications, in source and/or binary forms;
++ provided that if you redistribute the Apple Software in its entirety and
++ without modifications, you must retain this notice and the following
++ text and disclaimers in all such redistributions of the Apple Software.
++ Neither the name, trademarks, service marks or logos of Apple Inc. may
++ be used to endorse or promote products derived from the Apple Software
++ without specific prior written permission from Apple.  Except as
++ expressly stated in this notice, no other rights or licenses, express or
++ implied, are granted by Apple herein, including but not limited to any
++ patent rights that may be infringed by your derivative works or by other
++ works in which the Apple Software may be incorporated.
++
++ The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
++ MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
++ THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
++ FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
++ OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
++
++ IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
++ OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
++ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
++ INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
++ MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
++ AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
++ STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
++ POSSIBILITY OF SUCH DAMAGE.
++
++ Copyright (C) 2014 Apple Inc. All Rights Reserved.
++
++ */
++
++#import "IJKMediaPlayback.h"
++
++@interface IJKAVMoviePlayerController : NSObject <IJKMediaPlayback>
++
++- (id)initWithContentURL:(NSURL *)aUrl;
++- (id)initWithContentURLString:(NSString *)aUrl;
+++ (id)getInstance:(NSString *)aUrl;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFMonitor.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFMonitor.h
+new file mode 100644
+index 0000000..0e70d39
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFMonitor.h
+@@ -0,0 +1,65 @@
++/*
++ * Copyright (c) 2016 Bilibili
++ * Copyright (c) 2016 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import <Foundation/Foundation.h>
++
++@interface IJKFFMonitor : NSObject
++
++- (instancetype)init;
++
++@property(nonatomic) NSDictionary *mediaMeta;
++@property(nonatomic) NSDictionary *videoMeta;
++@property(nonatomic) NSDictionary *audioMeta;
++
++@property(nonatomic, readonly) int64_t   duration;   // milliseconds
++@property(nonatomic, readonly) int64_t   bitrate;    // bit / sec
++@property(nonatomic, readonly) float     fps;        // frame / sec
++@property(nonatomic, readonly) int       width;      // width
++@property(nonatomic, readonly) int       height;     // height
++@property(nonatomic, readonly) NSString *vcodec;     // video codec
++@property(nonatomic, readonly) NSString *acodec;     // audio codec
++@property(nonatomic, readonly) int       sampleRate;
++@property(nonatomic, readonly) int64_t   channelLayout;
++
++@property(nonatomic) NSString *vdecoder;
++
++@property(nonatomic) int       tcpError;
++@property(nonatomic) NSString *remoteIp;
++
++@property(nonatomic) int       httpError;
++@property(nonatomic) NSString *httpUrl;
++@property(nonatomic) NSString *httpHost;
++@property(nonatomic) int       httpCode;
++@property(nonatomic) int64_t   httpOpenTick;
++@property(nonatomic) int64_t   httpSeekTick;
++@property(nonatomic) int       httpOpenCount;
++@property(nonatomic) int       httpSeekCount;
++@property(nonatomic) int64_t   lastHttpOpenDuration;
++@property(nonatomic) int64_t   lastHttpSeekDuration;
++@property(nonatomic) int64_t   filesize;
++
++@property(nonatomic) int64_t   prepareStartTick;
++@property(nonatomic) int64_t   prepareDuration;
++@property(nonatomic) int64_t   firstVideoFrameLatency;
++@property(nonatomic) int64_t   lastPrerollStartTick;
++@property(nonatomic) int64_t   lastPrerollDuration;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFMoviePlayerController.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFMoviePlayerController.h
+new file mode 100644
+index 0000000..004c123
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFMoviePlayerController.h
+@@ -0,0 +1,155 @@
++/*
++ * IJKFFMoviePlayerController.h
++ *
++ * Copyright (c) 2013 Bilibili
++ * Copyright (c) 2013 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import "IJKMediaPlayback.h"
++#import "IJKFFMonitor.h"
++#import "IJKFFOptions.h"
++#import "IJKSDLGLViewProtocol.h"
++
++// media meta
++#define k_IJKM_KEY_FORMAT         @"format"
++#define k_IJKM_KEY_DURATION_US    @"duration_us"
++#define k_IJKM_KEY_START_US       @"start_us"
++#define k_IJKM_KEY_BITRATE        @"bitrate"
++
++// stream meta
++#define k_IJKM_KEY_TYPE           @"type"
++#define k_IJKM_VAL_TYPE__VIDEO    @"video"
++#define k_IJKM_VAL_TYPE__AUDIO    @"audio"
++#define k_IJKM_VAL_TYPE__UNKNOWN  @"unknown"
++
++#define k_IJKM_KEY_CODEC_NAME      @"codec_name"
++#define k_IJKM_KEY_CODEC_PROFILE   @"codec_profile"
++#define k_IJKM_KEY_CODEC_LONG_NAME @"codec_long_name"
++
++// stream: video
++#define k_IJKM_KEY_WIDTH          @"width"
++#define k_IJKM_KEY_HEIGHT         @"height"
++#define k_IJKM_KEY_FPS_NUM        @"fps_num"
++#define k_IJKM_KEY_FPS_DEN        @"fps_den"
++#define k_IJKM_KEY_TBR_NUM        @"tbr_num"
++#define k_IJKM_KEY_TBR_DEN        @"tbr_den"
++#define k_IJKM_KEY_SAR_NUM        @"sar_num"
++#define k_IJKM_KEY_SAR_DEN        @"sar_den"
++// stream: audio
++#define k_IJKM_KEY_SAMPLE_RATE    @"sample_rate"
++#define k_IJKM_KEY_CHANNEL_LAYOUT @"channel_layout"
++
++#define kk_IJKM_KEY_STREAMS       @"streams"
++
++typedef enum IJKLogLevel {
++    k_IJK_LOG_UNKNOWN = 0,
++    k_IJK_LOG_DEFAULT = 1,
++
++    k_IJK_LOG_VERBOSE = 2,
++    k_IJK_LOG_DEBUG   = 3,
++    k_IJK_LOG_INFO    = 4,
++    k_IJK_LOG_WARN    = 5,
++    k_IJK_LOG_ERROR   = 6,
++    k_IJK_LOG_FATAL   = 7,
++    k_IJK_LOG_SILENT  = 8,
++} IJKLogLevel;
++
++@interface IJKFFMoviePlayerController : NSObject <IJKMediaPlayback>
++
++- (id)initWithContentURL:(NSURL *)aUrl
++             withOptions:(IJKFFOptions *)options;
++
++- (id)initWithContentURLString:(NSString *)aUrlString
++                   withOptions:(IJKFFOptions *)options;
++
++- (id)initWithMoreContent:(NSURL *)aUrl
++             withOptions:(IJKFFOptions *)options
++              withGLView:(UIView<IJKSDLGLViewProtocol> *)glView;
++
++- (id)initWithMoreContentString:(NSString *)aUrlString
++                 withOptions:(IJKFFOptions *)options
++                  withGLView:(UIView<IJKSDLGLViewProtocol> *)glView;
++
++- (void)prepareToPlay;
++- (void)play;
++- (void)pause;
++- (void)stop;
++- (BOOL)isPlaying;
++- (int64_t)trafficStatistic;
++- (float)dropFrameRate;
++
++- (void)setPauseInBackground:(BOOL)pause;
++- (BOOL)isVideoToolboxOpen;
++
++- (void)setHudValue:(NSString *)value forKey:(NSString *)key;
++
+++ (void)setLogReport:(BOOL)preferLogReport;
+++ (void)setLogLevel:(IJKLogLevel)logLevel;
+++ (BOOL)checkIfFFmpegVersionMatch:(BOOL)showAlert;
+++ (BOOL)checkIfPlayerVersionMatch:(BOOL)showAlert
++                            version:(NSString *)version;
++
++@property(nonatomic, readonly) CGFloat fpsInMeta;
++@property(nonatomic, readonly) CGFloat fpsAtOutput;
++@property(nonatomic) BOOL shouldShowHudView;
++
++- (void)setOptionValue:(NSString *)value
++                forKey:(NSString *)key
++            ofCategory:(IJKFFOptionCategory)category;
++
++- (void)setOptionIntValue:(int64_t)value
++                   forKey:(NSString *)key
++               ofCategory:(IJKFFOptionCategory)category;
++
++
++
++- (void)setFormatOptionValue:       (NSString *)value forKey:(NSString *)key;
++- (void)setCodecOptionValue:        (NSString *)value forKey:(NSString *)key;
++- (void)setSwsOptionValue:          (NSString *)value forKey:(NSString *)key;
++- (void)setPlayerOptionValue:       (NSString *)value forKey:(NSString *)key;
++
++- (void)setFormatOptionIntValue:    (int64_t)value forKey:(NSString *)key;
++- (void)setCodecOptionIntValue:     (int64_t)value forKey:(NSString *)key;
++- (void)setSwsOptionIntValue:       (int64_t)value forKey:(NSString *)key;
++- (void)setPlayerOptionIntValue:    (int64_t)value forKey:(NSString *)key;
++
++@property (nonatomic, retain) id<IJKMediaUrlOpenDelegate> segmentOpenDelegate;
++@property (nonatomic, retain) id<IJKMediaUrlOpenDelegate> tcpOpenDelegate;
++@property (nonatomic, retain) id<IJKMediaUrlOpenDelegate> httpOpenDelegate;
++@property (nonatomic, retain) id<IJKMediaUrlOpenDelegate> liveOpenDelegate;
++
++@property (nonatomic, retain) id<IJKMediaNativeInvokeDelegate> nativeInvokeDelegate;
++
++- (void)didShutdown;
++
++#pragma mark KVO properties
++@property (nonatomic, readonly) IJKFFMonitor *monitor;
++
++@end
++
++#define IJK_FF_IO_TYPE_READ (1)
++void IJKFFIOStatDebugCallback(const char *url, int type, int bytes);
++void IJKFFIOStatRegister(void (*cb)(const char *url, int type, int bytes));
++
++void IJKFFIOStatCompleteDebugCallback(const char *url,
++                                      int64_t read_bytes, int64_t total_size,
++                                      int64_t elpased_time, int64_t total_duration);
++void IJKFFIOStatCompleteRegister(void (*cb)(const char *url,
++                                            int64_t read_bytes, int64_t total_size,
++                                            int64_t elpased_time, int64_t total_duration));
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFOptions.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFOptions.h
+new file mode 100644
+index 0000000..cc03847
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKFFOptions.h
+@@ -0,0 +1,75 @@
++/*
++ * IJKFFOptions.h
++ *
++ * Copyright (c) 2013-2015 Bilibili
++ * Copyright (c) 2013-2015 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import <Foundation/Foundation.h>
++
++typedef enum IJKFFOptionCategory {
++    kIJKFFOptionCategoryFormat = 1,
++    kIJKFFOptionCategoryCodec  = 2,
++    kIJKFFOptionCategorySws    = 3,
++    kIJKFFOptionCategoryPlayer = 4,
++    kIJKFFOptionCategorySwr    = 5,
++} IJKFFOptionCategory;
++
++// for codec option 'skip_loop_filter' and 'skip_frame'
++typedef enum IJKAVDiscard {
++    /* We leave some space between them for extensions (drop some
++     * keyframes for intra-only or drop just some bidir frames). */
++    IJK_AVDISCARD_NONE    =-16, ///< discard nothing
++    IJK_AVDISCARD_DEFAULT =  0, ///< discard useless packets like 0 size packets in avi
++    IJK_AVDISCARD_NONREF  =  8, ///< discard all non reference
++    IJK_AVDISCARD_BIDIR   = 16, ///< discard all bidirectional frames
++    IJK_AVDISCARD_NONKEY  = 32, ///< discard all frames except keyframes
++    IJK_AVDISCARD_ALL     = 48, ///< discard all
++} IJKAVDiscard;
++
++struct IjkMediaPlayer;
++
++@interface IJKFFOptions : NSObject
++
+++(IJKFFOptions *)optionsByDefault;
++
++-(void)applyTo:(struct IjkMediaPlayer *)mediaPlayer;
++
++- (void)setOptionValue:(NSString *)value
++                forKey:(NSString *)key
++            ofCategory:(IJKFFOptionCategory)category;
++
++- (void)setOptionIntValue:(int64_t)value
++                   forKey:(NSString *)key
++               ofCategory:(IJKFFOptionCategory)category;
++
++
++-(void)setFormatOptionValue:       (NSString *)value forKey:(NSString *)key;
++-(void)setCodecOptionValue:        (NSString *)value forKey:(NSString *)key;
++-(void)setSwsOptionValue:          (NSString *)value forKey:(NSString *)key;
++-(void)setPlayerOptionValue:       (NSString *)value forKey:(NSString *)key;
++
++-(void)setFormatOptionIntValue:    (int64_t)value forKey:(NSString *)key;
++-(void)setCodecOptionIntValue:     (int64_t)value forKey:(NSString *)key;
++-(void)setSwsOptionIntValue:       (int64_t)value forKey:(NSString *)key;
++-(void)setPlayerOptionIntValue:    (int64_t)value forKey:(NSString *)key;
++
++@property(nonatomic) BOOL showHudView;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKKVOController.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKKVOController.h
+new file mode 100644
+index 0000000..3a6bf15
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKKVOController.h
+@@ -0,0 +1,39 @@
++/*
++ * IJKKVOController.h
++ *
++ * Copyright (c) 2014 Bilibili
++ * Copyright (c) 2014 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import <Foundation/Foundation.h>
++
++@interface IJKKVOController : NSObject
++
++- (id)initWithTarget:(NSObject *)target;
++
++- (void)safelyAddObserver:(NSObject *)observer
++               forKeyPath:(NSString *)keyPath
++                  options:(NSKeyValueObservingOptions)options
++                  context:(void *)context;
++- (void)safelyRemoveObserver:(NSObject *)observer
++                  forKeyPath:(NSString *)keyPath;
++
++- (void)safelyRemoveAllObservers;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMPMoviePlayerController.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMPMoviePlayerController.h
+new file mode 100644
+index 0000000..b17f175
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMPMoviePlayerController.h
+@@ -0,0 +1,32 @@
++/*
++ * IJKMPMoviePlayerController.h
++ *
++ * Copyright (c) 2013 Bilibili
++ * Copyright (c) 2013 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import "IJKMediaPlayback.h"
++#import <MediaPlayer/MediaPlayer.h>
++
++@interface IJKMPMoviePlayerController : MPMoviePlayerController <IJKMediaPlayback>
++
++- (id)initWithContentURL:(NSURL *)aUrl;
++- (id)initWithContentURLString:(NSString *)aUrl;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaFramework.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaFramework.h
+new file mode 100644
+index 0000000..d0bc526
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaFramework.h
+@@ -0,0 +1,63 @@
++/*
++ * IJKMediaFramework.h
++ *
++ * Copyright (c) 2013 Bilibili
++ * Copyright (c) 2013 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import <UIKit/UIKit.h>
++
++//! Project version number for IJKMediaFramework.
++FOUNDATION_EXPORT double IJKMediaFrameworkVersionNumber;
++
++//! Project version string for IJKMediaFramework.
++FOUNDATION_EXPORT const unsigned char IJKMediaFrameworkVersionString[];
++
++// In this header, you should import all the public headers of your framework using statements like #import <IJKMediaFrameworkWithSSL/PublicHeader.h>
++#import <IJKMediaFramework/IJKMediaPlayback.h>
++#import <IJKMediaFramework/IJKMPMoviePlayerController.h>
++#import <IJKMediaFramework/IJKFFOptions.h>
++#import <IJKMediaFramework/IJKFFMoviePlayerController.h>
++#import <IJKMediaFramework/IJKAVMoviePlayerController.h>
++#import <IJKMediaFramework/IJKMediaModule.h>
++#import <IJKMediaFramework/IJKMediaPlayer.h>
++#import <IJKMediaFramework/IJKNotificationManager.h>
++#import <IJKMediaFramework/IJKKVOController.h>
++#import <IJKMediaFramework/IJKSDLGLViewProtocol.h>
++
++// backward compatible for old names
++#define IJKMediaPlaybackIsPreparedToPlayDidChangeNotification IJKMPMediaPlaybackIsPreparedToPlayDidChangeNotification
++#define IJKMoviePlayerLoadStateDidChangeNotification IJKMPMoviePlayerLoadStateDidChangeNotification
++#define IJKMoviePlayerPlaybackDidFinishNotification IJKMPMoviePlayerPlaybackDidFinishNotification
++#define IJKMoviePlayerPlaybackDidFinishReasonUserInfoKey IJKMPMoviePlayerPlaybackDidFinishReasonUserInfoKey
++#define IJKMoviePlayerPlaybackStateDidChangeNotification IJKMPMoviePlayerPlaybackStateDidChangeNotification
++#define IJKMoviePlayerIsAirPlayVideoActiveDidChangeNotification IJKMPMoviePlayerIsAirPlayVideoActiveDidChangeNotification
++#define IJKMoviePlayerVideoDecoderOpenNotification IJKMPMoviePlayerVideoDecoderOpenNotification
++#define IJKMoviePlayerFirstVideoFrameRenderedNotification IJKMPMoviePlayerFirstVideoFrameRenderedNotification
++#define IJKMoviePlayerFirstAudioFrameRenderedNotification IJKMPMoviePlayerFirstAudioFrameRenderedNotification
++#define IJKMoviePlayerFirstAudioFrameDecodedNotification IJKMPMoviePlayerFirstAudioFrameDecodedNotification
++#define IJKMoviePlayerFirstVideoFrameDecodedNotification IJKMPMoviePlayerFirstVideoFrameDecodedNotification
++#define IJKMoviePlayerOpenInputNotification IJKMPMoviePlayerOpenInputNotification
++#define IJKMoviePlayerFindStreamInfoNotification IJKMPMoviePlayerFindStreamInfoNotification
++#define IJKMoviePlayerComponentOpenNotification IJKMPMoviePlayerComponentOpenNotification
++
++#define IJKMPMoviePlayerAccurateSeekCompleteNotification IJKMPMoviePlayerAccurateSeekCompleteNotification
++#define IJKMoviePlayerSeekAudioStartNotification IJKMPMoviePlayerSeekAudioStartNotification
++#define IJKMoviePlayerSeekVideoStartNotification IJKMPMoviePlayerSeekVideoStartNotification
++
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaModule.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaModule.h
+new file mode 100644
+index 0000000..c0e23f9
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaModule.h
+@@ -0,0 +1,33 @@
++/*
++ * IJKMediaModule.h
++ *
++ * Copyright (c) 2013 Bilibili
++ * Copyright (c) 2013 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import <Foundation/Foundation.h>
++
++@interface IJKMediaModule : NSObject
++
+++ (IJKMediaModule *)sharedModule;
++
++@property(atomic, getter=isAppIdleTimerDisabled)            BOOL appIdleTimerDisabled;
++@property(atomic, getter=isMediaModuleIdleTimerDisabled)    BOOL mediaModuleIdleTimerDisabled;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaPlayback.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaPlayback.h
+new file mode 100644
+index 0000000..b5e50e0
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaPlayback.h
+@@ -0,0 +1,227 @@
++/*
++ * IJKMediaPlayback.h
++ *
++ * Copyright (c) 2013 Bilibili
++ * Copyright (c) 2013 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import <Foundation/Foundation.h>
++#import <UIKit/UIKit.h>
++
++typedef NS_ENUM(NSInteger, IJKMPMovieScalingMode) {
++    IJKMPMovieScalingModeNone,       // No scaling
++    IJKMPMovieScalingModeAspectFit,  // Uniform scale until one dimension fits
++    IJKMPMovieScalingModeAspectFill, // Uniform scale until the movie fills the visible bounds. One dimension may have clipped contents
++    IJKMPMovieScalingModeFill        // Non-uniform scale. Both render dimensions will exactly match the visible bounds
++};
++
++typedef NS_ENUM(NSInteger, IJKMPMoviePlaybackState) {
++    IJKMPMoviePlaybackStateStopped,
++    IJKMPMoviePlaybackStatePlaying,
++    IJKMPMoviePlaybackStatePaused,
++    IJKMPMoviePlaybackStateInterrupted,
++    IJKMPMoviePlaybackStateSeekingForward,
++    IJKMPMoviePlaybackStateSeekingBackward
++};
++
++typedef NS_OPTIONS(NSUInteger, IJKMPMovieLoadState) {
++    IJKMPMovieLoadStateUnknown        = 0,
++    IJKMPMovieLoadStatePlayable       = 1 << 0,
++    IJKMPMovieLoadStatePlaythroughOK  = 1 << 1, // Playback will be automatically started in this state when shouldAutoplay is YES
++    IJKMPMovieLoadStateStalled        = 1 << 2, // Playback will be automatically paused in this state, if started
++};
++
++typedef NS_ENUM(NSInteger, IJKMPMovieFinishReason) {
++    IJKMPMovieFinishReasonPlaybackEnded,
++    IJKMPMovieFinishReasonPlaybackError,
++    IJKMPMovieFinishReasonUserExited
++};
++
++// -----------------------------------------------------------------------------
++// Thumbnails
++
++typedef NS_ENUM(NSInteger, IJKMPMovieTimeOption) {
++    IJKMPMovieTimeOptionNearestKeyFrame,
++    IJKMPMovieTimeOptionExact
++};
++
++@protocol IJKMediaPlayback;
++
++#pragma mark IJKMediaPlayback
++
++@protocol IJKMediaPlayback <NSObject>
++
++- (void)prepareToPlay;
++- (void)play;
++- (void)pause;
++- (void)stop;
++- (BOOL)isPlaying;
++- (void)shutdown;
++- (void)setPauseInBackground:(BOOL)pause;
++
++@property(nonatomic, readonly)  UIView *view;
++@property(nonatomic)            NSTimeInterval currentPlaybackTime;
++@property(nonatomic, readonly)  NSTimeInterval duration;
++@property(nonatomic, readonly)  NSTimeInterval playableDuration;
++@property(nonatomic, readonly)  NSInteger bufferingProgress;
++
++@property(nonatomic, readonly)  BOOL isPreparedToPlay;
++@property(nonatomic, readonly)  IJKMPMoviePlaybackState playbackState;
++@property(nonatomic, readonly)  IJKMPMovieLoadState loadState;
++@property(nonatomic, readonly) int isSeekBuffering;
++@property(nonatomic, readonly) int isAudioSync;
++@property(nonatomic, readonly) int isVideoSync;
++
++@property(nonatomic, readonly) int64_t numberOfBytesTransferred;
++
++@property(nonatomic, readonly) CGSize naturalSize;
++@property(nonatomic) IJKMPMovieScalingMode scalingMode;
++@property(nonatomic) BOOL shouldAutoplay;
++
++@property (nonatomic) BOOL allowsMediaAirPlay;
++@property (nonatomic) BOOL isDanmakuMediaAirPlay;
++@property (nonatomic, readonly) BOOL airPlayMediaActive;
++
++@property (nonatomic) float playbackRate;
++@property (nonatomic) float playbackVolume;
++
++- (UIImage *)thumbnailImageAtCurrentTime;
++
++#pragma mark Notifications
++
++#ifdef __cplusplus
++#define IJK_EXTERN extern "C" __attribute__((visibility ("default")))
++#else
++#define IJK_EXTERN extern __attribute__((visibility ("default")))
++#endif
++
++// -----------------------------------------------------------------------------
++//  MPMediaPlayback.h
++
++// Posted when the prepared state changes of an object conforming to the MPMediaPlayback protocol changes.
++// This supersedes MPMoviePlayerContentPreloadDidFinishNotification.
++IJK_EXTERN NSString *const IJKMPMediaPlaybackIsPreparedToPlayDidChangeNotification;
++
++// -----------------------------------------------------------------------------
++//  MPMoviePlayerController.h
++//  Movie Player Notifications
++
++// Posted when the scaling mode changes.
++IJK_EXTERN NSString* const IJKMPMoviePlayerScalingModeDidChangeNotification;
++
++// Posted when movie playback ends or a user exits playback.
++IJK_EXTERN NSString* const IJKMPMoviePlayerPlaybackDidFinishNotification;
++IJK_EXTERN NSString* const IJKMPMoviePlayerPlaybackDidFinishReasonUserInfoKey; // NSNumber (IJKMPMovieFinishReason)
++
++// Posted when the playback state changes, either programatically or by the user.
++IJK_EXTERN NSString* const IJKMPMoviePlayerPlaybackStateDidChangeNotification;
++
++// Posted when the network load state changes.
++IJK_EXTERN NSString* const IJKMPMoviePlayerLoadStateDidChangeNotification;
++
++// Posted when the movie player begins or ends playing video via AirPlay.
++IJK_EXTERN NSString* const IJKMPMoviePlayerIsAirPlayVideoActiveDidChangeNotification;
++
++// -----------------------------------------------------------------------------
++// Movie Property Notifications
++
++// Calling -prepareToPlay on the movie player will begin determining movie properties asynchronously.
++// These notifications are posted when the associated movie property becomes available.
++IJK_EXTERN NSString* const IJKMPMovieNaturalSizeAvailableNotification;
++
++// -----------------------------------------------------------------------------
++//  Extend Notifications
++
++IJK_EXTERN NSString *const IJKMPMoviePlayerVideoDecoderOpenNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerFirstVideoFrameRenderedNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerFirstAudioFrameRenderedNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerFirstAudioFrameDecodedNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerFirstVideoFrameDecodedNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerOpenInputNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerFindStreamInfoNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerComponentOpenNotification;
++
++IJK_EXTERN NSString *const IJKMPMoviePlayerDidSeekCompleteNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerDidSeekCompleteTargetKey;
++IJK_EXTERN NSString *const IJKMPMoviePlayerDidSeekCompleteErrorKey;
++IJK_EXTERN NSString *const IJKMPMoviePlayerDidAccurateSeekCompleteCurPos;
++IJK_EXTERN NSString *const IJKMPMoviePlayerAccurateSeekCompleteNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerSeekAudioStartNotification;
++IJK_EXTERN NSString *const IJKMPMoviePlayerSeekVideoStartNotification;
++
++@end
++
++#pragma mark IJKMediaUrlOpenDelegate
++
++// Must equal to the defination in ijkavformat/ijkavformat.h
++typedef NS_ENUM(NSInteger, IJKMediaEvent) {
++
++    // Notify Events
++    IJKMediaEvent_WillHttpOpen         = 1,       // attr: url
++    IJKMediaEvent_DidHttpOpen          = 2,       // attr: url, error, http_code
++    IJKMediaEvent_WillHttpSeek         = 3,       // attr: url, offset
++    IJKMediaEvent_DidHttpSeek          = 4,       // attr: url, offset, error, http_code
++    // Control Message
++    IJKMediaCtrl_WillTcpOpen           = 0x20001, // IJKMediaUrlOpenData: no args
++    IJKMediaCtrl_DidTcpOpen            = 0x20002, // IJKMediaUrlOpenData: error, family, ip, port, fd
++    IJKMediaCtrl_WillHttpOpen          = 0x20003, // IJKMediaUrlOpenData: url, segmentIndex, retryCounter
++    IJKMediaCtrl_WillLiveOpen          = 0x20005, // IJKMediaUrlOpenData: url, retryCounter
++    IJKMediaCtrl_WillConcatSegmentOpen = 0x20007, // IJKMediaUrlOpenData: url, segmentIndex, retryCounter
++};
++
++#define IJKMediaEventAttrKey_url            @"url"
++#define IJKMediaEventAttrKey_host           @"host"
++#define IJKMediaEventAttrKey_error          @"error"
++#define IJKMediaEventAttrKey_time_of_event  @"time_of_event"
++#define IJKMediaEventAttrKey_http_code      @"http_code"
++#define IJKMediaEventAttrKey_offset         @"offset"
++#define IJKMediaEventAttrKey_file_size      @"file_size"
++
++// event of IJKMediaUrlOpenEvent_xxx
++@interface IJKMediaUrlOpenData: NSObject
++
++- (id)initWithUrl:(NSString *)url
++            event:(IJKMediaEvent)event
++     segmentIndex:(int)segmentIndex
++     retryCounter:(int)retryCounter;
++
++@property(nonatomic, readonly) IJKMediaEvent event;
++@property(nonatomic, readonly) int segmentIndex;
++@property(nonatomic, readonly) int retryCounter;
++
++@property(nonatomic, retain) NSString *url;
++@property(nonatomic, assign) int fd;
++@property(nonatomic, strong) NSString *msg;
++@property(nonatomic) int error; // set a negative value to indicate an error has occured.
++@property(nonatomic, getter=isHandled)    BOOL handled;     // auto set to YES if url changed
++@property(nonatomic, getter=isUrlChanged) BOOL urlChanged;  // auto set to YES by url changed
++
++@end
++
++@protocol IJKMediaUrlOpenDelegate <NSObject>
++
++- (void)willOpenUrl:(IJKMediaUrlOpenData*) urlOpenData;
++
++@end
++
++@protocol IJKMediaNativeInvokeDelegate <NSObject>
++
++- (int)invoke:(IJKMediaEvent)event attributes:(NSDictionary *)attributes;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaPlayer.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaPlayer.h
+new file mode 100644
+index 0000000..28c8bab
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKMediaPlayer.h
+@@ -0,0 +1,32 @@
++/*
++ * IJKMediaPlayer.h
++ *
++ * Copyright (c) 2013 Bilibili
++ * Copyright (c) 2013 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import "IJKMediaPlayback.h"
++#import "IJKMPMoviePlayerController.h"
++
++#import "IJKFFOptions.h"
++#import "IJKFFMoviePlayerController.h"
++
++#import "IJKAVMoviePlayerController.h"
++
++#import "IJKMediaModule.h"
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKNotificationManager.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKNotificationManager.h
+new file mode 100644
+index 0000000..6190049
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKNotificationManager.h
+@@ -0,0 +1,37 @@
++/*
++ * IJKNotificationManager.h
++ *
++ * Copyright (c) 2016 Bilibili
++ * Copyright (c) 2016 Zhang Rui <bbcallen@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#import <Foundation/Foundation.h>
++
++@interface IJKNotificationManager : NSObject
++
++- (nullable instancetype)init;
++
++- (void)addObserver:(nonnull id)observer
++           selector:(nonnull SEL)aSelector
++               name:(nullable NSString *)aName
++             object:(nullable id)anObject;
++
++- (void)removeAllObservers:(nonnull id)observer;
++
++@end
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKSDLGLViewProtocol.h b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKSDLGLViewProtocol.h
+new file mode 100644
+index 0000000..0f27f26
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Headers/IJKSDLGLViewProtocol.h
+@@ -0,0 +1,50 @@
++/*
++ * IJKSDLGLViewProtocol.h
++ *
++ * Copyright (c) 2017 Bilibili
++ * Copyright (c) 2017 raymond <raymondzheng1412@gmail.com>
++ *
++ * This file is part of ijkPlayer.
++ *
++ * ijkPlayer is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ *
++ * ijkPlayer is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with ijkPlayer; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ */
++
++#ifndef IJKSDLGLViewProtocol_h
++#define IJKSDLGLViewProtocol_h
++
++#import <UIKit/UIKit.h>
++
++typedef struct IJKOverlay IJKOverlay;
++struct IJKOverlay {
++    int w;
++    int h;
++    UInt32 format;
++    int planes;
++    UInt16 *pitches;
++    UInt8 **pixels;
++    int sar_num;
++    int sar_den;
++    CVPixelBufferRef pixel_buffer;
++};
++
++@protocol IJKSDLGLViewProtocol <NSObject>
++- (UIImage*) snapshot;
++@property(nonatomic, readonly) CGFloat  fps;
++@property(nonatomic)        CGFloat  scaleFactor;
++@property(nonatomic)        BOOL  isThirdGLView;
++- (void) display_pixels: (IJKOverlay *) overlay;
++@end
++
++#endif /* IJKSDLGLViewProtocol_h */
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/IJKMediaFramework b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/IJKMediaFramework
+new file mode 100644
+index 0000000..7153b2e
+Binary files /dev/null and b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/IJKMediaFramework differ
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Info.plist b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Info.plist
+new file mode 100644
+index 0000000..2cebad9
+Binary files /dev/null and b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Info.plist differ
+diff --git a/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Modules/module.modulemap b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Modules/module.modulemap
+new file mode 100644
+index 0000000..194919b
+--- /dev/null
++++ b/node_modules/react-native-video/ios/Video/IJKMediaFramework.framework/Modules/module.modulemap
+@@ -0,0 +1,6 @@
++framework module IJKMediaFramework {
++  umbrella header "IJKMediaFramework.h"
++  export *
++
++  module * { export * }
++}
 diff --git a/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.h b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.h
 new file mode 100644
-index 0000000..78e4d6b
+index 0000000..c462420
 --- /dev/null
 +++ b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.h
-@@ -0,0 +1,42 @@
+@@ -0,0 +1,46 @@
 +//
 +//  RCTVLCVideoManager.h
 +//  react-native-video
@@ -26,14 +1009,18 @@ index 0000000..78e4d6b
 +@protocol RCTVLCVideoManagerDelegate <NSObject>
 +
 +@optional
-+-(void)RCTVLCMediaPlayerTimeChanged:(NSNotification *)aNotification;
++-(void)RCTVLCMediaPlayerTimeChanged:(NSDictionary *)dictInfo;
 +
 +@end
 +
 +@interface RCTVLCVideoManager : NSObject
-++ (instancetype)sharedInstance;
-+
 +@property (nonatomic, weak) id<RCTVLCVideoManagerDelegate> delegate;
++
++@property (nonatomic, copy) NSNumber *reactTag;
++
++@property (nonatomic , assign)BOOL muted;
++
++@property (nonatomic , assign)CGFloat volume;
 +
 +- (void)setSrc:(NSDictionary *)source view:(RCTVideo *)videoView;
 +
@@ -47,7 +1034,7 @@ index 0000000..78e4d6b
 +
 +-(void)setRate:(float)rate;
 +
-+-(void)setVolume:(float)volume;
++
 +
 +-(void)removePlayer;
 +
@@ -56,10 +1043,10 @@ index 0000000..78e4d6b
 +NS_ASSUME_NONNULL_END
 diff --git a/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.m b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.m
 new file mode 100644
-index 0000000..e10d148
+index 0000000..87e1c66
 --- /dev/null
 +++ b/node_modules/react-native-video/ios/Video/RCTVLCVideoManager.m
-@@ -0,0 +1,202 @@
+@@ -0,0 +1,286 @@
 +//
 +//  RCTVLCVideoManager.m
 +//  react-native-video
@@ -74,6 +1061,7 @@ index 0000000..e10d148
 +#import <React/RCTBridgeModule.h>
 +#import <React/RCTEventDispatcher.h>
 +#import <React/UIView+React.h>
++#import <AVFoundation/AVFoundation.h>
 +
 +@interface RCTVLCVideoManager ()
 +
@@ -91,17 +1079,12 @@ index 0000000..e10d148
 +
 +@property (nonatomic , assign)NSInteger currentTime;
 +
++
++@property (nonatomic , strong) NSTimer *playerTimer;
 +@end
 +static id VLCVideoSharedInstance;
 +static dispatch_once_t VLCVideoOnceToken;
 +@implementation RCTVLCVideoManager
-++ (instancetype)sharedInstance {
-+    
-+    dispatch_once(&VLCVideoOnceToken, ^{
-+        VLCVideoSharedInstance = [[self alloc] init];
-+    });
-+    return VLCVideoSharedInstance;
-+}
 +
 +
 +-(IJKFFMoviePlayerController *)player{
@@ -109,36 +1092,54 @@ index 0000000..e10d148
 +        NSURL *url = [NSURL URLWithString:self.vlcUrl];
 +        [IJKFFMoviePlayerController setLogReport:YES];
 +        [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_INFO];
++        [IJKFFMoviePlayerController checkIfFFmpegVersionMatch:YES];
 +        IJKFFOptions *options = [IJKFFOptions optionsByDefault];
++
 +        _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:url withOptions:options];
 +        [_player setScalingMode:IJKMPMovieScalingModeAspectFit];
 +        
 +        _player.view.frame = self.videoView.frame;
 +        _player.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 +        [self.videoView addSubview:self.player.view];
++        
++        
 +    }
 +    return _player;
 +}
 +
 +
 +- (void)setSrc:(NSDictionary *)source view:(RCTVideo *)videoView{
-+    self.useVlC = videoView.useVlC;
++    if([videoView.useCustom isEqualToString:@"true"]){
++        self.useVlC = YES;
++    }
 +    if(self.useVlC){
-+        [_player pause];
-+        _player = nil;
++        
++        [self removePlayer];
 +        self.isSend = NO;
 +        self.totalTime = 0;
 +        self.currentTime = 0;
++        [self.playerTimer invalidate];
++        self.playerTimer = nil;
 +        self.vlcUrl = [source objectForKey:@"uri"];
++        NSLog(@"--IJKFF-rn--设置资源：%@",self.vlcUrl);
 +        self.videoView = videoView;
-+        NSLog(@"--IJKFF--source:%@",source);
++        [self.player pause];
++        [self updateSetValue];
 +        
 +        [self.player prepareToPlay];
++        if (self.videoView.onVideoLoadStart) {
++            self.videoView.onVideoLoadStart(@{});
++        }
++        
 +        [[NSNotificationCenter defaultCenter] addObserver:self
 +                                                 selector:@selector(playerPlaybackStateDidChange:)
 +                                                     name:IJKMPMoviePlayerPlaybackStateDidChangeNotification
 +                                                   object:nil];
-+        
++        // 添加播放完成通知的观察者
++        [[NSNotificationCenter defaultCenter] addObserver:self
++                                                     selector:@selector(moviePlayerPlaybackDidFinish:)
++                                                         name:IJKMPMoviePlayerPlaybackDidFinishNotification
++                                                       object:self.player];
 +        
 +    }
 +    
@@ -149,19 +1150,14 @@ index 0000000..e10d148
 +
 +
 +-(void)pause{
-+//    NSLog(@"--IJKFF--pause");
 +    if(self.player && self.useVlC){
-+       
 +        [self.player pause];
 +    }
 +    
 +}
 +
 +-(void)play{
-+//    NSLog(@"--IJKFF--play");
 +    if(self.player && self.useVlC){
-+        
-+        
 +        [self.player play];
 +        self.player.playbackRate = 0;
 +    }
@@ -169,24 +1165,39 @@ index 0000000..e10d148
 +}
 +-(void)stop{
 +    if(self.player && self.useVlC){
-+//        NSLog(@"--IJKFF--stop");
 +        [self.player stop];
 +    }
 +    
 +    
 +}
++-(void)setMuted:(BOOL)muted{
++    _muted = muted;
++    
++    if(self.player && self.useVlC){
++        [self updateSetValue];
++    }
++}
 +
++-(void)setVolume:(CGFloat)volume{
++    _volume = 2;
++    if(self.player && self.useVlC){
++        [self updateSetValue];
++    }
++}
++
++-(void)updateSetValue{
++//    [self.player setPlaybackVolume:_volume];
++}
 +- (void)setSeek:(NSDictionary *)info{
++    NSLog(@"--IJKFF----Seek");
 +    if(self.player && self.useVlC){
 +        NSNumber *seekTime = info[@"time"];
 +        NSNumber *seekTolerance = info[@"tolerance"];
-+        NSLog(@"--IJKFF----rn----time:%@--tolerance:%@",seekTime,seekTolerance);
-+        self.currentTime = [info[@"time"] integerValue];
++        self.currentTime = [seekTime integerValue];
 +        if(self.totalTime > 0){
-+//            [self.player pause];
 +            self.player.currentPlaybackTime = self.currentTime;
-+            NSLog(@"--IJKFF--设置--外外外-time:%zd",self.currentTime);
-+//            [self.player play];
++            [self.player play];
++            [self playStartTimer];
 +        }
 +        
 +    }
@@ -197,22 +1208,54 @@ index 0000000..e10d148
 +    }
 +    
 +}
-+-(void)setVolume:(float)volume{
-+    if(self.player && self.useVlC){
-+    }
-+}
++
 +-(void)removePlayer{
-+    if(_player && self.useVlC){
++    
++    if(_player){
 +        NSLog(@"--IJKFF--removePlayer");
++//        [_player setPlaybackVolume:0];
 +        [_player shutdown];
 +        [_player stop];
 +        _player.playbackRate = 0;
++        // 移除观察者
++        [[NSNotificationCenter defaultCenter] removeObserver:self name:IJKMPMoviePlayerPlaybackDidFinishNotification object:self.player];
++        [[NSNotificationCenter defaultCenter] removeObserver:self name:IJKMPMoviePlayerPlaybackStateDidChangeNotification object:self.player];
++        // 移除播放器视图
++        [self.player.view removeFromSuperview];
 +        _player = nil;
++        
++        self.currentTime = 0;
++        [_playerTimer invalidate];
++        _playerTimer = nil;
 +    }
 +    
 +}
 +
-+
++- (void)moviePlayerPlaybackDidFinish:(NSNotification *)notification {
++    // 播放完成后的处理逻辑
++    // 你可以根据需要获取通知中的相关信息
++    NSDictionary *userInfo = notification.userInfo;
++    IJKMPMovieFinishReason reason = [[userInfo valueForKey:IJKMPMoviePlayerPlaybackDidFinishReasonUserInfoKey] intValue];
++    
++    if (reason == IJKMPMovieFinishReasonPlaybackEnded) {
++        // 正常播放结束
++        NSLog(@"--IJKFF--正常播放结束");
++        self.currentTime = 0;
++        [_playerTimer invalidate];
++        _playerTimer = nil;
++        self.videoView.onVideoEnd(@{});
++    } else if (reason == IJKMPMovieFinishReasonUserExited) {
++        // 用户退出
++        NSLog(@"--IJKFF--用户退出");
++        self.videoView.onVideoEnd(@{});
++        self.currentTime = 0;
++        [_playerTimer invalidate];
++        _playerTimer = nil;
++    } else if (reason == IJKMPMovieFinishReasonPlaybackError) {
++        // 播放错误
++        NSLog(@"--IJKFF--播放错误");
++    }
++}
 +
 +
 +
@@ -222,28 +1265,30 @@ index 0000000..e10d148
 +        case IJKMPMoviePlaybackStateStopped:
 +            // 播放停止
 +            NSLog(@"--IJKFF--播放停止");
++            self.videoView.onVideoEnd(@{});
++            self.currentTime = 0;
++            [_playerTimer invalidate];
++            _playerTimer = nil;
 +            break;
 +        case IJKMPMoviePlaybackStatePlaying:
 +            // 播放中
 +//            NSLog(@"--IJKFF--播放中");
++            
 +            self.totalTime = self.player.duration;
-+            NSLog(@"--IJKFF--totalTime:%zd",self.totalTime);
++            self.currentTime = (NSInteger)self.player.currentPlaybackTime;
++//            NSLog(@"--IJKFF--totalTime:%zd",self.totalTime);
++            
 +            if([self.delegate respondsToSelector:@selector(RCTVLCMediaPlayerTimeChanged:)] && !self.isSend){
 +                self.isSend = YES;
-+                [self.delegate RCTVLCMediaPlayerTimeChanged:notification];
++                NSDictionary *dict = @{@"duration":@(self.totalTime)};
++                [self.delegate RCTVLCMediaPlayerTimeChanged:dict];
 +            }
-+            if(self.currentTime > 0){
-+//                [self.player pause];
-+                self.player.currentPlaybackTime = self.currentTime;
-+                [self.player play];
-+                NSLog(@"--IJKFF--设置--里里里-time:%zd",self.currentTime);
-+                self.currentTime = 0;
-+                
-+            }
++            
++            [self playStartTimer];
 +            break;
 +        case IJKMPMoviePlaybackStatePaused:
 +            // 暂停
-+            NSLog(@"--IJKFF--暂停");
++//            NSLog(@"--IJKFF--暂停");
 +            break;
 +        case IJKMPMoviePlaybackStateInterrupted:
 +            // 播放被中断
@@ -261,22 +1306,48 @@ index 0000000..e10d148
 +            break;
 +    }
 +}
++
++-(void)playStartTimer{
++    if(!_playerTimer){
++        self.playerTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(playTimeChange) userInfo:nil repeats:YES];
++    }
++    
++}
++
++
++-(void)playTimeChange{
++    if(self.player.playbackState == IJKMPMoviePlaybackStatePlaying && self.useVlC){
++        self.currentTime ++;
++//        NSLog(@"--IJKFF--progress:%zd--duration:%zd",self.currentTime,self.totalTime);
++        [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTVideo_progress" object:nil userInfo:@{@"progress": [NSNumber numberWithDouble: self.currentTime / self.totalTime]}];
++        
++        if( self.player.currentPlaybackTime >= 0 ) {
++            NSDictionary *progressDict = @{
++                @"currentTime": @(self.currentTime),
++                @"playableDuration": @(self.totalTime)
++            };
++            NSLog(@"--IJKFF-progress--currentTime:%zd--totalTime:%zd",self.currentTime,self.totalTime);
++            self.videoView.onVideoProgress(progressDict);
++        }
++    }
++    
++}
 +@end
 diff --git a/node_modules/react-native-video/ios/Video/RCTVideo.h b/node_modules/react-native-video/ios/Video/RCTVideo.h
-index 6fee299..9f8197c 100644
+index 6fee299..341473a 100644
 --- a/node_modules/react-native-video/ios/Video/RCTVideo.h
 +++ b/node_modules/react-native-video/ios/Video/RCTVideo.h
 @@ -44,6 +44,8 @@
  @property (nonatomic, copy) RCTDirectEventBlock onRestoreUserInterfaceForPictureInPictureStop;
  @property (nonatomic, copy) RCTDirectEventBlock onGetLicense;
  
-+@property (nonatomic, assign)BOOL useVlC;
++@property (nonatomic, assign)NSString *useCustom;
 +
  typedef NS_ENUM(NSInteger, RCTVideoError) {
      RCTVideoErrorFromJSPart,
      RCTVideoErrorLicenseRequestNotOk,
 diff --git a/node_modules/react-native-video/ios/Video/RCTVideo.m b/node_modules/react-native-video/ios/Video/RCTVideo.m
-index a757c08..df1c7b3 100644
+index a757c08..cb1ba6a 100644
 --- a/node_modules/react-native-video/ios/Video/RCTVideo.m
 +++ b/node_modules/react-native-video/ios/Video/RCTVideo.m
 @@ -5,7 +5,7 @@
@@ -288,20 +1359,30 @@ index a757c08..df1c7b3 100644
  static NSString *const statusKeyPath = @"status";
  static NSString *const playbackLikelyToKeepUpKeyPath = @"playbackLikelyToKeepUp";
  static NSString *const playbackBufferEmptyKeyPath = @"playbackBufferEmpty";
-@@ -22,6 +22,12 @@
+@@ -22,6 +22,14 @@ static int const RCTVideoUnset = -1;
      #define DebugLog(...) (void)0
  #endif
  
 +
 +@interface RCTVideo ()<RCTVLCVideoManagerDelegate>
 +
++@property (nonatomic, strong) RCTVLCVideoManager *customVideoManager;
 +
++@property (nonatomic, assign) BOOL  isCustom;
 +@end
 +
  @implementation RCTVideo
  {
    AVPlayer *_player;
-@@ -97,7 +103,7 @@ - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
+@@ -44,7 +52,6 @@ static int const RCTVideoUnset = -1;
+   RCTEventDispatcher *_eventDispatcher;
+   BOOL _playbackRateObserverRegistered;
+   BOOL _isExternalPlaybackActiveObserverRegistered;
+-  BOOL _videoLoadStarted;
+   
+   bool _pendingSeek;
+   float _pendingSeekTime;
+@@ -97,7 +104,7 @@ static int const RCTVideoUnset = -1;
  {
    if ((self = [super init])) {
      _eventDispatcher = eventDispatcher;
@@ -310,7 +1391,31 @@ index a757c08..df1c7b3 100644
      _playbackRateObserverRegistered = NO;
      _isExternalPlaybackActiveObserverRegistered = NO;
      _playbackStalled = NO;
-@@ -200,6 +206,10 @@ -(void)addPlayerTimeObserver
+@@ -111,6 +118,7 @@ static int const RCTVideoUnset = -1;
+     _lastSeekTime = 0.0f;
+     _progressUpdateInterval = 250;
+     _controls = NO;
++      _isCustom = NO;
+     _playerBufferEmpty = YES;
+     _playInBackground = false;
+     _preventsDisplaySleepDuringVideoPlayback = true;
+@@ -152,6 +160,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (RCTVideoPlayerViewController*)createPlayerViewController:(AVPlayer*)player
+                                              withPlayerItem:(AVPlayerItem*)playerItem {
++    
+   RCTVideoPlayerViewController* viewController = [[RCTVideoPlayerViewController alloc] init];
+   viewController.showsPlaybackControls = YES;
+   viewController.rctDelegate = self;
+@@ -190,6 +199,7 @@ static int const RCTVideoUnset = -1;
+ 
+ -(void)addPlayerTimeObserver
+ {
++
+   const Float64 progressUpdateIntervalMS = _progressUpdateInterval / 1000;
+   // @see endScrubbing in AVPlayerDemoPlaybackViewController.m
+   // of https://developer.apple.com/library/ios/samplecode/AVPlayerDemo/Introduction/Intro.html
+@@ -200,9 +210,14 @@ static int const RCTVideoUnset = -1;
                     ];
  }
  
@@ -321,250 +1426,754 @@ index a757c08..df1c7b3 100644
  /* Cancels the previously registered time observer. */
  -(void)removePlayerTimeObserver
  {
-@@ -228,6 +238,7 @@ - (void)applicationWillResignActive:(NSNotification *)notification
++   
+   if (_timeObserver)
+   {
+     [_player removeTimeObserver:_timeObserver];
+@@ -214,8 +229,10 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)dealloc
+ {
++    
+   [[NSNotificationCenter defaultCenter] removeObserver:self];
+   [self removePlayerLayer];
++    
+   [self removePlayerItemObservers];
+   [_player removeObserver:self forKeyPath:playbackRate context:nil];
+   [_player removeObserver:self forKeyPath:externalPlaybackActive context: nil];
+@@ -225,14 +242,17 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)applicationWillResignActive:(NSNotification *)notification
+ {
++    [self.customVideoManager pause];
    if (_playInBackground || _playWhenInactive || _paused) return;
    
    [_player pause];
-+    [[RCTVLCVideoManager sharedInstance] pause];
++    
    [_player setRate:0.0];
  }
  
-@@ -352,16 +363,79 @@ - (void)removePlayerItemObservers
+ - (void)applicationDidEnterBackground:(NSNotification *)notification
+ {
++    
+   if (_playInBackground) {
+     // Needed to play sound in background. See https://developer.apple.com/library/ios/qa/qa1668/_index.html
+     [_playerLayer setPlayer:nil];
+@@ -242,6 +262,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)applicationWillEnterForeground:(NSNotification *)notification
+ {
++    
+   [self applyModifiers];
+   if (_playInBackground) {
+     [_playerLayer setPlayer:_player];
+@@ -253,6 +274,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)audioRouteChanged:(NSNotification *)notification
+ {
++
+   NSNumber *reason = [[notification userInfo] objectForKey:AVAudioSessionRouteChangeReasonKey];
+   NSNumber *previousRoute = [[notification userInfo] objectForKey:AVAudioSessionRouteChangePreviousRouteKey];
+   if (reason.unsignedIntValue == AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
+@@ -264,6 +286,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)sendProgressUpdate
+ {
++    
+   AVPlayerItem *video = [_player currentItem];
+   if (video == nil || video.status != AVPlayerItemStatusReadyToPlay) {
+     return;
+@@ -278,19 +301,20 @@ static int const RCTVideoUnset = -1;
+   NSDate *currentPlaybackTime = _player.currentItem.currentDate;
+   const Float64 duration = CMTimeGetSeconds(playerDuration);
+   const Float64 currentTimeSecs = CMTimeGetSeconds(currentTime);
+-  
+   [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTVideo_progress" object:nil userInfo:@{@"progress": [NSNumber numberWithDouble: currentTimeSecs / duration]}];
+   
+   if( currentTimeSecs >= 0 && self.onVideoProgress) {
+-    self.onVideoProgress(@{
+-                           @"currentTime": [NSNumber numberWithFloat:CMTimeGetSeconds(currentTime)],
+-                           @"playableDuration": [self calculatePlayableDuration],
+-                           @"atValue": [NSNumber numberWithLongLong:currentTime.value],
+-                           @"atTimescale": [NSNumber numberWithInt:currentTime.timescale],
+-                           @"currentPlaybackTime": [NSNumber numberWithLongLong:[@(floor([currentPlaybackTime timeIntervalSince1970] * 1000)) longLongValue]],
+-                           @"target": self.reactTag,
+-                           @"seekableDuration": [self calculateSeekableDuration],
+-                           });
++      NSDictionary *progressDict = @{
++          @"currentTime": [NSNumber numberWithFloat:CMTimeGetSeconds(currentTime)],
++          @"playableDuration": [self calculatePlayableDuration],
++          @"atValue": [NSNumber numberWithLongLong:currentTime.value],
++          @"atTimescale": [NSNumber numberWithInt:currentTime.timescale],
++          @"currentPlaybackTime": [NSNumber numberWithLongLong:[@(floor([currentPlaybackTime timeIntervalSince1970] * 1000)) longLongValue]],
++          @"target": self.reactTag,
++          @"seekableDuration": [self calculateSeekableDuration],
++      };
++      NSLog(@"--IJKFF-progressDict-:%@",progressDict);
++    self.onVideoProgress(progressDict);
    }
  }
  
-+-(void)RCTVLCMediaPlayerTimeChanged:(NSNotification *)aNotification{
-+    float duration = CMTimeGetSeconds(_playerItem.asset.duration);
-+    
-+    if (isnan(duration)) {
-+      duration = 0.0;
-+    }
-+    
-+    NSObject *width = @"undefined";
-+    NSObject *height = @"undefined";
-+    NSString *orientation = @"undefined";
-+    
-+    if ([_playerItem.asset tracksWithMediaType:AVMediaTypeVideo].count > 0) {
-+      AVAssetTrack *videoTrack = [[_playerItem.asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
-+      width = [NSNumber numberWithFloat:videoTrack.naturalSize.width];
-+      height = [NSNumber numberWithFloat:videoTrack.naturalSize.height];
-+      CGAffineTransform preferredTransform = [videoTrack preferredTransform];
-+      
-+      if ((videoTrack.naturalSize.width == preferredTransform.tx
-+           && videoTrack.naturalSize.height == preferredTransform.ty)
-+          || (preferredTransform.tx == 0 && preferredTransform.ty == 0))
-+      {
-+        orientation = @"landscape";
-+      } else {
-+        orientation = @"portrait";
-+      }
-+    } else if (_playerItem.presentationSize.height) {
-+      width = [NSNumber numberWithFloat:_playerItem.presentationSize.width];
-+      height = [NSNumber numberWithFloat:_playerItem.presentationSize.height];
-+      orientation = _playerItem.presentationSize.width > _playerItem.presentationSize.height ? @"landscape" : @"portrait";
-+    }
+@@ -331,6 +355,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)addPlayerItemObservers
+ {
 +
-+    if (_pendingSeek) {
-+      [self setCurrentTime:_pendingSeekTime];
-+      _pendingSeek = false;
+   [_playerItem addObserver:self forKeyPath:statusKeyPath options:0 context:nil];
+   [_playerItem addObserver:self forKeyPath:playbackBufferEmptyKeyPath options:0 context:nil];
+   [_playerItem addObserver:self forKeyPath:playbackLikelyToKeepUpKeyPath options:0 context:nil];
+@@ -343,6 +368,7 @@ static int const RCTVideoUnset = -1;
+  * observer set */
+ - (void)removePlayerItemObservers
+ {
++
+   if (_playerItemObserversSet) {
+     [_playerItem removeObserver:self forKeyPath:statusKeyPath];
+     [_playerItem removeObserver:self forKeyPath:playbackBufferEmptyKeyPath];
+@@ -352,65 +378,103 @@ static int const RCTVideoUnset = -1;
+   }
+ }
+ 
+-#pragma mark - Player and source
++-(void)RCTVLCMediaPlayerTimeChanged:(NSDictionary *)dictInfo{
+    
+-- (void)setSrc:(NSDictionary *)source
+-{
+-  _source = source;
+-  [self removePlayerLayer];
+-  [self removePlayerTimeObserver];
+-  [self removePlayerItemObservers];
+-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) 0), dispatch_get_main_queue(), ^{
+-    
+-    // perform on next run loop, otherwise other passed react-props may not be set
+-    [self playerItemForSource:self->_source withCallback:^(AVPlayerItem * playerItem) {
+-      self->_playerItem = playerItem;
+-      _playerItem = playerItem;
+-      [self setPreferredForwardBufferDuration:_preferredForwardBufferDuration];
+-      [self addPlayerItemObservers];
+-      [self setFilter:self->_filterName];
+-      [self setMaxBitRate:self->_maxBitRate];
+-      
+-      [_player pause];
+-        
+-      if (_playbackRateObserverRegistered) {
+-        [_player removeObserver:self forKeyPath:playbackRate context:nil];
+-        _playbackRateObserverRegistered = NO;
+-      }
+-      if (self->_isExternalPlaybackActiveObserverRegistered) {
+-        [self->_player removeObserver:self forKeyPath:externalPlaybackActive context:nil];
+-        self->_isExternalPlaybackActiveObserverRegistered = NO;
+-      }
++    if (self.onVideoLoad) {
++        NSLog(@"--IJKFF--onVideoLoad");
++        self.onVideoLoad(dictInfo);
++    }
++}
+ 
+-      self->_player = [AVPlayer playerWithPlayerItem:self->_playerItem];
+-      self->_player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
++-(void)setUseCustom:(NSString *)useCustom{
++    _useCustom = useCustom;
++    if ([_useCustom isEqualToString:@"true"]) {
++        self.isCustom = YES;
++    }else{
++        self.isCustom = NO;
++    }
+     
+-      [self->_player addObserver:self forKeyPath:playbackRate options:0 context:nil];
+-      self->_playbackRateObserverRegistered = YES;
++    [self initCustomPlayer];
++}
+ 
+-      [self->_player addObserver:self forKeyPath:externalPlaybackActive options:0 context:nil];
+-      self->_isExternalPlaybackActiveObserverRegistered = YES;
+ 
+-      [self addPlayerTimeObserver];
+-      if (@available(iOS 10.0, *)) {
+-        [self setAutomaticallyWaitsToMinimizeStalling:_automaticallyWaitsToMinimizeStalling];
+-      }
++-(void)initCustomPlayer{
++    if(self.isCustom){
++        [self.customVideoManager setSrc:_source view:self];
++        self.customVideoManager.delegate = self;
++        self.customVideoManager.reactTag = self.reactTag;
++        return;
 +    }
 +    
-+    if (self.onVideoLoad && _videoLoadStarted) {
-+      self.onVideoLoad(@{@"duration": [NSNumber numberWithFloat:duration],
-+                         @"currentTime": [NSNumber numberWithFloat:CMTimeGetSeconds(_playerItem.currentTime)],
-+                         @"canPlayReverse": [NSNumber numberWithBool:_playerItem.canPlayReverse],
-+                         @"canPlayFastForward": [NSNumber numberWithBool:_playerItem.canPlayFastForward],
-+                         @"canPlaySlowForward": [NSNumber numberWithBool:_playerItem.canPlaySlowForward],
-+                         @"canPlaySlowReverse": [NSNumber numberWithBool:_playerItem.canPlaySlowReverse],
-+                         @"canStepBackward": [NSNumber numberWithBool:_playerItem.canStepBackward],
-+                         @"canStepForward": [NSNumber numberWithBool:_playerItem.canStepForward],
-+                         @"naturalSize": @{
-+                             @"width": width,
-+                             @"height": height,
-+                             @"orientation": orientation
-+                             },
-+                         @"audioTracks": [self getAudioTrackInfo],
-+                         @"textTracks": [self getTextTrackInfo],
-+                         @"target": self.reactTag});
-+    }
-+    _videoLoadStarted = NO;
 +    
-+    [self attachListeners];
-+    [self applyModifiers];
++    [self removePlayerLayer];
++    [self removePlayerTimeObserver];
++    [self removePlayerItemObservers];
++    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) 0), dispatch_get_main_queue(), ^{
++        
++        // perform on next run loop, otherwise other passed react-props may not be set
++        [self playerItemForSource:self->_source withCallback:^(AVPlayerItem * playerItem) {
++            self->_playerItem = playerItem;
++            _playerItem = playerItem;
++            [self setPreferredForwardBufferDuration:_preferredForwardBufferDuration];
++            [self addPlayerItemObservers];
++            [self setFilter:self->_filterName];
++            [self setMaxBitRate:self->_maxBitRate];
++            
++            [_player pause];
++            //        [[RCTVLCVideoManager sharedInstance] pause];
++            if (_playbackRateObserverRegistered) {
++                [_player removeObserver:self forKeyPath:playbackRate context:nil];
++                _playbackRateObserverRegistered = NO;
++            }
++            if (self->_isExternalPlaybackActiveObserverRegistered) {
++                [self->_player removeObserver:self forKeyPath:externalPlaybackActive context:nil];
++                self->_isExternalPlaybackActiveObserverRegistered = NO;
++            }
++            
++            self->_player = [AVPlayer playerWithPlayerItem:self->_playerItem];
++            self->_player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
++            
++            [self->_player addObserver:self forKeyPath:playbackRate options:0 context:nil];
++            self->_playbackRateObserverRegistered = YES;
++            
++            [self->_player addObserver:self forKeyPath:externalPlaybackActive options:0 context:nil];
++            self->_isExternalPlaybackActiveObserverRegistered = YES;
++            
++            [self addPlayerTimeObserver];
++            if (@available(iOS 10.0, *)) {
++                [self setAutomaticallyWaitsToMinimizeStalling:_automaticallyWaitsToMinimizeStalling];
++            }
++            
++            //Perform on next run loop, otherwise onVideoLoadStart is nil
++            if (self.onVideoLoadStart) {
++                id uri = [self->_source objectForKey:@"uri"];
++                id type = [self->_source objectForKey:@"type"];
++                self.onVideoLoadStart(@{@"src": @{
++                    @"uri": uri ? uri : [NSNull null],
++                    @"type": type ? type : [NSNull null],
++                    @"isNetwork": [NSNumber numberWithBool:(bool)[self->_source objectForKey:@"isNetwork"]]},
++                                        @"drm": self->_drm ? self->_drm : [NSNull null],
++                                        @"target": self.reactTag
++                                      });
++            }
++            
++            
++        }];
++    });
 +}
 +
- #pragma mark - Player and source
++
++#pragma mark - Player and source
++
++- (void)setSrc:(NSDictionary *)source
++{
++    if (_source.allKeys.count > 0) {
++        _source = source;
++        [self initCustomPlayer];
++    }
++    _source = source;
+     
+-      //Perform on next run loop, otherwise onVideoLoadStart is nil
+-      if (self.onVideoLoadStart) {
+-        id uri = [self->_source objectForKey:@"uri"];
+-        id type = [self->_source objectForKey:@"type"];
+-        self.onVideoLoadStart(@{@"src": @{
+-                                    @"uri": uri ? uri : [NSNull null],
+-                                    @"type": type ? type : [NSNull null],
+-                                    @"isNetwork": [NSNumber numberWithBool:(bool)[self->_source objectForKey:@"isNetwork"]]},
+-                                @"drm": self->_drm ? self->_drm : [NSNull null],
+-                                @"target": self.reactTag
+-                                });
+-      }
+-    }];
+-  });
+-  _videoLoadStarted = YES;
+ }
  
- - (void)setSrc:(NSDictionary *)source
- {
-   _source = source;
-+   
-+  NSLog(@"--VLC--rn--设置资源：%@",source);
-   [self removePlayerLayer];
-   [self removePlayerTimeObserver];
-   [self removePlayerItemObservers];
-   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) 0), dispatch_get_main_queue(), ^{
--    
-+    [[RCTVLCVideoManager sharedInstance] setSrc:_source view:self];
-+      [RCTVLCVideoManager sharedInstance].delegate = self;
-     // perform on next run loop, otherwise other passed react-props may not be set
-     [self playerItemForSource:self->_source withCallback:^(AVPlayerItem * playerItem) {
-       self->_playerItem = playerItem;
-@@ -372,7 +446,7 @@ - (void)setSrc:(NSDictionary *)source
-       [self setMaxBitRate:self->_maxBitRate];
-       
-       [_player pause];
--        
-+//        [[RCTVLCVideoManager sharedInstance] pause];
-       if (_playbackRateObserverRegistered) {
-         [_player removeObserver:self forKeyPath:playbackRate context:nil];
-         _playbackRateObserverRegistered = NO;
-@@ -407,7 +481,12 @@ - (void)setSrc:(NSDictionary *)source
-                                 @"drm": self->_drm ? self->_drm : [NSNull null],
-                                 @"target": self.reactTag
-                                 });
-+//          dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-+//              [self setPaused:NO];
-+//          });
-       }
-+        
-+    
-     }];
-   });
-   _videoLoadStarted = YES;
-@@ -609,6 +688,7 @@ - (void)dvAssetLoaderDelegate:(DVAssetLoaderDelegate *)loaderDelegate
+ - (void)setDrm:(NSDictionary *)drm {
+@@ -609,6 +673,7 @@ static int const RCTVideoUnset = -1;
  - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
  {
  
-+    NSLog(@"--VLC--keyPath:%@",keyPath);
++//    NSLog(@"--IJKFF--keyPath:%@",keyPath);
    if([keyPath isEqualToString:readyForDisplayKeyPath] && [change objectForKey:NSKeyValueChangeNewKey] && self.onReadyForDisplay) {
      self.onReadyForDisplay(@{@"target": self.reactTag});
      return;
-@@ -930,9 +1010,17 @@ - (void)setMixWithOthers:(NSString *)mixWithOthers
+@@ -675,7 +740,7 @@ static int const RCTVideoUnset = -1;
+           _pendingSeek = false;
+         }
+         
+-        if (self.onVideoLoad && _videoLoadStarted) {
++        if (self.onVideoLoad ) {
+           self.onVideoLoad(@{@"duration": [NSNumber numberWithFloat:duration],
+                              @"currentTime": [NSNumber numberWithFloat:CMTimeGetSeconds(_playerItem.currentTime)],
+                              @"canPlayReverse": [NSNumber numberWithBool:_playerItem.canPlayReverse],
+@@ -693,7 +758,6 @@ static int const RCTVideoUnset = -1;
+                              @"textTracks": [self getTextTrackInfo],
+                              @"target": self.reactTag});
+         }
+-        _videoLoadStarted = NO;
+         
+         [self attachListeners];
+         [self applyModifiers];
+@@ -930,6 +994,18 @@ static int const RCTVideoUnset = -1;
  
  - (void)setPaused:(BOOL)paused
  {
-+    if(paused){
-+        NSLog(@"--VLC-rn-pause:YES");
-+    }else{
-+        NSLog(@"--VLC-rn-pause:NO");
++    if (paused) {
++        [self.customVideoManager setRate:0.0];
++        [self.customVideoManager pause];
++    } else {
++        
++        [self.customVideoManager play];
++        [self.customVideoManager setRate:_rate];
++        
 +    }
++    [self.customVideoManager setRate:_rate];
++    
 +    
    if (paused) {
      [_player pause];
      [_player setRate:0.0];
-+    [[RCTVLCVideoManager sharedInstance] setRate:0.0];
-+    [[RCTVLCVideoManager sharedInstance] pause];
-   } else {
- 
-     [self configureAudio];
-@@ -941,9 +1029,13 @@ - (void)setPaused:(BOOL)paused
+@@ -941,7 +1017,8 @@ static int const RCTVideoUnset = -1;
        [_player playImmediatelyAtRate:_rate];
      } else {
        [_player play];
 -      [_player setRate:_rate];
 +        [_player setRate:_rate];
-+        [[RCTVLCVideoManager sharedInstance] play];
-+        [[RCTVLCVideoManager sharedInstance] setRate:_rate];
 +     
      }
      [_player setRate:_rate];
-+    [[RCTVLCVideoManager sharedInstance] setRate:_rate];
    }
-   
-   _paused = paused;
-@@ -967,7 +1059,8 @@ - (void)setSeek:(NSDictionary *)info
+@@ -965,112 +1042,147 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)setSeek:(NSDictionary *)info
  {
-   NSNumber *seekTime = info[@"time"];
-   NSNumber *seekTolerance = info[@"tolerance"];
+-  NSNumber *seekTime = info[@"time"];
+-  NSNumber *seekTolerance = info[@"tolerance"];
 -  
-+    NSLog(@"--VLC-rn-time:%@--tolerance:%@",seekTime,seekTolerance);
-+    [[RCTVLCVideoManager sharedInstance] setSeek:info];
-   int timeScale = 1000;
-   
-   AVPlayerItem *item = _player.currentItem;
-@@ -983,6 +1076,7 @@ - (void)setSeek:(NSDictionary *)info
-     if (CMTimeCompare(current, cmSeekTime) != 0) {
-       if (!wasPaused) [_player pause];
-       [_player seekToTime:cmSeekTime toleranceBefore:tolerance toleranceAfter:tolerance completionHandler:^(BOOL finished) {
-+          
-         if (!_timeObserver) {
-           [self addPlayerTimeObserver];
+-  int timeScale = 1000;
+-  
+-  AVPlayerItem *item = _player.currentItem;
+-  if (item && item.status == AVPlayerItemStatusReadyToPlay) {
+-    // TODO check loadedTimeRanges
+-    
+-    CMTime cmSeekTime = CMTimeMakeWithSeconds([seekTime floatValue], timeScale);
+-    CMTime current = item.currentTime;
+-    // TODO figure out a good tolerance level
+-    CMTime tolerance = CMTimeMake([seekTolerance floatValue], timeScale);
+-    BOOL wasPaused = _paused;
+-    
+-    if (CMTimeCompare(current, cmSeekTime) != 0) {
+-      if (!wasPaused) [_player pause];
+-      [_player seekToTime:cmSeekTime toleranceBefore:tolerance toleranceAfter:tolerance completionHandler:^(BOOL finished) {
+-        if (!_timeObserver) {
+-          [self addPlayerTimeObserver];
+-        }
+-        if (!wasPaused) {
+-          [self setPaused:false];
+-        }
+-        if(self.onVideoSeek) {
+-          self.onVideoSeek(@{@"currentTime": [NSNumber numberWithFloat:CMTimeGetSeconds(item.currentTime)],
+-                             @"seekTime": seekTime,
+-                             @"target": self.reactTag});
++    if(self.isCustom){
++        [self.customVideoManager setSeek:info];
++        return;
++    }
++    NSNumber *seekTime = info[@"time"];
++    NSNumber *seekTolerance = info[@"tolerance"];
++    NSLog(@"--IJKFF--rn-time:%@--tolerance:%@",seekTime,seekTolerance);
++    
++    int timeScale = 1000;
++    
++    AVPlayerItem *item = _player.currentItem;
++    if (item && item.status == AVPlayerItemStatusReadyToPlay) {
++        // TODO check loadedTimeRanges
++        
++        CMTime cmSeekTime = CMTimeMakeWithSeconds([seekTime floatValue], timeScale);
++        CMTime current = item.currentTime;
++        // TODO figure out a good tolerance level
++        CMTime tolerance = CMTimeMake([seekTolerance floatValue], timeScale);
++        BOOL wasPaused = _paused;
++        
++        if (CMTimeCompare(current, cmSeekTime) != 0) {
++            if (!wasPaused) [_player pause];
++            [_player seekToTime:cmSeekTime toleranceBefore:tolerance toleranceAfter:tolerance completionHandler:^(BOOL finished) {
++                
++                if (!_timeObserver) {
++                    [self addPlayerTimeObserver];
++                }
++                if (!wasPaused) {
++                    [self setPaused:false];
++                }
++                if(self.onVideoSeek) {
++                    self.onVideoSeek(@{@"currentTime": [NSNumber numberWithFloat:CMTimeGetSeconds(item.currentTime)],
++                                       @"seekTime": seekTime,
++                                       @"target": self.reactTag});
++                }
++            }];
++            
++            _pendingSeek = false;
          }
-@@ -1036,8 +1130,8 @@ - (void)setPreferredForwardBufferDuration:(float) preferredForwardBufferDuration
+-      }];
+         
+-      _pendingSeek = false;
++    } else {
++        _pendingSeek = true;
++        _pendingSeekTime = [seekTime floatValue];
+     }
+-    
+-  } else {
+-    _pendingSeek = true;
+-    _pendingSeekTime = [seekTime floatValue];
+-  }
+ }
+ 
+ - (void)setRate:(float)rate
+ {
+-  _rate = rate;
+-  [self applyModifiers];
++    _rate = rate;
++    if(self.isCustom){
++        [self.customVideoManager setRate:_rate];
++        return;
++    }
++    [self applyModifiers];
+ }
+ 
+ - (void)setMuted:(BOOL)muted
+ {
++    if(self.isCustom){
++        self.customVideoManager.muted = _muted;
++        return;
++    }
+   _muted = muted;
+   [self applyModifiers];
++    
+ }
+ 
+ - (void)setVolume:(float)volume
+ {
+   _volume = volume;
+-  [self applyModifiers];
++    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
++        [self applyModifiers];
++    });
++  
+ }
+ 
+ - (void)setMaxBitRate:(float) maxBitRate {
++   
+   _maxBitRate = maxBitRate;
+   _playerItem.preferredPeakBitRate = maxBitRate;
+ }
+ 
+ - (void)setPreferredForwardBufferDuration:(float) preferredForwardBufferDuration
+ {
++    
+   _preferredForwardBufferDuration = preferredForwardBufferDuration;
+   _playerItem.preferredForwardBufferDuration = preferredForwardBufferDuration;
+ }
  
  - (void)setAutomaticallyWaitsToMinimizeStalling:(BOOL)waits
  {
 -	_automaticallyWaitsToMinimizeStalling = waits;
 -	_player.automaticallyWaitsToMinimizeStalling = waits;
++    
 +    _automaticallyWaitsToMinimizeStalling = waits;
 +    _player.automaticallyWaitsToMinimizeStalling = waits;
  }
  
  
-@@ -1051,8 +1145,13 @@ - (void)applyModifiers
-   } else {
-     [_player setVolume:_volume];
-     [_player setMuted:NO];
-+      if(self.useVlC){
-+          [_player setVolume:0];
-+          [[RCTVLCVideoManager sharedInstance] setVolume:_volume];
-+      }
-   }
+ - (void)applyModifiers
+ {
+-  if (_muted) {
+-    if (!_controls) {
+-      [_player setVolume:0];
++    
++        self.customVideoManager.volume = _volume;
++     
++    if (_muted) {
++        if (!_controls) {
++            [_player setVolume:0];
++        }
++        [_player setMuted:YES];
++    } else {
++        [_player setVolume:0];
++        [_player setMuted:NO];
++        
+     }
+-    [_player setMuted:YES];
+-  } else {
+-    [_player setVolume:_volume];
+-    [_player setMuted:NO];
+-  }
+     
+-  if (@available(iOS 12.0, *)) {
+-      self->_player.preventsDisplaySleepDuringVideoPlayback = _preventsDisplaySleepDuringVideoPlayback;
+-  } else {
+-      // Fallback on earlier versions
+-  }
++    if (@available(iOS 12.0, *)) {
++        self->_player.preventsDisplaySleepDuringVideoPlayback = _preventsDisplaySleepDuringVideoPlayback;
++    } else {
++        // Fallback on earlier versions
++    }
+     
+-  [self setMaxBitRate:_maxBitRate];
+-  [self setSelectedAudioTrack:_selectedAudioTrack];
+-  [self setSelectedTextTrack:_selectedTextTrack];
+-  [self setResizeMode:_resizeMode];
+-  [self setRepeat:_repeat];
+-  [self setPaused:_paused];
+-  [self setControls:_controls];
+-  [self setAllowsExternalPlayback:_allowsExternalPlayback];
++    [self setMaxBitRate:_maxBitRate];
++    [self setSelectedAudioTrack:_selectedAudioTrack];
++    [self setSelectedTextTrack:_selectedTextTrack];
++    [self setResizeMode:_resizeMode];
++    [self setRepeat:_repeat];
++    [self setPaused:_paused];
++    [self setControls:_controls];
++    [self setAllowsExternalPlayback:_allowsExternalPlayback];
++    
++    AVMutableAudioMix *audioMix = [AVMutableAudioMix audioMix];
++    AVMutableAudioMixInputParameters *audioInputParams = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:[[_playerItem.asset tracksWithMediaType:AVMediaTypeAudio] firstObject]];
++    
++    // 设置音量
++    [audioInputParams setVolume:1 atTime:kCMTimeZero]; // 设置音量为 50%
++    
++    audioMix.inputParameters = @[audioInputParams];
++    _playerItem.audioMix = audioMix;
+ }
  
-+
-   if (@available(iOS 12.0, *)) {
-       self->_player.preventsDisplaySleepDuringVideoPlayback = _preventsDisplaySleepDuringVideoPlayback;
-   } else {
-@@ -1492,6 +1591,7 @@ - (void)removePlayerLayer
+ - (void)configureAudio
+ {
++    
+     AVAudioSession *session = [AVAudioSession sharedInstance];
+     AVAudioSessionCategory category = nil;
+     AVAudioSessionCategoryOptions options = nil;
+@@ -1097,12 +1209,14 @@ static int const RCTVideoUnset = -1;
+ }
+ 
+ - (void)setRepeat:(BOOL)repeat {
++    
+   _repeat = repeat;
+ }
+ 
+ - (void)setMediaSelectionTrackForCharacteristic:(AVMediaCharacteristic)characteristic
+                                    withCriteria:(NSDictionary *)criteria
+ {
++   
+   NSString *type = criteria[@"type"];
+   AVMediaSelectionGroup *group = [_player.currentItem.asset
+                                   mediaSelectionGroupForMediaCharacteristic:characteristic];
+@@ -1154,12 +1268,14 @@ static int const RCTVideoUnset = -1;
+ }
+ 
+ - (void)setSelectedAudioTrack:(NSDictionary *)selectedAudioTrack {
++    
+   _selectedAudioTrack = selectedAudioTrack;
+   [self setMediaSelectionTrackForCharacteristic:AVMediaCharacteristicAudible
+                                    withCriteria:_selectedAudioTrack];
+ }
+ 
+ - (void)setSelectedTextTrack:(NSDictionary *)selectedTextTrack {
++    
+   _selectedTextTrack = selectedTextTrack;
+   if (_textTracks) { // sideloaded text tracks
+     [self setSideloadedText];
+@@ -1170,6 +1286,7 @@ static int const RCTVideoUnset = -1;
+ }
+ 
+ - (void) setSideloadedText {
++    
+   NSString *type = _selectedTextTrack[@"type"];
+   NSArray *textTracks = [self getTextTrackInfo];
+   
+@@ -1239,6 +1356,7 @@ static int const RCTVideoUnset = -1;
+ }
+ 
+ -(void) setStreamingText {
++    
+   NSString *type = _selectedTextTrack[@"type"];
+   AVMediaSelectionGroup *group = [_player.currentItem.asset
+                                   mediaSelectionGroupForMediaCharacteristic:AVMediaCharacteristicLegible];
+@@ -1291,6 +1409,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (NSArray *)getAudioTrackInfo
+ {
++    
+   NSMutableArray *audioTracks = [[NSMutableArray alloc] init];
+   AVMediaSelectionGroup *group = [_player.currentItem.asset
+                                   mediaSelectionGroupForMediaCharacteristic:AVMediaCharacteristicAudible];
+@@ -1407,6 +1526,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)usePlayerViewController
+ {
++    
+   if( _player )
+   {
+     if (!_playerViewController) {
+@@ -1430,6 +1550,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)usePlayerLayer
+ {
++    
+   if( _player )
+   {
+     _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
+@@ -1471,6 +1592,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)setProgressUpdateInterval:(float)progressUpdateInterval
+ {
++    
+   _progressUpdateInterval = progressUpdateInterval;
+   
+   if (_timeObserver) {
+@@ -1481,6 +1603,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)removePlayerLayer
+ {
++    [self.customVideoManager removePlayer];
+   if (_loadingRequest != nil) {
+     [_loadingRequest finishLoading];
+   }
+@@ -1492,6 +1615,7 @@ static int const RCTVideoUnset = -1;
      _playerLayerObserverSet = NO;
    }
    _playerLayer = nil;
-+    [[RCTVLCVideoManager sharedInstance] removePlayer];
++    
  }
  
  #pragma mark - RCTVideoPlayerViewControllerDelegate
-@@ -1615,6 +1715,7 @@ - (void)layoutSubviews
- - (void)removeFromSuperview
+@@ -1511,6 +1635,7 @@ static int const RCTVideoUnset = -1;
+ 
+ - (void)videoPlayerViewControllerDidDismiss:(AVPlayerViewController *)playerViewController
  {
-   [_player pause];
-+    [[RCTVLCVideoManager sharedInstance] pause];
-   if (_playbackRateObserverRegistered) {
-     [_player removeObserver:self forKeyPath:playbackRate context:nil];
-     _playbackRateObserverRegistered = NO;
++    
+   if (_playerViewController == playerViewController && _fullscreenPlayerPresented)
+   {
+     _fullscreenPlayerPresented = false;
+@@ -1613,35 +1738,38 @@ static int const RCTVideoUnset = -1;
+ #pragma mark - Lifecycle
+ 
+ - (void)removeFromSuperview
+-{
+-  [_player pause];
+-  if (_playbackRateObserverRegistered) {
+-    [_player removeObserver:self forKeyPath:playbackRate context:nil];
+-    _playbackRateObserverRegistered = NO;
+-  }
+-  if (_isExternalPlaybackActiveObserverRegistered) {
+-    [_player removeObserver:self forKeyPath:externalPlaybackActive context:nil];
+-    _isExternalPlaybackActiveObserverRegistered = NO;
+-  }
+-  _player = nil;
++    {
+         
+-  [self removePlayerLayer];
++        [self.customVideoManager pause];
++        [_player pause];
+         
+-  [_playerViewController.contentOverlayView removeObserver:self forKeyPath:@"frame"];
+-  [_playerViewController removeObserver:self forKeyPath:readyForDisplayKeyPath];
+-  [_playerViewController.view removeFromSuperview];
+-  _playerViewController.rctDelegate = nil;
+-  _playerViewController.player = nil;
+-  _playerViewController = nil;
++        if (_playbackRateObserverRegistered) {
++            [_player removeObserver:self forKeyPath:playbackRate context:nil];
++            _playbackRateObserverRegistered = NO;
++        }
++        if (_isExternalPlaybackActiveObserverRegistered) {
++            [_player removeObserver:self forKeyPath:externalPlaybackActive context:nil];
++            _isExternalPlaybackActiveObserverRegistered = NO;
++        }
++        _player = nil;
+         
+-  [self removePlayerTimeObserver];
+-  [self removePlayerItemObservers];
++        [self removePlayerLayer];
+         
+-  _eventDispatcher = nil;
+-  [[NSNotificationCenter defaultCenter] removeObserver:self];
++        [_playerViewController.contentOverlayView removeObserver:self forKeyPath:@"frame"];
++        [_playerViewController removeObserver:self forKeyPath:readyForDisplayKeyPath];
++        [_playerViewController.view removeFromSuperview];
++        _playerViewController.rctDelegate = nil;
++        _playerViewController.player = nil;
++        _playerViewController = nil;
+         
+-  [super removeFromSuperview];
+-}
++        [self removePlayerTimeObserver];
++        [self removePlayerItemObservers];
++        
++        _eventDispatcher = nil;
++        [[NSNotificationCenter defaultCenter] removeObserver:self];
++        
++        [super removeFromSuperview];
++    }
+ 
+ #pragma mark - Export
+ 
+@@ -1736,6 +1864,7 @@ static int const RCTVideoUnset = -1;
+ }
+ 
+ - (BOOL)ensureDirExistsWithPath:(NSString *)path {
++   
+   BOOL isDir = NO;
+   NSError *error;
+   BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir];
+@@ -2028,4 +2157,11 @@ didCancelLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest {
+ }
+ #endif
+ 
++
++-(RCTVLCVideoManager *)customVideoManager{
++    if (_customVideoManager == nil) {
++        _customVideoManager = [RCTVLCVideoManager new];
++    }
++    return _customVideoManager;
++}
+ @end
 diff --git a/node_modules/react-native-video/ios/Video/RCTVideoManager.m b/node_modules/react-native-video/ios/Video/RCTVideoManager.m
-index 000a9e8..1874e9f 100644
+index 000a9e8..ea02802 100644
 --- a/node_modules/react-native-video/ios/Video/RCTVideoManager.m
 +++ b/node_modules/react-native-video/ios/Video/RCTVideoManager.m
-@@ -10,7 +10,9 @@ @implementation RCTVideoManager
+@@ -10,7 +10,8 @@ RCT_EXPORT_MODULE();
  
  - (UIView *)view
  {
 -  return [[RCTVideo alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
 +    RCTVideo * videoView = [[RCTVideo alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
-+    videoView.useVlC = YES;
-+  return videoView;
++    return videoView;
  }
  
  - (dispatch_queue_t)methodQueue
-@@ -112,6 +114,12 @@ - (dispatch_queue_t)methodQueue
+@@ -112,6 +113,11 @@ RCT_REMAP_METHOD(setLicenseResultError,
          }
      }];
  };
-+
-+RCT_CUSTOM_VIEW_PROPERTY(useVlC, BOOL, RCTVideo) {
-+    
-+    [view setUseVlC:json];
-+    
++RCT_CUSTOM_VIEW_PROPERTY(useCustom, NSString, RCTVideo){
++    [view setUseCustom:json];
 +}
++
++
  RCT_EXPORT_VIEW_PROPERTY(onPictureInPictureStatusChanged, RCTDirectEventBlock);
  RCT_EXPORT_VIEW_PROPERTY(onRestoreUserInterfaceForPictureInPictureStop, RCTDirectEventBlock);
  
 diff --git a/node_modules/react-native-video/react-native-video.podspec b/node_modules/react-native-video/react-native-video.podspec
-index 7013f95..a5c7577 100644
+index 7013f95..c7112eb 100644
 --- a/node_modules/react-native-video/react-native-video.podspec
 +++ b/node_modules/react-native-video/react-native-video.podspec
-@@ -24,12 +24,12 @@ Pod::Spec.new do |s|
+@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
+   s.author         = package['author']
+   s.homepage       = 'https://github.com/react-native-community/react-native-video'
+   s.source       = { :git => "https://github.com/react-native-community/react-native-video.git", :tag => "#{s.version}" }
+-
+   s.ios.deployment_target = "8.0"
+   s.tvos.deployment_target = "9.0"
+ 
+@@ -24,12 +23,12 @@ Pod::Spec.new do |s|
      ss.dependency "react-native-video/Video"
      ss.dependency "SPTPersistentCache", "~> 1.1.0"
      ss.dependency "DVAssetLoaderDelegate", "~> 0.3.1"
@@ -574,7 +2183,7 @@ index 7013f95..a5c7577 100644
    end
  
    s.dependency "React-Core"
-+  s.dependency "IJKMediaFramework"
++  s.dependency "RinoVideoModule"
  
    s.default_subspec = "Video"
  

@@ -12,68 +12,68 @@ use_frameworks! :linkage => :static
 
 production = ENV["PRODUCTION"] == "1"
 
-target 'RinoMatterExtension' do
-  
-  pod 'RinoMatterExtensionKit'
-  
-end
-
 target 'Rino' do
   
   config = use_native_modules!
 
-  # Flags change depending on  the env values.
+  # Flags change depending on the env values.
   flags = get_default_flags()
 
   use_react_native!(
     :path => config[:reactNativePath],
     # to enable hermes on iOS, change `false` to `true` and then install pods
     :production => production,
-#    :hermes_enabled => flags[:hermes_enabled],
-    :hermes_enabled => false,
+    :hermes_enabled => flags[:hermes_enabled],
+#    :hermes_enabled => false,
     :fabric_enabled => flags[:fabric_enabled],
 #    :flipper_configuration => FlipperConfiguration.enabled,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
   
-  pod 'RinoActivatorDefaultUISkin'
-  pod 'RinoActivatorKit'
-  pod 'RinoAppConfigModule'
-  pod 'RinoAppUpgradeKit'
-  pod 'RinoBaseKit'
-  pod 'RinoBizCore'
-  pod 'RinoBusinessLibraryModule'
-  pod 'RinoCommonDefineKit'
-  pod 'RinoDebugKit'
-  pod 'RinoDeviceDetailDefaultUISkin'
-  pod 'RinoDeviceKit'
-  pod 'RinoFoundationKit'
-  pod 'RinoHomeDefaultUISkin'
-  pod 'RinoHomeKit'
-  pod 'RinoIPCKit'
-  pod 'RinoLanguageKit'
-  pod 'RinoLaunchMenuKit'
-  pod 'RinoLibraryModule'
-  pod 'RinoMapBusinessLibrary'
-  pod 'RinoMessageDefaultUISKin'
-  pod 'RinoMessageKit'
-  pod 'RinoMQTTKit'
-  pod 'RinoNetworkRequestKit'
-  pod 'RinoNFCDefaultUISKin'
-  pod 'RinoNFCKit'
-  pod 'RinoPanelKit'
-  pod 'RinoProgressHUD'
-  pod 'RinoScanBusinessKit'
-  pod 'RinoScanKit'
-  pod 'RinoSceneDefaultUISkin'
-  pod 'RinoSceneKit'
-  pod 'RinoThirdPartyVoiceKit'
-  pod 'RinoUIKit'
-  pod 'RinoUserDefaultUISkin'
-  pod 'RinoUserSettingsDefaultUISkin'
-  pod 'RinoWebViewKit'
-
+  #--------------基本库----------------
+  pod 'RinoBaseKit', '1.1.3'
+  pod 'RinoAppConfigModule', '1.1.4'
+  pod 'RinoBusinessLibraryModule', '1.1.3'
+  pod 'RinoBizCore', '1.1.3'
+  pod 'RinoDeviceDetailDefaultUISkin', '1.1.4'
+  pod 'RinoUIKit', '1.1.3'
+  pod 'RinoBizCore', '1.1.3'
+  pod 'RinoWebViewKit', '1.1.3'
+  #--------------面板----------------
+  pod 'RinoPanelKit', '1.1.4'
+  #--------------设备----------------
+  pod 'RinoDeviceKit', '1.1.3'
+  
+  
+  #--------------配网----------------
+  pod 'RinoActivatorDefaultUISkin' , '1.1.3'   #配网UI库
+  pod 'RinoActivatorKit'  , '1.1.3'            #配网接口库
+  #--------------场景----------------
+  pod 'RinoSceneKit' , '1.1.3'            #场景接口库
+  pod 'RinoSceneDefaultUISkin'  , '1.1.3'      #场景UI库
+  #--------------消息----------------
+  pod 'RinoMessageDefaultUISKin', '1.1.3'       #消息UI库
+  pod 'RinoMessageKit' , '1.1.3'              #消息接口库
+  
+  #--------------家庭管理----------------
+  pod 'RinoHomeDefaultUISkin', '1.1.3'         #家庭管理UI库
+  pod 'RinoHomeKit' , '1.1.3'                   #家庭管理接口库
+  
+  #--------------ipc----------------
+  pod 'RinoIPCKit', '1.1.3'
+  #--------------设置----------------
+  pod 'RinoUserSettingsDefaultUISkin', '1.1.3' #设置UI库
+  #--------------扫一扫----------------
+  pod 'RinoScanBusinessKit' , '1.1.3'#扫一扫 ui 库
+  
+  
+  #--------------rn相关----------------
+  pod 'RinoPanelContainerModule', :path => 'local_pods/RinoPanelContainerModule/'
+  
+  pod 'ffmpeg-kit-ios-full', :path => 'local_pods/ffmpeg-kit-ios-full/'
+  
+      
   post_install do |installer|
     installer.generated_projects.each do |project|
       project.targets.each do |target|
@@ -94,5 +94,6 @@ target 'Rino' do
   pre_install do |installer|
     Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
   end
-
+      
 end
+

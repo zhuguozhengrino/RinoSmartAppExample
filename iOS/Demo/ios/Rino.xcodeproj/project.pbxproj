@@ -16,7 +16,6 @@
 		632AEB8D28AA3F07006E66A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 632AEB8C28AA3F07006E66A0 /* main.m */; };
 		633355A82A6E5C7000659B61 /* Matter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633355A72A6E5C7000659B61 /* Matter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		633355AA2A6E5C7600659B61 /* MatterSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633355A92A6E5C7500659B61 /* MatterSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		636B58462A5D3C52007151FE /* RinoSmartBusinessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B58452A5D3C52007151FE /* RinoSmartBusinessManager.m */; };
 		636B58482A5D3CF3007151FE /* rino_oem_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 636B58472A5D3CF3007151FE /* rino_oem_config.json */; };
 		6377AF1528C870D70043B5E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6377AF1428C870D70043B5E0 /* SystemConfiguration.framework */; };
 		6377AF1728C870DD0043B5E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6377AF1628C870DD0043B5E0 /* Security.framework */; };
@@ -25,37 +24,22 @@
 		6378A2DD2A85E8EA00CFD6ED /* RinoPairPanel.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6378A2DC2A85E8EA00CFD6ED /* RinoPairPanel.zip */; };
 		63854A782A611B5F00829CF7 /* launchImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63854A762A611B5F00829CF7 /* launchImage@3x.png */; };
 		63854A792A611B5F00829CF7 /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63854A772A611B5F00829CF7 /* launchImage@2x.png */; };
-		63A76AFE2AF2521D007B3744 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 63A76AFD2AF2521D007B3744 /* assets */; };
 		63B04E3A29BF2AD500C84732 /* MetricKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B04E3929BF2AD500C84732 /* MetricKit.framework */; };
 		63B07EB829069794002D4B2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63B07EBA29069794002D4B2A /* Localizable.strings */; };
 		63B07EBB2906979D002D4B2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63B07EBD2906979D002D4B2A /* InfoPlist.strings */; };
-		63B2614F2A2F484F00454015 /* RinoPanelGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25F612A2F484D00454015 /* RinoPanelGroupViewController.m */; };
-		63B261522A2F484F00454015 /* RinoBasePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25F662A2F484D00454015 /* RinoBasePanelViewController.m */; };
-		63B261542A2F484F00454015 /* RinoPanelDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25F682A2F484D00454015 /* RinoPanelDeviceViewController.m */; };
-		63B261642A2F484F00454015 /* index.ios.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63B25F8B2A2F484D00454015 /* index.ios.bundle */; };
-		63B261652A2F484F00454015 /* RinoPanelOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25F8D2A2F484D00454015 /* RinoPanelOperationView.m */; };
-		63B261892A2F484F00454015 /* RinoReactNativeBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FBE2A2F484D00454015 /* RinoReactNativeBaseModule.m */; };
-		63B2618A2A2F484F00454015 /* RinoEmitterModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FC12A2F484D00454015 /* RinoEmitterModule.m */; };
-		63B2618B2A2F484F00454015 /* RinoDeviceModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FC32A2F484D00454015 /* RinoDeviceModule.m */; };
-		63B2618C2A2F484F00454015 /* RinoCameraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FC92A2F484D00454015 /* RinoCameraModule.m */; };
-		63B2618D2A2F484F00454015 /* RinoNetworkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FCA2A2F484D00454015 /* RinoNetworkModule.m */; };
-		63B2618E2A2F484F00454015 /* RinoIPCPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FCB2A2F484D00454015 /* RinoIPCPlay.m */; };
-		63B2618F2A2F484F00454015 /* RinoIPCModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FCC2A2F484D00454015 /* RinoIPCModule.m */; };
-		63B261902A2F484F00454015 /* RinoNativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FCD2A2F484D00454015 /* RinoNativeModule.m */; };
-		63B261912A2F484F00454015 /* RinoRCTIPCPlayViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B25FCF2A2F484D00454015 /* RinoRCTIPCPlayViewManager.m */; };
-		63B261992A2F484F00454015 /* RinoPanel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B25FE32A2F484D00454015 /* RinoPanel.xcassets */; };
 		63C33C912A331AE90065D2EA /* rino_custom_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 63C33C902A331AE90065D2EA /* rino_custom_config.json */; };
-		63D0D7452A72055C00FC5C08 /* RinoActivatorPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0D7432A72055C00FC5C08 /* RinoActivatorPanelViewController.m */; };
-		63D0D7532A720AD800FC5C08 /* RinoAssetModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0D7472A720AD700FC5C08 /* RinoAssetModule.m */; };
-		63D0D7552A720AD800FC5C08 /* RinoQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0D74B2A720AD700FC5C08 /* RinoQRCodeView.m */; };
-		63D0D7582A720AD800FC5C08 /* RinoFSModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0D7522A720AD800FC5C08 /* RinoFSModule.m */; };
-		63D0D75C2A720B5A00FC5C08 /* RinoQRCodeViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0D7592A720B5A00FC5C08 /* RinoQRCodeViewManager.m */; };
-		63D0D75D2A720B5A00FC5C08 /* RinoUserModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0D75B2A720B5A00FC5C08 /* RinoUserModule.m */; };
 		63D766DF2A8C7D1E0033CB3F /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D766DE2A8C7D1D0033CB3F /* NetworkExtension.framework */; };
 		63D98EDF2934A86600A91F41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D98EDE2934A86600A91F41 /* CoreGraphics.framework */; };
 		63D98EE32934A87700A91F41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D98EE22934A87700A91F41 /* UIKit.framework */; };
 		63D98EE52934A87F00A91F41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D98EE42934A87F00A91F41 /* Foundation.framework */; };
 		63FF2FA72A4E7EAE00719594 /* hermes.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638E07F72A4E7AE90045A51F /* hermes.xcframework */; };
+		952E78712C6D9FC20061C67F /* RinoOperationPanel.zip in Resources */ = {isa = PBXBuildFile; fileRef = 952E78702C6D9FC10061C67F /* RinoOperationPanel.zip */; };
+		95BBCCA72DBE196A00354BA0 /* RinoLaunchMenuProtocolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCCA62DBE196A00354BA0 /* RinoLaunchMenuProtocolManager.m */; };
+		95BFD8A72C00737D00D3EA29 /* RinoDeviceIpcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BFD8A62C00737D00D3EA29 /* RinoDeviceIpcViewController.m */; };
+		95BFD8AA2C00739000D3EA29 /* RinoDeviceIpcMutiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BFD8A92C00739000D3EA29 /* RinoDeviceIpcMutiViewController.m */; };
+		95CA1D8F2DB891A000D05C4D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CA1D8E2DB891A000D05C4D /* CoreAudio.framework */; };
+		95CA1D912DB891A900D05C4D /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CA1D902DB891A900D05C4D /* CoreAudioKit.framework */; };
+		95F28AB82DE4068200E418FB /* RinoAMRPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F28AB72DE4068200E418FB /* RinoAMRPlayer.m */; };
 		BF3AA3312B2957250033E33E /* RinoDemoCountryListController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3AA3302B2957250033E33E /* RinoDemoCountryListController.m */; };
 		BF3AA3342B2957530033E33E /* RinoDemoRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3AA3332B2957530033E33E /* RinoDemoRegisterController.m */; };
 		BF3AA3372B2999E80033E33E /* RinoDemoFamilyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3AA3362B2999E80033E33E /* RinoDemoFamilyListController.m */; };
@@ -99,8 +83,6 @@
 		632AEBAC28AB38D2006E66A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		633355A72A6E5C7000659B61 /* Matter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Matter.framework; path = System/Library/Frameworks/Matter.framework; sourceTree = SDKROOT; };
 		633355A92A6E5C7500659B61 /* MatterSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MatterSupport.framework; path = System/Library/Frameworks/MatterSupport.framework; sourceTree = SDKROOT; };
-		636B58442A5D3C52007151FE /* RinoSmartBusinessManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoSmartBusinessManager.h; sourceTree = "<group>"; };
-		636B58452A5D3C52007151FE /* RinoSmartBusinessManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinoSmartBusinessManager.m; sourceTree = "<group>"; };
 		636B58472A5D3CF3007151FE /* rino_oem_config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rino_oem_config.json; sourceTree = "<group>"; };
 		6377AF1428C870D70043B5E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6377AF1628C870DD0043B5E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -110,58 +92,28 @@
 		63854A762A611B5F00829CF7 /* launchImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@3x.png"; sourceTree = "<group>"; };
 		63854A772A611B5F00829CF7 /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
 		638E07F72A4E7AE90045A51F /* hermes.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = hermes.xcframework; path = "Pods/hermes-engine/destroot/Library/Frameworks/universal/hermes.xcframework"; sourceTree = "<group>"; };
-		63A76AFD2AF2521D007B3744 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		63B04E3929BF2AD500C84732 /* MetricKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetricKit.framework; path = System/Library/Frameworks/MetricKit.framework; sourceTree = SDKROOT; };
 		63B07EB929069794002D4B2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		63B07EBC2906979D002D4B2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63B07EBE290697B1002D4B2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		63B07EBF290697B1002D4B2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		63B25F5F2A2F484D00454015 /* RinoPanelDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoPanelDeviceViewController.h; sourceTree = "<group>"; };
-		63B25F602A2F484D00454015 /* RinoBasePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoBasePanelViewController.h; sourceTree = "<group>"; };
-		63B25F612A2F484D00454015 /* RinoPanelGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoPanelGroupViewController.m; sourceTree = "<group>"; };
-		63B25F662A2F484D00454015 /* RinoBasePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoBasePanelViewController.m; sourceTree = "<group>"; };
-		63B25F682A2F484D00454015 /* RinoPanelDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoPanelDeviceViewController.m; sourceTree = "<group>"; };
-		63B25F692A2F484D00454015 /* RinoPanelGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoPanelGroupViewController.h; sourceTree = "<group>"; };
-		63B25F8B2A2F484D00454015 /* index.ios.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.bundle; sourceTree = "<group>"; };
-		63B25F8C2A2F484D00454015 /* RinoPanelOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoPanelOperationView.h; sourceTree = "<group>"; };
-		63B25F8D2A2F484D00454015 /* RinoPanelOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoPanelOperationView.m; sourceTree = "<group>"; };
-		63B25FBE2A2F484D00454015 /* RinoReactNativeBaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoReactNativeBaseModule.m; sourceTree = "<group>"; };
-		63B25FBF2A2F484D00454015 /* RinoNetworkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoNetworkModule.h; sourceTree = "<group>"; };
-		63B25FC02A2F484D00454015 /* RinoCameraModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoCameraModule.h; sourceTree = "<group>"; };
-		63B25FC12A2F484D00454015 /* RinoEmitterModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoEmitterModule.m; sourceTree = "<group>"; };
-		63B25FC22A2F484D00454015 /* RinoIPCPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoIPCPlay.h; sourceTree = "<group>"; };
-		63B25FC32A2F484D00454015 /* RinoDeviceModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoDeviceModule.m; sourceTree = "<group>"; };
-		63B25FC42A2F484D00454015 /* RinoRCTIPCPlayViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoRCTIPCPlayViewManager.h; sourceTree = "<group>"; };
-		63B25FC52A2F484D00454015 /* RinoNativeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoNativeModule.h; sourceTree = "<group>"; };
-		63B25FC62A2F484D00454015 /* RinoIPCModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoIPCModule.h; sourceTree = "<group>"; };
-		63B25FC72A2F484D00454015 /* RinoReactNativeBaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoReactNativeBaseModule.h; sourceTree = "<group>"; };
-		63B25FC82A2F484D00454015 /* RinoEmitterModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoEmitterModule.h; sourceTree = "<group>"; };
-		63B25FC92A2F484D00454015 /* RinoCameraModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoCameraModule.m; sourceTree = "<group>"; };
-		63B25FCA2A2F484D00454015 /* RinoNetworkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoNetworkModule.m; sourceTree = "<group>"; };
-		63B25FCB2A2F484D00454015 /* RinoIPCPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoIPCPlay.m; sourceTree = "<group>"; };
-		63B25FCC2A2F484D00454015 /* RinoIPCModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoIPCModule.m; sourceTree = "<group>"; };
-		63B25FCD2A2F484D00454015 /* RinoNativeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoNativeModule.m; sourceTree = "<group>"; };
-		63B25FCE2A2F484D00454015 /* RinoDeviceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoDeviceModule.h; sourceTree = "<group>"; };
-		63B25FCF2A2F484D00454015 /* RinoRCTIPCPlayViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoRCTIPCPlayViewManager.m; sourceTree = "<group>"; };
-		63B25FE32A2F484D00454015 /* RinoPanel.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RinoPanel.xcassets; sourceTree = "<group>"; };
 		63C33C902A331AE90065D2EA /* rino_custom_config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rino_custom_config.json; sourceTree = "<group>"; };
-		63D0D7412A72055C00FC5C08 /* RinoActivatorPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoActivatorPanelViewController.h; sourceTree = "<group>"; };
-		63D0D7432A72055C00FC5C08 /* RinoActivatorPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoActivatorPanelViewController.m; sourceTree = "<group>"; };
-		63D0D7462A720AD700FC5C08 /* RinoAssetModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoAssetModule.h; sourceTree = "<group>"; };
-		63D0D7472A720AD700FC5C08 /* RinoAssetModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoAssetModule.m; sourceTree = "<group>"; };
-		63D0D7482A720AD700FC5C08 /* RinoFSModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoFSModule.h; sourceTree = "<group>"; };
-		63D0D74A2A720AD700FC5C08 /* RinoQRCodeViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoQRCodeViewManager.h; sourceTree = "<group>"; };
-		63D0D74B2A720AD700FC5C08 /* RinoQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoQRCodeView.m; sourceTree = "<group>"; };
-		63D0D74F2A720AD800FC5C08 /* RinoQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoQRCodeView.h; sourceTree = "<group>"; };
-		63D0D7522A720AD800FC5C08 /* RinoFSModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoFSModule.m; sourceTree = "<group>"; };
-		63D0D7592A720B5A00FC5C08 /* RinoQRCodeViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoQRCodeViewManager.m; sourceTree = "<group>"; };
-		63D0D75A2A720B5A00FC5C08 /* RinoUserModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RinoUserModule.h; sourceTree = "<group>"; };
-		63D0D75B2A720B5A00FC5C08 /* RinoUserModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RinoUserModule.m; sourceTree = "<group>"; };
 		63D766DE2A8C7D1D0033CB3F /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		63D98EDE2934A86600A91F41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		63D98EE02934A86C00A91F41 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		63D98EE22934A87700A91F41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63D98EE42934A87F00A91F41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		952E78702C6D9FC10061C67F /* RinoOperationPanel.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = RinoOperationPanel.zip; sourceTree = "<group>"; };
+		95BBCCA52DBE196A00354BA0 /* RinoLaunchMenuProtocolManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoLaunchMenuProtocolManager.h; sourceTree = "<group>"; };
+		95BBCCA62DBE196A00354BA0 /* RinoLaunchMenuProtocolManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinoLaunchMenuProtocolManager.m; sourceTree = "<group>"; };
+		95BFD8A52C00737D00D3EA29 /* RinoDeviceIpcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoDeviceIpcViewController.h; sourceTree = "<group>"; };
+		95BFD8A62C00737D00D3EA29 /* RinoDeviceIpcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinoDeviceIpcViewController.m; sourceTree = "<group>"; };
+		95BFD8A82C00739000D3EA29 /* RinoDeviceIpcMutiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoDeviceIpcMutiViewController.h; sourceTree = "<group>"; };
+		95BFD8A92C00739000D3EA29 /* RinoDeviceIpcMutiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinoDeviceIpcMutiViewController.m; sourceTree = "<group>"; };
+		95CA1D8E2DB891A000D05C4D /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		95CA1D902DB891A900D05C4D /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		95F28AB62DE4068200E418FB /* RinoAMRPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoAMRPlayer.h; sourceTree = "<group>"; };
+		95F28AB72DE4068200E418FB /* RinoAMRPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinoAMRPlayer.m; sourceTree = "<group>"; };
 		BF3AA32F2B2957250033E33E /* RinoDemoCountryListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoDemoCountryListController.h; sourceTree = "<group>"; };
 		BF3AA3302B2957250033E33E /* RinoDemoCountryListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinoDemoCountryListController.m; sourceTree = "<group>"; };
 		BF3AA3322B2957530033E33E /* RinoDemoRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RinoDemoRegisterController.h; sourceTree = "<group>"; };
@@ -185,6 +137,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CA1D912DB891A900D05C4D /* CoreAudioKit.framework in Frameworks */,
+				95CA1D8F2DB891A000D05C4D /* CoreAudio.framework in Frameworks */,
 				63FF2FA72A4E7EAE00719594 /* hermes.xcframework in Frameworks */,
 				633355AA2A6E5C7600659B61 /* MatterSupport.framework in Frameworks */,
 				63B04E3A29BF2AD500C84732 /* MetricKit.framework in Frameworks */,
@@ -192,9 +146,9 @@
 				63D98EE32934A87700A91F41 /* UIKit.framework in Frameworks */,
 				6377AF1B28C8710B0043B5E0 /* libc++.tbd in Frameworks */,
 				633355A82A6E5C7000659B61 /* Matter.framework in Frameworks */,
-				6377AF1728C870DD0043B5E0 /* Security.framework in Frameworks */,
 				63D98EDF2934A86600A91F41 /* CoreGraphics.framework in Frameworks */,
 				63D98EE52934A87F00A91F41 /* Foundation.framework in Frameworks */,
+				6377AF1728C870DD0043B5E0 /* Security.framework in Frameworks */,
 				63158F712A24A2FD00C2501E /* Network.framework in Frameworks */,
 				6377AF1A28C871000043B5E0 /* libz.tbd in Frameworks */,
 				0A916ED37C5D31BCE3FCB446 /* Pods_Rino.framework in Frameworks */,
@@ -219,6 +173,8 @@
 		1EAB332D608864B3C82F2738 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95CA1D902DB891A900D05C4D /* CoreAudioKit.framework */,
+				95CA1D8E2DB891A000D05C4D /* CoreAudio.framework */,
 				63D766DE2A8C7D1D0033CB3F /* NetworkExtension.framework */,
 				633355A92A6E5C7500659B61 /* MatterSupport.framework */,
 				633355A72A6E5C7000659B61 /* Matter.framework */,
@@ -265,7 +221,6 @@
 				BFCD12ED2B2803F600EA7839 /* Class */,
 				6378A2DA2A85E8B600CFD6ED /* Resource */,
 				6378A2DB2A85E8BF00CFD6ED /* RinoBusiness */,
-				63B25F462A2F484D00454015 /* RinoPanelKit */,
 				63C3FC7028CF0328006F2258 /* Support Files */,
 			);
 			path = Rino;
@@ -275,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				6378A2DC2A85E8EA00CFD6ED /* RinoPairPanel.zip */,
+				952E78702C6D9FC10061C67F /* RinoOperationPanel.zip */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -284,98 +240,8 @@
 			children = (
 				63C33C902A331AE90065D2EA /* rino_custom_config.json */,
 				636B58472A5D3CF3007151FE /* rino_oem_config.json */,
-				636B58442A5D3C52007151FE /* RinoSmartBusinessManager.h */,
-				636B58452A5D3C52007151FE /* RinoSmartBusinessManager.m */,
 			);
 			path = RinoBusiness;
-			sourceTree = "<group>";
-		};
-		63B25F462A2F484D00454015 /* RinoPanelKit */ = {
-			isa = PBXGroup;
-			children = (
-				63B25F492A2F484D00454015 /* Class */,
-				63B25FBD2A2F484D00454015 /* Module */,
-				63B25FE22A2F484D00454015 /* Resource */,
-			);
-			path = RinoPanelKit;
-			sourceTree = "<group>";
-		};
-		63B25F492A2F484D00454015 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				63B25F8A2A2F484D00454015 /* OperationView */,
-				63B25F582A2F484D00454015 /* Panel */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		63B25F582A2F484D00454015 /* Panel */ = {
-			isa = PBXGroup;
-			children = (
-				63B25F602A2F484D00454015 /* RinoBasePanelViewController.h */,
-				63B25F662A2F484D00454015 /* RinoBasePanelViewController.m */,
-				63B25F5F2A2F484D00454015 /* RinoPanelDeviceViewController.h */,
-				63B25F682A2F484D00454015 /* RinoPanelDeviceViewController.m */,
-				63B25F692A2F484D00454015 /* RinoPanelGroupViewController.h */,
-				63B25F612A2F484D00454015 /* RinoPanelGroupViewController.m */,
-				63D0D7412A72055C00FC5C08 /* RinoActivatorPanelViewController.h */,
-				63D0D7432A72055C00FC5C08 /* RinoActivatorPanelViewController.m */,
-			);
-			path = Panel;
-			sourceTree = "<group>";
-		};
-		63B25F8A2A2F484D00454015 /* OperationView */ = {
-			isa = PBXGroup;
-			children = (
-				63A76AFD2AF2521D007B3744 /* assets */,
-				63B25F8B2A2F484D00454015 /* index.ios.bundle */,
-				63B25F8C2A2F484D00454015 /* RinoPanelOperationView.h */,
-				63B25F8D2A2F484D00454015 /* RinoPanelOperationView.m */,
-			);
-			path = OperationView;
-			sourceTree = "<group>";
-		};
-		63B25FBD2A2F484D00454015 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				63D0D7462A720AD700FC5C08 /* RinoAssetModule.h */,
-				63D0D7472A720AD700FC5C08 /* RinoAssetModule.m */,
-				63B25FC02A2F484D00454015 /* RinoCameraModule.h */,
-				63B25FC92A2F484D00454015 /* RinoCameraModule.m */,
-				63B25FCE2A2F484D00454015 /* RinoDeviceModule.h */,
-				63B25FC32A2F484D00454015 /* RinoDeviceModule.m */,
-				63B25FC82A2F484D00454015 /* RinoEmitterModule.h */,
-				63B25FC12A2F484D00454015 /* RinoEmitterModule.m */,
-				63D0D7482A720AD700FC5C08 /* RinoFSModule.h */,
-				63D0D7522A720AD800FC5C08 /* RinoFSModule.m */,
-				63B25FC62A2F484D00454015 /* RinoIPCModule.h */,
-				63B25FCC2A2F484D00454015 /* RinoIPCModule.m */,
-				63B25FC22A2F484D00454015 /* RinoIPCPlay.h */,
-				63B25FCB2A2F484D00454015 /* RinoIPCPlay.m */,
-				63B25FC52A2F484D00454015 /* RinoNativeModule.h */,
-				63B25FCD2A2F484D00454015 /* RinoNativeModule.m */,
-				63B25FBF2A2F484D00454015 /* RinoNetworkModule.h */,
-				63B25FCA2A2F484D00454015 /* RinoNetworkModule.m */,
-				63D0D74F2A720AD800FC5C08 /* RinoQRCodeView.h */,
-				63D0D74B2A720AD700FC5C08 /* RinoQRCodeView.m */,
-				63D0D74A2A720AD700FC5C08 /* RinoQRCodeViewManager.h */,
-				63D0D7592A720B5A00FC5C08 /* RinoQRCodeViewManager.m */,
-				63B25FC42A2F484D00454015 /* RinoRCTIPCPlayViewManager.h */,
-				63B25FCF2A2F484D00454015 /* RinoRCTIPCPlayViewManager.m */,
-				63B25FC72A2F484D00454015 /* RinoReactNativeBaseModule.h */,
-				63B25FBE2A2F484D00454015 /* RinoReactNativeBaseModule.m */,
-				63D0D75A2A720B5A00FC5C08 /* RinoUserModule.h */,
-				63D0D75B2A720B5A00FC5C08 /* RinoUserModule.m */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		63B25FE22A2F484D00454015 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				63B25FE32A2F484D00454015 /* RinoPanel.xcassets */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		63C3FC7028CF0328006F2258 /* Support Files */ = {
@@ -416,6 +282,14 @@
 				BF3AA33C2B29AD880033E33E /* RinoDemoDeviceListController.m */,
 				BF3AABAC2B29B9C90033E33E /* RinoDemoSceneListController.h */,
 				BF3AABAD2B29B9C90033E33E /* RinoDemoSceneListController.m */,
+				95BFD8A52C00737D00D3EA29 /* RinoDeviceIpcViewController.h */,
+				95BFD8A62C00737D00D3EA29 /* RinoDeviceIpcViewController.m */,
+				95BFD8A82C00739000D3EA29 /* RinoDeviceIpcMutiViewController.h */,
+				95BFD8A92C00739000D3EA29 /* RinoDeviceIpcMutiViewController.m */,
+				95BBCCA52DBE196A00354BA0 /* RinoLaunchMenuProtocolManager.h */,
+				95BBCCA62DBE196A00354BA0 /* RinoLaunchMenuProtocolManager.m */,
+				95F28AB62DE4068200E418FB /* RinoAMRPlayer.h */,
+				95F28AB72DE4068200E418FB /* RinoAMRPlayer.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -486,18 +360,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				632AEB8A28AA3F07006E66A0 /* LaunchScreen.storyboard in Resources */,
-				63B261992A2F484F00454015 /* RinoPanel.xcassets in Resources */,
 				63854A792A611B5F00829CF7 /* launchImage@2x.png in Resources */,
 				63C33C912A331AE90065D2EA /* rino_custom_config.json in Resources */,
 				632AEB8728AA3F07006E66A0 /* Assets.xcassets in Resources */,
 				6378A2DD2A85E8EA00CFD6ED /* RinoPairPanel.zip in Resources */,
 				63B07EBB2906979D002D4B2A /* InfoPlist.strings in Resources */,
 				636B58482A5D3CF3007151FE /* rino_oem_config.json in Resources */,
-				63A76AFE2AF2521D007B3744 /* assets in Resources */,
+				952E78712C6D9FC20061C67F /* RinoOperationPanel.zip in Resources */,
 				632AEB8528AA3F05006E66A0 /* Main.storyboard in Resources */,
 				63854A782A611B5F00829CF7 /* launchImage@3x.png in Resources */,
 				63B07EB829069794002D4B2A /* Localizable.strings in Resources */,
-				63B261642A2F484F00454015 /* index.ios.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,34 +435,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63B261542A2F484F00454015 /* RinoPanelDeviceViewController.m in Sources */,
 				BF3AA3342B2957530033E33E /* RinoDemoRegisterController.m in Sources */,
-				63D0D75C2A720B5A00FC5C08 /* RinoQRCodeViewManager.m in Sources */,
-				636B58462A5D3C52007151FE /* RinoSmartBusinessManager.m in Sources */,
-				63D0D7452A72055C00FC5C08 /* RinoActivatorPanelViewController.m in Sources */,
-				63D0D7532A720AD800FC5C08 /* RinoAssetModule.m in Sources */,
-				63B2618D2A2F484F00454015 /* RinoNetworkModule.m in Sources */,
 				632AEB7C28AA3F05006E66A0 /* AppDelegate.m in Sources */,
-				63B261912A2F484F00454015 /* RinoRCTIPCPlayViewManager.m in Sources */,
 				BF3AA3312B2957250033E33E /* RinoDemoCountryListController.m in Sources */,
-				63B261892A2F484F00454015 /* RinoReactNativeBaseModule.m in Sources */,
+				95BBCCA72DBE196A00354BA0 /* RinoLaunchMenuProtocolManager.m in Sources */,
 				BFA523672B28924C00427128 /* RinoHomeTestViewController.m in Sources */,
-				63B2614F2A2F484F00454015 /* RinoPanelGroupViewController.m in Sources */,
-				63B261652A2F484F00454015 /* RinoPanelOperationView.m in Sources */,
-				63D0D7582A720AD800FC5C08 /* RinoFSModule.m in Sources */,
-				63B2618E2A2F484F00454015 /* RinoIPCPlay.m in Sources */,
-				63D0D75D2A720B5A00FC5C08 /* RinoUserModule.m in Sources */,
-				63B261902A2F484F00454015 /* RinoNativeModule.m in Sources */,
+				95BFD8A72C00737D00D3EA29 /* RinoDeviceIpcViewController.m in Sources */,
+				95F28AB82DE4068200E418FB /* RinoAMRPlayer.m in Sources */,
 				BFCD12F02B28042800EA7839 /* RinoDemoLoginController.m in Sources */,
-				63B261522A2F484F00454015 /* RinoBasePanelViewController.m in Sources */,
-				63B2618B2A2F484F00454015 /* RinoDeviceModule.m in Sources */,
-				63B2618F2A2F484F00454015 /* RinoIPCModule.m in Sources */,
-				63B2618C2A2F484F00454015 /* RinoCameraModule.m in Sources */,
 				632AEB8D28AA3F07006E66A0 /* main.m in Sources */,
 				BF3AA3372B2999E80033E33E /* RinoDemoFamilyListController.m in Sources */,
+				95BFD8AA2C00739000D3EA29 /* RinoDeviceIpcMutiViewController.m in Sources */,
 				BF3AA33D2B29AD880033E33E /* RinoDemoDeviceListController.m in Sources */,
-				63B2618A2A2F484F00454015 /* RinoEmitterModule.m in Sources */,
-				63D0D7552A720AD800FC5C08 /* RinoQRCodeView.m in Sources */,
 				BF3AABAE2B29B9C90033E33E /* RinoDemoSceneListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,6 +626,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Rino/Support Files/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Rino/Support Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Rino Smart";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
@@ -803,7 +660,7 @@
 				MARKETING_VERSION = 1.3.3;
 				OTHER_CFLAGS = "-DLINUX";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smart.rinoiot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smart.rinoiot.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -831,6 +688,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Rino/Support Files/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Rino/Support Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Rino Smart";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
@@ -864,7 +722,7 @@
 				MARKETING_VERSION = 1.3.3;
 				OTHER_CFLAGS = "-DLINUX";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smart.rinoiot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smart.rinoiot.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

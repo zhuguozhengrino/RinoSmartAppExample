@@ -2,15 +2,69 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APIKey</key>
+	<string>eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjAzNjUyNGQ0NDk3NjQ1Y2NiYzhkZTY5NzdkNzI4ODhkIiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi4wODcwOGNkMWU2Njg0MzllODk5MDA2NmU4MDc0OThlNiIsImJ1bmRsZVNlZWRJZCI6ImNvbS5zbWFydC5yaW5vaW90IiwiYnVuZGxlSWQiOiJjb20uc21hcnQucmlub2lvdCIsImlzcyI6IkFtYXpvbiIsInR5cGUiOiJBUElLZXkiLCJhcHBWYXJpYW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1jbGllbnQuMWU4OTdlMzY2MDVhNDc3ZTkyZjY1YTcyOTY3ODE3ZjciLCJ0cnVzdFBvb2wiOm51bGwsImFwcElkIjoiYW16bjEuYXBwbGljYXRpb24tY2xpZW50LjFlODk3ZTM2NjA1YTQ3N2U5MmY2NWE3Mjk2NzgxN2Y3IiwiaWQiOiI2MDVjMTQzNi1lNjNkLTRkOTEtYTA2Ny05Y2Q5NGU1OWRlMTkiLCJpYXQiOiIxNjY5NjkwOTAyNzU2In0=.E4nw291a6oY5y6Lfsbda4bROFB3cSbLnVV7L7vZcDONXCeJIiP3jsWF1ztGNU8FDkuh3z/ZFgPtVzHrXFR+/6nh/qJG4Qz4j1wUpdtdAJv2+KD6UREBDlrPUR+qKN0LVap8/9HEv3MvZKxn3n7w6Rf1LWZ+tMfP/Uo8pkUaNUMS5j4dMrLLeeMytSEzAp9iVJo9cxfedGILnTDekyIOeroUr7ROyLO66goThB+wTH+0hDefaWMmqxrMm0if2UrczSnK1rQncjkMbrK6OEXQutPQf7EhrqLhiOcOJq199VdIdESrwxBSbeFxzbwnaRTkMpfJlXAmEqWUJ9sdHRY5NeQ==</string>
 	<key>CFBundleURLTypes</key>
-	<array/>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>nfc</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>nfc.rinoiot.com</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>anzm</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>amzn-com.smart.rinoiot</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>wxpay</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>h5.rinoiot.com</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wxe2e6b8b97d33f6f9</string>
+			</array>
+		</dict>
+	</array>
 	<key>LSApplicationQueriesSchemes</key>
-	<array/>
+	<array>
+		<string>weixin</string>
+		<string>weixinULAPI</string>
+		<string>weixinURLParamsAPI</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_meshcop._udp</string>
+		<string>_matterd._udp</string>
+		<string>_matter._tcp</string>
+		<string>_matterc._udp</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

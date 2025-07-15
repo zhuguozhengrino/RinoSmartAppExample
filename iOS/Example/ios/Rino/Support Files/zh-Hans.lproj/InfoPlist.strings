@@ -1,4 +1,4 @@
-"CFBundleDisplayName" = "犀云智能";
+"CFBundleDisplayName" = "RINO_SDK";
 "NSAppleMusicUsageDescription" = "APP需要访问您的媒体库权限以获取音乐，不允许则无法添加本地音乐";
 "NSBluetoothAlwaysUsageDescription" = "这将允许 App 查找并连接蓝牙配件。此 App 还可能使用蓝牙来获取蓝牙设备的位置";
 "NSBluetoothPeripheralUsageDescription" = "App需要使用您的手机蓝牙来添加和使用蓝牙设备。";

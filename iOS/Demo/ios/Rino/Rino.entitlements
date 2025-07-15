@@ -21,10 +21,6 @@
 	<array>
 		<string>TAG</string>
 	</array>
-	<key>com.apple.security.application-groups</key>
-	<array>
-		<string>group.com.smart.rinoiot</string>
-	</array>
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)com.smart.rinoiot</string>
